@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_mux4to1_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sim_mux4to1" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="14.001 ns"></ZoomEndTime>
+      <Cursor1Time time="8.675 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/sim_mux4to1/t_X0" type="array">
+      <obj_property name="ElementShortName">t_X0[1:0]</obj_property>
+      <obj_property name="ObjectShortName">t_X0[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_mux4to1/t_X1" type="array">
+      <obj_property name="ElementShortName">t_X1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">t_X1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_mux4to1/t_X2" type="array">
+      <obj_property name="ElementShortName">t_X2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">t_X2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_mux4to1/t_X3" type="array">
+      <obj_property name="ElementShortName">t_X3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">t_X3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_mux4to1/SELECT" type="array">
+      <obj_property name="ElementShortName">SELECT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SELECT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_mux4to1/OUTPUT" type="array">
+      <obj_property name="ElementShortName">OUTPUT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT[1:0]</obj_property>
+   </wvobject>
+</wave_config>
