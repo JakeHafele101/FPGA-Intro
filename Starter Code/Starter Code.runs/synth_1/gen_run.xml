@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="mux4x1.tcl"/>
   <File Type="REPORTS-TCL" Name="mux4x1_reports.tcl"/>
   <File Type="RDS-RDS" Name="mux4x1.vds"/>
-  <File Type="RDS-UTIL" Name="mux4x1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="mux4x1_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mux4x1.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
