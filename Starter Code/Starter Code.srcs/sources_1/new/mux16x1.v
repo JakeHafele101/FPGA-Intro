@@ -29,8 +29,8 @@ module mux16x1(
     reg [1:0] Y;
     
     wire [1:0] A, B, C, D; //Instantiate wires for outputs of intermittent 4x1 Mux's
-    wire [1:0] S_01 = S[1:0];
-    wire [1:0] S_23 = S[3:2];
+    wire [1:0] S_01 = S[1:0]; //bits 0 and 1 of select line S
+    wire [1:0] S_23 = S[3:2]; //bits 2 and 3 of select line S
     
     mux4x1 mux_1(X[0], X[1], X[2], X[3], S_01, A); //output A for X inputs 0 to 3
     mux4x1 mux_2(X[4], X[5], X[6], X[7], S_01, B); //output B for X inputs 4 to 7
