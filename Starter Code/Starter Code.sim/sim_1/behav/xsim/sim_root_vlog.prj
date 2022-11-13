@@ -2,6 +2,7 @@
 verilog xil_defaultlib  \
 "../../../../Starter Code.srcs/sim_1/new/mux4x1.v" \
 "../../../../Starter Code.srcs/sim_1/new/sim_mux4to1.v" \
+"../../../../Starter Code.srcs/sim_1/new/sim_root.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
