@@ -1,7 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/mux4x1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux4x1
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'Y' is not allowed [C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/mux4x1.v:32]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/sim_mux4to1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_mux4to1
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/sim_root.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_root
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/encoder4x2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder4x2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/sim_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_encoder

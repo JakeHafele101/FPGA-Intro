@@ -26,7 +26,7 @@ module encoder4x2(
     output [1:0] Y
     );
     
-    assign Y[0] = en&(X[1]|X[3]);
-    assign Y[1] = en&(X[2]|X[3]);
+    assign Y[0] = en&(X[3]|(~X[2]&X[1]));
+    assign Y[1] = en&(X[3]|X[2]);
     
 endmodule

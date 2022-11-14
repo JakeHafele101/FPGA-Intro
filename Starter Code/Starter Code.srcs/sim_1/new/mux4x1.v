@@ -21,22 +21,17 @@
 
 
 module mux4x1(
-    input [1:0] X0, //Input 1
-    input [1:0] X1, //Input 2
-    input [1:0] X2, //Input 3
-    input [1:0] X3, //Input 4
+    input [3:0] X, //array of four input bits
     input [1:0] S, //Select line
-    output [1:0] Y //Output
+    output reg Y //Output
     );
-    
-    reg [1:0] Y; //Set Y to register so = value below works. Has to save bits before exiting module! Don't forget to set array of bits either
-     
-    always @(X0 or X1 or X2 or X3 or S) //This block runs whenever X0/1/2/3 or S changes. Can also use "always @*"
+
+    always @* 
         case(S)
-            2'b00: Y = X0;
-            2'b01: Y = X1;
-            2'b10: Y = X2;
-            2'b11: Y = X3;
+            2'b00: Y = X[0];
+            2'b01: Y = X[1];
+            2'b10: Y = X[2];
+            2'b11: Y = X[3];
         endcase
 endmodule
 
