@@ -26,9 +26,9 @@ module decoder2x4(
     output [3:0] Y
     );
     
-    assign Y[0] = en&(~X[1])&(~X[0]);
-    assign Y[1] = en&(~X[1])&(X[0]);
-    assign Y[2] = en&(X[1])&(~X[0]);
-    assign Y[3] = en&(X[1])&(X[0]);
+    assign Y[0] = en&&!X[1]&&!X[0];
+    assign Y[1] = en&&!X[1]&&X[0];
+    assign Y[2] = en&&X[1]&&!X[0];
+    assign Y[3] = en&&X[1]&&X[0];
     
 endmodule
