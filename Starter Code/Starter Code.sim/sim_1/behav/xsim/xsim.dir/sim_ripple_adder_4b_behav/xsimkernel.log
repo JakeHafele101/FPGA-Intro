@@ -1,7 +1,7 @@
-Running: xsim.dir/sim_ripple_adder_4b_behav/xsimk.exe -simmode gui -wdb sim_ripple_adder_4b_behav.wdb -simrunnum 0 -socket 53910
+Running: xsim.dir/sim_ripple_adder_4b_behav/xsimk.exe -simmode gui -wdb sim_ripple_adder_4b_behav.wdb -simrunnum 0 -socket 63130
 Design successfully loaded
-Design Loading Memory Usage: 8240 KB (Peak: 8240 KB)
+Design Loading Memory Usage: 7608 KB (Peak: 7608 KB)
 Design Loading CPU Usage: 31 ms
 Simulation completed
-Simulation Memory Usage: 8840 KB (Peak: 8840 KB)
-Simulation CPU Usage: 31 ms
+Simulation Memory Usage: 8196 KB (Peak: 8196 KB)
+Simulation CPU Usage: 93 ms

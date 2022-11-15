@@ -62,5 +62,6 @@ module sim_ripple_adder_4b;
         A = 4'b1111;
         B = 4'b1111;
         #2;
+        $stop;
     end
 endmodule

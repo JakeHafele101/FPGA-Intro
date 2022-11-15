@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.runs/synth_1/mux4x1.tcl"
+  variable script "C:/Projects/FPGA-Intro/Starter Code/Starter Code.runs/synth_1/ripple_carry_4b.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,15 +76,19 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Projects/FPGA-Intro/Starter Code/Starter Code.cache/wt} [current_project]
+set_property parent.project_path {C:/Projects/FPGA-Intro/Starter Code/Starter Code.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.cache/ip} [current_project]
+set_property ip_output_repo {c:/Projects/FPGA-Intro/Starter Code/Starter Code.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib {{C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/mux4x1.v}}
+read_verilog -library xil_defaultlib {
+  {C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/full_adder_2b.v}
+  {C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/half_adder_2b.v}
+  {C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/ripple_carry_4b.v}
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -94,14 +98,13 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Jake/OneDrive/Documents/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc}}]
-
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/utils_1/imports/synth_1/mux4x1.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top mux4x1 -part xc7a35tcpg236-1
+synth_design -top ripple_carry_4b -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -111,10 +114,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef mux4x1.dcp
+write_checkpoint -force -noxdef ripple_carry_4b.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file mux4x1_utilization_synth.rpt -pb mux4x1_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file ripple_carry_4b_utilization_synth.rpt -pb ripple_carry_4b_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

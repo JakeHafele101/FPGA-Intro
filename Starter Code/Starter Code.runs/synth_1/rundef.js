@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log mux4x1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux4x1.tcl" );
+         "-log ripple_carry_4b.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ripple_carry_4b.tcl" );
 
 
 
