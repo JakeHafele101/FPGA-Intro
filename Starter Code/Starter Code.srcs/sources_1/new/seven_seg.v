@@ -42,13 +42,12 @@ module seven_seg(
             4'h6: seg[6:0] = 7'b0100000; //displays 6
             4'h7: seg[6:0] = 7'b0001111; //displays 7
             4'h8: seg[6:0] = 7'b0000000; //displays 8
-            4'h9: seg[6:0] = 7'b0001100; //displays 9
+            4'h9: seg[6:0] = 7'b0000100; //displays 9
             4'hA: seg[6:0] = 7'b0001000; //displays A
             4'hB: seg[6:0] = 7'b1100000; //displays B
             4'hC: seg[6:0] = 7'b0110001; //displays C
             4'hD: seg[6:0] = 7'b1000010; //displays D
             4'hE: seg[6:0] = 7'b0110000; //displays E
-            4'hF: seg[6:0] = 7'b0011000; //displays F
             default: seg[6:0] = 7'b0011000; //defaults to displaying F
         endcase
         seg[7] = dp; //Sets MSB to decimal point LED output for seven seg
