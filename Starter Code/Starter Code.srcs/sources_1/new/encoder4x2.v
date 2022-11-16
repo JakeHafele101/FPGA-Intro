@@ -19,14 +19,20 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//4 bit priority encode, implemented with casex statement
 module encoder4x2(
     input [3:0] X,
     input en,
-    output [1:0] Y
+    output reg [1:0] Y
     );
     
-    assign Y[0] = en&&(X[3]||(!X[2]&&X[1]));
-    assign Y[1] = en&&(X[3]||X[2]);
+    always @*
+        casex({en, X})
+            5'b11???: Y = 11;
+            5'b101??: Y = 10;
+            5'b1001?: Y = 01;
+            5'b10001: Y = 00;
+            default: Y = 00;
+        endcase
     
 endmodule

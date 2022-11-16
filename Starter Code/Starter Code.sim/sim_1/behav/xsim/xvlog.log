@@ -1,6 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/DFF_Pos_Edge.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module DFF_Pos_Edge
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/D_Latch.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module D_Latch
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/sim_DFF.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_DFF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/encoder4x2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encoder4x2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/sim_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_encoder

@@ -23,12 +23,17 @@
 module decoder2x4(
     input [1:0] X,
     input en,
-    output [3:0] Y
+    output reg [3:0] Y
     );
     
-    assign Y[0] = en&&!X[1]&&!X[0];
-    assign Y[1] = en&&!X[1]&&X[0];
-    assign Y[2] = en&&X[1]&&!X[0];
-    assign Y[3] = en&&X[1]&&X[0];
+    always @*
+        casex({en, X})
+            3'b0??: Y = 4'b0000;
+            3'b100: Y = 4'b0001;
+            3'b101: Y = 4'b0010;
+            3'b110: Y = 4'b0100;
+            3'b111: Y = 4'b1000;
+            //default: Y = 4'b0000; //Can use instead of first case
+        endcase
     
 endmodule

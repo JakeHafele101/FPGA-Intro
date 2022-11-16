@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1668483465" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mux4x1.dcp">
   <File Type="PA-TCL" Name="ripple_carry_4b.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ripple_carry_4b_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ripple_carry_4b_reports.tcl"/>
   <File Type="RDS-RDS" Name="ripple_carry_4b.vds"/>
   <File Type="RDS-UTIL" Name="ripple_carry_4b_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ripple_carry_4b_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="ripple_carry_4b.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ripple_carry_4b_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ripple_carry_4b_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sim_1/new/full_adder_2b.v">
