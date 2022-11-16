@@ -4,5 +4,11 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'C4' on this module [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sim_1/new/sim_ripple_adder_4b.v:31]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ripple_carry_Nb
+Compiling module xil_defaultlib.sim_ripple_adder_4b
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim_ripple_adder_4b_behav

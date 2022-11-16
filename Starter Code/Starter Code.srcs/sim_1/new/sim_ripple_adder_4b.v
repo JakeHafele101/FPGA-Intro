@@ -22,17 +22,17 @@
 module sim_ripple_adder_4b;
     
     reg [3:0] A, B;
-    reg C0;
+    reg Cin;
     
-    wire [3:0] Y;
-    wire C4;
+    wire [3:0] Sum;
+    wire Cout;
     
-//    ripple_carry_4b ripple(.A(A), .B(B), .C0(C0), .Y(Y), .C4(C4));
-    ripple_carry_Nb ripple(.A(A), .B(B), .C0(C0), .Y(Y), .C4(C4));
+//    ripple_carry_4b ripple(.A(A), .B(B), .C0(C0), .Y(Y), .Cout(Cout));
+    ripple_carry_Nb  #(.N(4)) ripple (.A(A), .B(B), .Cin(Cin), .Sum(Sum), .Cout(Cout));
 
     
     initial begin
-        C0 = 1'b0;
+        Cin = 1'b0;
         A = 4'b0000;
         B = 4'b0000;
         #2;
@@ -48,7 +48,7 @@ module sim_ripple_adder_4b;
         A = 4'b1111;
         B = 4'b1111;
         #2;
-        C0 = 1'b1;
+        Cin = 1'b1;
         A = 4'b0001;
         B = 4'b0001;
         #2;

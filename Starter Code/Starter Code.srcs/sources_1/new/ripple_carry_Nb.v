@@ -32,7 +32,7 @@ module ripple_carry_Nb
         
     wire [N: 0] Sum_Inter; //Intermittent sum with extra concatenated bit to hold Cout
     
-    assign Sum_Inter = {1'b0, A} + {1'b0, B};
+    assign Sum_Inter = {1'b0, A} + {1'b0, B} + Cin;
     assign Sum = Sum_Inter[N-1:0]; //Sum except for MSB, which includes COut
     assign Cout = Sum_Inter[N]; //MSB of sum, which uses output carry bit
     

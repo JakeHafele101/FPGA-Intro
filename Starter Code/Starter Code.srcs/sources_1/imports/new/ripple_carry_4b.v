@@ -30,7 +30,7 @@ module ripple_carry_4b(
     
     wire C1, C2, C3;
     
-    //This is so damn cool
+    //This is so cool
     full_adder_2b full_0(A[0], B[0], C0, Y[0], C1);
     full_adder_2b full_1(A[1], B[1], C1, Y[1], C2);
     full_adder_2b full_2(A[2], B[2], C2, Y[2], C3);
