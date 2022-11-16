@@ -27,7 +27,9 @@ module sim_ripple_adder_4b;
     wire [3:0] Y;
     wire C4;
     
-    ripple_carry_4b ripple(.A(A), .B(B), .C0(C0), .Y(Y), .C4(C4));
+//    ripple_carry_4b ripple(.A(A), .B(B), .C0(C0), .Y(Y), .C4(C4));
+    ripple_carry_Nb ripple(.A(A), .B(B), .C0(C0), .Y(Y), .C4(C4));
+
     
     initial begin
         C0 = 1'b0;

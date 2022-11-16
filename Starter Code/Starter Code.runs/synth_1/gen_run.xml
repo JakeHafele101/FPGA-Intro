@@ -8,22 +8,28 @@
   <File Type="RDS-DCP" Name="ripple_carry_4b.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sim_1/new/full_adder_2b.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/full_adder_2b.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/full_adder_2b.v"/>
+        <Attr Name="ImportTime" Val="1668473684"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sim_1/new/half_adder_2b.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/half_adder_2b.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/half_adder_2b.v"/>
+        <Attr Name="ImportTime" Val="1668473443"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sim_1/new/ripple_carry_4b.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/ripple_carry_4b.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/ripple_carry_4b.v"/>
+        <Attr Name="ImportTime" Val="1668474698"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -45,9 +51,11 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sim_1/new/mux4x1.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/mux4x1.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/mux4x1.v"/>
+        <Attr Name="ImportTime" Val="1668399675"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

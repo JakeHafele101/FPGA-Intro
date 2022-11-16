@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../Starter Code.srcs/sources_1/new/encoder4x2.v" \
-"../../../../Starter Code.srcs/sim_1/new/sim_encoder.v" \
+"../../../../Starter Code.srcs/sources_1/new/ripple_carry_Nb.v" \
+"../../../../Starter Code.srcs/sim_1/new/sim_ripple_adder_4b.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
