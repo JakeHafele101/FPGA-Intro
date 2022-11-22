@@ -29,7 +29,6 @@ module seven_seg(
     output reg [7:0] seg //dp will be MSB, then A, B, C, D, E, F, G as LSB
     );
     
-    
     always @*
     begin
         case(hex) //7'b A,B,C,D,E,F,G

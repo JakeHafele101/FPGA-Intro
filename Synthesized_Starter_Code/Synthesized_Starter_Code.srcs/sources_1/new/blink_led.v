@@ -25,6 +25,6 @@ module blink_led(
     output [15:0] LED
     );
     
-    assign LED = 15'b1111111111111111;
+    assign LED = 16'b1111111111111111;
     
 endmodule
