@@ -37,71 +37,71 @@ module blink_led(
     //parameters set to count up for LED light toggle
     //input clock will be 100MHZ
     //Formula is: (FPGA clk frequency / LED frequency) * duty cycle. Assumed 50% duty cycle
-    parameter c_CNT_100HZ = 50000;
-    parameter c_CNT_50HZ = 100000;
-    parameter c_CNT_10HZ = 500000;
-    parameter c_CNT_1HZ = 5000000;
+    parameter c_CNT_2000mHZ = 2500000;
+    parameter c_CNT_1000mHZ = 5000000;
+    parameter c_CNT_100mHZ  = 50000000;
+    parameter c_CNT_10mHZ   = 500000000;
     
     //Frequency count registers to store count data as it increments from clock pulses
-    reg [31:0] r_CNT_100HZ;
-    reg [31:0] r_CNT_50HZ;
-    reg [31:0] r_CNT_10HZ;
-    reg [31:0] r_CNT_1HZ;
+    reg [31:0] r_CNT_2000mHZ;
+    reg [31:0] r_CNT_1000mHZ;
+    reg [31:0] r_CNT_100mHZ;
+    reg [31:0] r_CNT_10mHZ;
     
     //register toggled at set frequencies, and will be MUX'ed to r_LED_SELECT with select lines i_sw_clk0/1
-    reg        r_TOGGLE_100HZ = 1'b0;
-    reg        r_TOGGLE_50HZ = 1'b0;
-    reg        r_TOGGLE_10HZ = 1'b0;
-    reg        r_TOGGLE_1HZ = 1'b0;
+    reg        r_TOGGLE_2000mHZ = 1'b0;
+    reg        r_TOGGLE_1000mHZ = 1'b0;
+    reg        r_TOGGLE_100mHZ = 1'b0;
+    reg        r_TOGGLE_10mHZ = 1'b0;
     
     //One bit select output to be AND'ed with enable pin to LED output. Default output set to 0
     reg        r_LED_SELECT = 1'b0;
         
     always @ (posedge i_clk)
     begin
-        if (r_CNT_100HZ == c_CNT_100HZ - 1) //Counter begins at 0, so -1 needed
+        if (r_CNT_2000mHZ == c_CNT_2000mHZ - 1) //Counter begins at 0, so -1 needed
             begin
-                r_TOGGLE_100HZ <= !r_TOGGLE_100HZ; //inverts toggle register, in turn inverting LED output if selected
-                r_CNT_100HZ <= 0; //resets counter to 0 when reached param max
+                r_TOGGLE_2000mHZ <= !r_TOGGLE_2000mHZ; //inverts toggle register, in turn inverting LED output if selected
+                r_CNT_2000mHZ <= 0; //resets counter to 0 when reached param max
             end
         else 
-            r_CNT_100HZ <= r_CNT_100HZ +1; //Increments counter by 1 if not at max
+            r_CNT_2000mHZ <= r_CNT_2000mHZ +1; //Increments counter by 1 if not at max
     
-        if (r_CNT_50HZ == c_CNT_50HZ - 1) //Creates incrementing counter for 50 Hz
+        if (r_CNT_1000mHZ == c_CNT_1000mHZ - 1) //Counter begins at 0, so -1 needed
             begin
-                r_TOGGLE_50HZ <= !r_TOGGLE_50HZ; 
-                r_CNT_50HZ <= 0; 
+                r_TOGGLE_1000mHZ <= !r_TOGGLE_1000mHZ; //inverts toggle register, in turn inverting LED output if selected
+                r_CNT_1000mHZ <= 0; //resets counter to 0 when reached param max
             end
         else 
-            r_CNT_50HZ <= r_CNT_50HZ +1; 
+            r_CNT_1000mHZ <= r_CNT_1000mHZ +1; //Increments counter by 1 if not at max
     
 
-        if (r_CNT_10HZ == c_CNT_10HZ - 1) //Creates incrementing counter for 10 Hz
+        if (r_CNT_100mHZ == c_CNT_100mHZ - 1) //Counter begins at 0, so -1 needed
             begin
-                r_TOGGLE_10HZ <= !r_TOGGLE_10HZ; 
-                r_CNT_10HZ <= 0;
+                r_TOGGLE_100mHZ <= !r_TOGGLE_100mHZ; //inverts toggle register, in turn inverting LED output if selected
+                r_CNT_100mHZ <= 0; //resets counter to 0 when reached param max
             end
         else 
-            r_CNT_10HZ <= r_CNT_10HZ +1;
+            r_CNT_100mHZ <= r_CNT_100mHZ +1; //Increments counter by 1 if not at max
 
 
-        if (r_CNT_1HZ == c_CNT_1HZ - 1) //Creates incrementing counter for 1 Hz
+        if (r_CNT_10mHZ == c_CNT_10mHZ - 1) //Counter begins at 0, so -1 needed
             begin
-                r_TOGGLE_1HZ <= !r_TOGGLE_1HZ; 
-                r_CNT_1HZ <= 0; 
+                r_TOGGLE_10mHZ <= !r_TOGGLE_10mHZ; //inverts toggle register, in turn inverting LED output if selected
+                r_CNT_10mHZ <= 0; //resets counter to 0 when reached param max
             end
         else 
-            r_CNT_1HZ <= r_CNT_1HZ +1; 
+            r_CNT_10mHZ <= r_CNT_10mHZ +1; //Increments counter by 1 if not at max
     end
     
     
     always @* //* covers when any toggle register, sw_clk, or r_LED_SELECT updates
     begin
         case({i_sw_clk1, i_sw_clk0})
-            2'b00: r_LED_SELECT <= r_TOGGLE_1HZ;
-            2'b01: r_LED_SELECT <= r_TOGGLE_10HZ;
-            2'b10: r_LED_SELECT <= r_TOGGLE_50HZ;
-            2'b11: r_LED_SELECT <= r_TOGGLE_100HZ;
+            2'b00: r_LED_SELECT <= r_TOGGLE_2000mHZ;
+            2'b01: r_LED_SELECT <= r_TOGGLE_1000mHZ;
+            2'b10: r_LED_SELECT <= r_TOGGLE_100mHZ;
+            2'b11: r_LED_SELECT <= r_TOGGLE_10mHZ;
         endcase
     end
     

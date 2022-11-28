@@ -3,5 +3,5 @@
 Oct 14 2022
 05:20:55
 C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sim_1/new/sim_blink_led.v,1669413605,verilog,,,,sim_blink_led,,,,,,,,
-C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/blink_led.v,1669412069,verilog,,C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sim_1/new/sim_blink_led.v,,blink_led,,,,,,,,
+C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sim_1/new/sim_blink_led.v,1669583396,verilog,,,,sim_blink_led,,,,,,,,
+C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/blink_led.v,1669481197,verilog,,C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sim_1/new/sim_blink_led.v,,blink_led,,,,,,,,

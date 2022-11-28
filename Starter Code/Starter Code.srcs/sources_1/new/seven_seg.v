@@ -26,29 +26,29 @@
 module seven_seg(
     input [3:0] hex,
     input dp,
-    output reg [7:0] seg //dp will be MSB, then A, B, C, D, E, F, G as LSB
+    output reg [7:0] segment //dp will be MSB, then A, B, C, D, E, F, G as LSB
     );
     
     always @*
     begin
-        case(hex) //7'b A,B,C,D,E,F,G
-            4'h0: seg[6:0] = 7'b0000001; //displays 0,
-            4'h1: seg[6:0] = 7'b1001111; //displays 1
-            4'h2: seg[6:0] = 7'b0010010; //displays 2
-            4'h3: seg[6:0] = 7'b0000110; //displays 3
-            4'h4: seg[6:0] = 7'b1001100; //displays 4
-            4'h5: seg[6:0] = 7'b0100100; //displays 5
-            4'h6: seg[6:0] = 7'b0100000; //displays 6
-            4'h7: seg[6:0] = 7'b0001111; //displays 7
-            4'h8: seg[6:0] = 7'b0000000; //displays 8
-            4'h9: seg[6:0] = 7'b0000100; //displays 9
-            4'hA: seg[6:0] = 7'b0001000; //displays A
-            4'hB: seg[6:0] = 7'b1100000; //displays B
-            4'hC: seg[6:0] = 7'b0110001; //displays C
-            4'hD: seg[6:0] = 7'b1000010; //displays D
-            4'hE: seg[6:0] = 7'b0110000; //displays E
-            default: seg[6:0] = 7'b0011000; //defaults to displaying F
+        case(hex) //7'b G,F,E,D,C,B,A
+            4'h0: segment[6:0] = 7'b1000000; //displays 0,
+            4'h1: segment[6:0] = 7'b1111001; //displays 1
+            4'h2: segment[6:0] = 7'b0100100; //displays 2
+            4'h3: segment[6:0] = 7'b0110000; //displays 3
+            4'h4: segment[6:0] = 7'b0011001; //displays 4
+            4'h5: segment[6:0] = 7'b0010010; //displays 5
+            4'h6: segment[6:0] = 7'b0000010; //displays 6
+            4'h7: segment[6:0] = 7'b1111000; //displays 7
+            4'h8: segment[6:0] = 7'b0000000; //displays 8
+            4'h9: segment[6:0] = 7'b0010000; //displays 9
+            4'hA: segment[6:0] = 7'b0001000; //displays A
+            4'hB: segment[6:0] = 7'b0000011; //displays B
+            4'hC: segment[6:0] = 7'b1000110; //displays C
+            4'hD: segment[6:0] = 7'b0100001; //displays D
+            4'hE: segment[6:0] = 7'b0000110; //displays E
+            default: segment[6:0] = 7'b0001110; //defaults to displaying F
         endcase
-        seg[7] = dp; //Sets MSB to decimal point LED output for seven seg
+        segment[7] = dp; //Sets MSB to decimal point LED output for seven seg
     end
 endmodule

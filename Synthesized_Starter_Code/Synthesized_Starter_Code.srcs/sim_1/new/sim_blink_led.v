@@ -1,4 +1,4 @@
-`timescale 10ns / 1ps // [time unit] / [time precision]
+`timescale 1ns / 1ps // [time unit] / [time precision]
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -22,16 +22,17 @@
 
 module sim_blink_led;
 
-    parameter PERIOD = 1; //10 nanosecond period for 100MHZ clock. 1 since time unit is 10ns for test script
-    parameter CASE_DELAY = 5; //Delay N periods to check different case statements for LED output
+    parameter PERIOD = 1; 
+    parameter CASE_DELAY = 10000; //Delay N periods to check different case statements for LED output
     
     //set up 
     reg sw_enable, clk;
     reg [1:0] sw_clk;
     wire o_LED;
     
-    //Instantiate module
-    blink_led blink(.i_sw_enable(sw_enable), .i_sw_clk1(sw_clk[1]), .i_sw_clk0(sw_clk[0]), .i_clk(clk), .o_LED(o_LED));
+    //Instantiate module, set frequency counts lower for faster sim
+    blink_led #(.c_CNT_2000mHZ(10), .c_CNT_1000mHZ(20), .c_CNT_100mHZ(200), .c_CNT_10mHZ(2000)) 
+        blink (.i_sw_enable(sw_enable), .i_sw_clk1(sw_clk[1]), .i_sw_clk0(sw_clk[0]), .i_clk(clk), .o_LED(o_LED));
 
     //start of sim, set clk to 0
     initial begin
@@ -45,23 +46,23 @@ module sim_blink_led;
     //runs through different switch pins
     initial begin
         sw_enable = 1; //Enable on, output LED matches selected clock frequency
-        sw_clk = 2'b00; //1 Hz, 1 second period
-        #CASE_DELAY;
-        sw_clk = 2'b01; //10 Hz, 0.1 second period
-        #CASE_DELAY
-        sw_clk = 2'b10; //50 Hz, 0.02 second period
-        #CASE_DELAY
-        sw_clk = 2'b11; //100 Hz, 0.01 second period
-        #CASE_DELAY
+        sw_clk = 2'b00; 
+        #(PERIOD * CASE_DELAY);
+        sw_clk = 2'b01;
+        #(PERIOD * CASE_DELAY);
+        sw_clk = 2'b10;
+        #(PERIOD * CASE_DELAY);
+        sw_clk = 2'b11;
+        #(PERIOD * CASE_DELAY);
         sw_enable = 0; //Enable off, output LED will be 0, or OFF
         sw_clk = 2'b00;
-        #CASE_DELAY
+        #(PERIOD * CASE_DELAY);
         sw_clk = 2'b01;
-        #CASE_DELAY
+        #(PERIOD * CASE_DELAY);
         sw_clk = 2'b10;
-        #CASE_DELAY
+        #(PERIOD * CASE_DELAY);
         sw_clk = 2'b11;
-        #CASE_DELAY
+        #(PERIOD * CASE_DELAY);
         $display($time, " << Ending the Simulation>> ");
         $stop; //stop sim
     end

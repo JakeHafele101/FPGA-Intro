@@ -4,11 +4,5 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.blink_led
-Compiling module xil_defaultlib.sim_blink_led
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot sim_blink_led_behav
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'o_LED' is not permitted [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sim_1/new/sim_blink_led.v:35]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

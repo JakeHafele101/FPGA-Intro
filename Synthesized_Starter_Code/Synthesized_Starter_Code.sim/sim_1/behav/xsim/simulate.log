@@ -1,4 +1,0 @@
-Time resolution is 1 ps
-                   0 << Starting the Simulation>> 
-                  40 << Ending the Simulation>> 
-$stop called at time : 400 ns : File "C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sim_1/new/sim_blink_led.v" Line 66
