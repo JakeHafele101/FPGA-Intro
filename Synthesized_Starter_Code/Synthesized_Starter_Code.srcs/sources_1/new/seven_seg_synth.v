@@ -23,18 +23,18 @@
 module seven_seg_synth(
     input CLK100MHZ,       //clock to MUX between segment displays
     input btnC,            //reset button
-    input btnU,            //button for counter increment
+    input btnR,            //button for counter increment
     input [15:0] sw,       
     output [6:0] seg,      //7 different LED outputs on seven seg display. 0 ON, 1 OFF. MSB is decimal point LED DP
     output [3:0] an,       //Select line for which segment display is on or off. MUX between at high frequency to update. 
     output dp              //Decimal point LED on seven seg display 
     );
     
-    reg [7:0] counter = 0;
+    reg [7:0] counter;
     
     wire [15:0] hex_disp = {counter, sw[7:0]}; //Hex values for four seven segment displays
     
-    always @(posedge btnU)
+    always @(btnR)
     begin
         if(counter == 2**7 - 1)
             counter <= 0;

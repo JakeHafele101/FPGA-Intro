@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Nov 27 21:19:28 2022
-# Process ID: 12620
+# Start of session at: Mon Nov 28 19:54:06 2022
+# Process ID: 40544
 # Current directory: C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.runs/synth_1
 # Command line: vivado.exe -log seven_seg_synth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seven_seg_synth.tcl
 # Log file: C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.runs/synth_1/seven_seg_synth.vds
@@ -11,7 +11,7 @@
 # Running On: DESKTOP-KD9BGR4, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17073 MB
 #-----------------------------------------------------------
 source seven_seg_synth.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 394.152 ; gain = 73.090
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 395.195 ; gain = 62.324
 Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/utils_1/imports/synth_1/blink_led.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/utils_1/imports/synth_1/blink_led.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,30 +24,32 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 41084
+INFO: [Synth 8-7075] Helper process launched with PID 48552
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1205.719 ; gain = 409.605
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1206.031 ; gain = 408.961
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'seven_seg_synth' [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+WARNING: [Synth 8-567] referenced signal 'counter' should be on the sensitivity list [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:37]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg_mux' [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/seven_seg.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/seven_seg.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mux' (0#1) [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_synth' (0#1) [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+WARNING: [Synth 8-7129] Port btnR in module seven_seg_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1295.176 ; gain = 499.062
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1295.605 ; gain = 498.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1295.176 ; gain = 499.062
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1295.605 ; gain = 498.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1295.176 ; gain = 499.062
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1295.605 ; gain = 498.535
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1295.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1295.605 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -149,17 +151,17 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:78]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:78]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:115]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:115]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:116]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:116]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:117]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:117]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:118]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:118]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:119]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:119]
@@ -172,32 +174,32 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/seven_seg_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1378.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1377.477 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1378.215 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1377.477 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -205,10 +207,9 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input    8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -226,26 +227,180 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port btnR in module seven_seg_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/I1 (LUT2)
+     2: i_28/O (LUT4)
+      [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/seven_seg.v:34]
+     3: i_28/I3 (LUT4)
+     4: i_70/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     5: i_70/I1 (LUT2)
+     6: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_74"
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_67/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_67/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_67"
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_68/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_68/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_68"
+Found timing loop:
+     0: i_69/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_69/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_69"
+Found timing loop:
+     0: i_70/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_70/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_70"
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_75/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_75/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_75"
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_71/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_71/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_71"
+Found timing loop:
+     0: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_72/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_72/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_72"
+Found timing loop:
+     0: i_71/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_71/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_73/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_73/I1 (LUT2)
+     2: i_74/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: i_74/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O i_73"
+Found timing loop:
+     0: i_75/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_75/I0 (LUT2)
+     2: i_7/O (LUT4)
+      [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/seven_seg.v:34]
+     3: i_7/I3 (LUT4)
+     4: i_75/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I0 -to O i_75"
+Found timing loop:
+     0: i_71/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_71/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_71/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_71/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: i_71/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: i_71/I0 (LUT2)
+     2: i_17/O (LUT5)
+      [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/sources_1/new/seven_seg.v:34]
+     3: i_17/I4 (LUT5)
+     4: i_71/O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I0 -to O i_71"
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -263,37 +418,126 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_16 /I1 (LUT5)
+     2: \seg_OBUF[6]_inst_i_12 /O (LUT6)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_12 /I5 (LUT6)
+     4: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O \seg_OBUF[6]_inst_i_16 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_12 /O (LUT6)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_12 /I5 (LUT6)
+     2: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I5 -to O \seg_OBUF[6]_inst_i_12 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_16 /I0 (LUT5)
+     2: \seg_OBUF[6]_inst_i_9 /O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_9 /I1 (LUT2)
+     4: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I0 -to O \seg_OBUF[6]_inst_i_16 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_9 /O (LUT2)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_9 /I1 (LUT2)
+     2: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I1 -to O \seg_OBUF[6]_inst_i_9 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_11 /O (LUT3)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_11 /I2 (LUT3)
+     2: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I2 -to O \seg_OBUF[6]_inst_i_11 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_10 /O (LUT4)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_10 /I3 (LUT4)
+     2: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I3 -to O \seg_OBUF[6]_inst_i_10 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_8 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_8 /I4 (LUT5)
+     2: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     3: \seg_OBUF[6]_inst_i_16 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I4 -to O \seg_OBUF[6]_inst_i_8 "
+Found timing loop:
+     0: \seg_OBUF[6]_inst_i_15 /O (LUT5)
+      [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:39]
+     1: \seg_OBUF[6]_inst_i_15 /I3 (LUT5)
+     2: \seg_OBUF[6]_inst_i_15 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_synth.v:23]
+Inferred a: "set_disable_timing -from I3 -to O \seg_OBUF[6]_inst_i_15 "
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -309,43 +553,42 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
+|1     |BUFG   |     1|
 |2     |CARRY4 |     5|
-|3     |LUT1   |     2|
-|4     |LUT2   |     2|
-|5     |LUT3   |    12|
-|6     |LUT4   |    22|
-|7     |LUT5   |     1|
-|8     |LUT6   |     4|
+|3     |LUT1   |     1|
+|4     |LUT2   |     4|
+|5     |LUT3   |     5|
+|6     |LUT4   |    30|
+|7     |LUT5   |     3|
+|8     |LUT6   |     5|
 |9     |MUXF7  |    14|
 |10    |MUXF8  |     7|
 |11    |FDCE   |    18|
-|12    |FDRE   |     7|
-|13    |IBUF   |    19|
-|14    |OBUF   |    12|
+|12    |IBUF   |    18|
+|13    |OBUF   |    12|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1378.215 ; gain = 499.062
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1378.215 ; gain = 582.102
+Synthesis finished with 0 errors, 31 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1377.477 ; gain = 498.535
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1377.477 ; gain = 580.406
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1378.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1377.477 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1378.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1377.477 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 19631a86
+Synth Design complete, checksum: d9259c12
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 39 Warnings, 38 Critical Warnings and 0 Errors encountered.
+29 Infos, 42 Warnings, 69 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1378.215 ; gain = 959.207
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1377.477 ; gain = 957.410
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.runs/synth_1/seven_seg_synth.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file seven_seg_synth_utilization_synth.rpt -pb seven_seg_synth_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 27 21:20:18 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 28 19:55:01 2022...
