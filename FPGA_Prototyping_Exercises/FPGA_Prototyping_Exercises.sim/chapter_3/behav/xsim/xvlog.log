@@ -1,4 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module floating_greater
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/floating_greater_test.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module floating_greater_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/int_to_float.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module int_to_float
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/int_to_float.v:42]
+WARNING: [VRFC 10-8864] concatenation with an unsized literal will be treated as 32 bits [C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/int_to_float.v:45]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/int_to_float_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module int_to_float_test
