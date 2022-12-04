@@ -30,26 +30,39 @@ module BCD_incrementor_12b_test(
     reg switch;
     wire [11:0] bcd_out;
     
+    reg clk;
+    wire dp;
+    wire [6:0] seg;
+    wire [3:0] an;
+    
     BCD_incrementor_12b BCD(.bcd_in(bcd_in), .en(switch), .bcd_out(bcd_out));
+    
+    seven_seg_mux #(.N(2)) segment_display(.clk(clk), .reset(1'b0), .hex3(4'h8), .hex2(bcd_out[11:8]), 
+                                           .hex1(bcd_out[7:4]), .hex0(bcd_out[3:0]), .dp(4'b1111), .an_en(4'b0111), 
+                                           .seg_out({dp, seg}), .an_out(an));
     
     initial begin
         bcd_in = 12'h000;
-        #(DELAY * 200);
+        #(DELAY * 1000);
         $stop;
     end
     
     initial begin
         switch = 0; //on startup, set switch to 0
-        #(DELAY * 2);
+        #(DELAY * 10);
         switch = 1;
-//        forever begin
-//            #(DELAY * 2) switch = !switch; //every DELAY time units, switch will invert 
-//        end
     end
     
     initial begin
         forever begin
-            #DELAY bcd_in = bcd_out;
+            #(DELAY*5) bcd_in = bcd_out;
+        end
+    end
+    
+    initial begin
+        clk = 0;
+        forever begin
+            #DELAY clk = ~clk;
         end
     end
     

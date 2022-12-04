@@ -1,88 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670103485">
-  <File Type="ROUTE-PWR" Name="BCD_incrementor_synth_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="BCD_incrementor_synth.tcl"/>
-  <File Type="BITSTR-MMI" Name="BCD_incrementor_synth.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="BCD_incrementor_synth_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="BCD_incrementor_synth_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="BCD_incrementor_synth_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="BCD_incrementor_synth_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="BCD_incrementor_synth_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="BCD_incrementor_synth_opt.dcp"/>
-  <File Type="OPT-DRC" Name="BCD_incrementor_synth_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="BCD_incrementor_synth.hwdef"/>
-  <File Type="PWROPT-DCP" Name="BCD_incrementor_synth_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="BCD_incrementor_synth_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="BCD_incrementor_synth_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="BCD_incrementor_synth_placed.dcp"/>
-  <File Type="PLACE-IO" Name="BCD_incrementor_synth_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="BCD_incrementor_synth_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="BCD_incrementor_synth_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="BCD_incrementor_synth_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="BCD_incrementor_synth_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="BCD_incrementor_synth_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="BCD_incrementor_synth_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="BCD_incrementor_synth.bin"/>
-  <File Type="PLACE-TIMING" Name="BCD_incrementor_synth_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="BCD_incrementor_synth_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="BCD_incrementor_synth.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="BCD_incrementor_synth_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="BCD_incrementor_synth_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="BCD_incrementor_synth_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="BCD_incrementor_synth.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="BCD_incrementor_synth_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="BCD_incrementor_synth_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="BCD_incrementor_synth_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="BCD_incrementor_synth_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="BCD_incrementor_synth_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="BCD_incrementor_synth_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="BCD_incrementor_synth_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="BCD_incrementor_synth_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="BCD_incrementor_synth_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="BCD_incrementor_synth_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="BCD_incrementor_synth_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="BCD_incrementor_synth_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="BCD_incrementor_synth_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="BCD_incrementor_synth_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="BCD_incrementor_synth_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="BCD_incrementor_synth_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="BCD_incrementor_synth_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="BCD_incrementor_synth_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="BCD_incrementor_synth_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="BCD_incrementor_synth_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="BCD_incrementor_synth_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="BCD_incrementor_synth_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="BCD_incrementor_synth_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="BCD_incrementor_synth_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="BCD_incrementor_synth_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="BCD_incrementor_synth_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="BCD_incrementor_synth_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="BCD_incrementor_synth.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="BCD_incrementor_synth_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="BCD_incrementor_synth_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="BCD_incrementor_synth.nky"/>
-  <File Type="BITSTR-BMM" Name="BCD_incrementor_synth_bd.bmm"/>
-  <File Type="PDI-FILE" Name="BCD_incrementor_synth.pdi"/>
-  <File Type="RCFI_FILE" Name="BCD_incrementor_synth.rcfi"/>
-  <File Type="CFI_FILE" Name="BCD_incrementor_synth.cfi"/>
-  <File Type="RNPI_FILE" Name="BCD_incrementor_synth.rnpi"/>
-  <File Type="NPI_FILE" Name="BCD_incrementor_synth.npi"/>
-  <File Type="RBD_FILE" Name="BCD_incrementor_synth.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670121329">
+  <File Type="ROUTE-PWR" Name="floating_greater_synth_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="floating_greater_synth.tcl"/>
+  <File Type="BITSTR-MMI" Name="floating_greater_synth.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="floating_greater_synth_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="floating_greater_synth_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="floating_greater_synth_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="floating_greater_synth_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="floating_greater_synth_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="floating_greater_synth_opt.dcp"/>
+  <File Type="OPT-DRC" Name="floating_greater_synth_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="floating_greater_synth.hwdef"/>
+  <File Type="PWROPT-DCP" Name="floating_greater_synth_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="floating_greater_synth_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="floating_greater_synth_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="floating_greater_synth_placed.dcp"/>
+  <File Type="PLACE-IO" Name="floating_greater_synth_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="floating_greater_synth_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="floating_greater_synth_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="floating_greater_synth_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="floating_greater_synth_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="floating_greater_synth_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="floating_greater_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="floating_greater_synth.bin"/>
+  <File Type="PLACE-TIMING" Name="floating_greater_synth_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="floating_greater_synth_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="floating_greater_synth.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="floating_greater_synth_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="floating_greater_synth_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="floating_greater_synth_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="floating_greater_synth.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="floating_greater_synth_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="floating_greater_synth_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="floating_greater_synth_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="floating_greater_synth_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="floating_greater_synth_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="floating_greater_synth_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="floating_greater_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="floating_greater_synth_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="floating_greater_synth_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="floating_greater_synth_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="floating_greater_synth_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="floating_greater_synth_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="floating_greater_synth_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="floating_greater_synth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="floating_greater_synth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="floating_greater_synth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="floating_greater_synth_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="floating_greater_synth_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="floating_greater_synth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="floating_greater_synth_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="floating_greater_synth_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="floating_greater_synth_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="floating_greater_synth_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="floating_greater_synth_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="floating_greater_synth_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="floating_greater_synth_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="floating_greater_synth_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="floating_greater_synth.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="floating_greater_synth_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="floating_greater_synth_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="floating_greater_synth.nky"/>
+  <File Type="BITSTR-BMM" Name="floating_greater_synth_bd.bmm"/>
+  <File Type="PDI-FILE" Name="floating_greater_synth.pdi"/>
+  <File Type="RCFI_FILE" Name="floating_greater_synth.rcfi"/>
+  <File Type="CFI_FILE" Name="floating_greater_synth.cfi"/>
+  <File Type="RNPI_FILE" Name="floating_greater_synth.rnpi"/>
+  <File Type="NPI_FILE" Name="floating_greater_synth.npi"/>
+  <File Type="RBD_FILE" Name="floating_greater_synth.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="BCD_incrementor_synth.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="BCD_incrementor_synth.sysdef"/>
-  <File Type="BG-BGN" Name="BCD_incrementor_synth.bgn"/>
-  <File Type="BG-DRC" Name="BCD_incrementor_synth.drc"/>
-  <File Type="RDI-RDI" Name="BCD_incrementor_synth.vdi"/>
+  <File Type="BITSTR-LTX" Name="floating_greater_synth.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="floating_greater_synth.sysdef"/>
+  <File Type="BG-BGN" Name="floating_greater_synth.bgn"/>
+  <File Type="BG-DRC" Name="floating_greater_synth.drc"/>
+  <File Type="RDI-RDI" Name="floating_greater_synth.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="BCD_incrementor_synth_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="BCD_incrementor_synth_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="floating_greater_synth_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="floating_greater_synth_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/floating_greater.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/floating_greater_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/BCD_incrementor_12b.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -90,6 +105,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/bcd_incrementor.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -97,6 +113,7 @@
     </File>
     <File Path="$PSIMDIR/seven_seg.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -104,6 +121,7 @@
     </File>
     <File Path="$PPRDIR/../Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -111,6 +129,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/BCD_incrementor_synth.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -174,7 +193,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="BCD_incrementor_synth"/>
+      <Option Name="TopModule" Val="floating_greater_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

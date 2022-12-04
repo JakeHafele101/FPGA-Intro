@@ -29,16 +29,21 @@ module bcd_incrementor(
     
     always @*
         begin
-            carry = 0; //carry set to 0 by default
-            
+
             if(in < 9 && en) //if under 9 and enable high, increment by 1
-                out = in + 1; //increment by 1
+                begin
+                    out <= in + 1; //increment by 1
+                    carry <= 0;
+                end
             else if(en) //if equal or above 9, set output to 0 and carry to 1 to increment next decimal
                 begin
-                    out = 0;
-                    carry = 1;
+                    out <= 0;
+                    carry <= 1;
                 end
             else //if enable 0, output stays same as input
-                out = in;
+                begin
+                    out <= in;
+                    carry <= 0;
+                end
         end  
 endmodule

@@ -1,7 +1,7 @@
-Running: xsim.dir/BCD_incrementor_12b_test_behav/xsimk.exe -simmode gui -wdb BCD_incrementor_12b_test_behav.wdb -simrunnum 0 -socket 59505
+Running: xsim.dir/BCD_incrementor_12b_test_behav/xsimk.exe -simmode gui -wdb BCD_incrementor_12b_test_behav.wdb -simrunnum 0 -socket 63392
 Design successfully loaded
-Design Loading Memory Usage: 7096 KB (Peak: 7096 KB)
+Design Loading Memory Usage: 7636 KB (Peak: 7636 KB)
 Design Loading CPU Usage: 62 ms
 Simulation completed
-Simulation Memory Usage: 7712 KB (Peak: 7712 KB)
-Simulation CPU Usage: 62 ms
+Simulation Memory Usage: 8252 KB (Peak: 8252 KB)
+Simulation CPU Usage: 108 ms

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log BCD_incrementor_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCD_incrementor_synth.tcl" );
+         "-log floating_greater_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source floating_greater_synth.tcl" );
 
 
 

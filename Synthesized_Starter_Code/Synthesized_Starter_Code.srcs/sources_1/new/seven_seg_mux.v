@@ -20,22 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module seven_seg_mux(
+module seven_seg_mux (
     input clk,                 //clock to MUX between segment displays
     input reset,               //reset active when set to 1
     input [3:0] hex3,          //hex 3 input. 0 to F
     input [3:0] hex2,          //hex 2 input
     input [3:0] hex1,          //hex 1 input
     input [3:0] hex0,          //hex 0 input
-    input [3:0] dp,            //Decimal point active or no. ON when 1, OFF when 0
+    input [3:0] dp,            //Decimal point active or no. ON when 0, OFF when 1
     input [3:0] an_en,         //Determines if seven seg display is on or off. ON when 1, OFF when 0
     output reg [7:0] seg_out,  //7 different LED outputs on seven seg display. 0 ON, 1 OFF for Basys 3 FPGA. MSB is decimal point LED DP. wired to [7:0] seg on FPGA
     output [3:0] an_out        //Determines if seven seg display is on or off. ON when 1, OFF when 0. Wired to [3:0] an on FPGA
     );
     
-    //N bit counter for clock increments
-    parameter  N = 18;
-    
+    parameter N = 18;
+
     //Frequency count register to store count data as it increments from every rising clock pulse
     reg [N-1:0] r_CNT = 0;
     

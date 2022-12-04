@@ -1,0 +1,7 @@
+Running: xsim.dir/floating_greater_test_behav/xsimk.exe -simmode gui -wdb floating_greater_test_behav.wdb -simrunnum 0 -socket 52167
+Design successfully loaded
+Design Loading Memory Usage: 7624 KB (Peak: 7624 KB)
+Design Loading CPU Usage: 78 ms
+Simulation completed
+Simulation Memory Usage: 8216 KB (Peak: 8216 KB)
+Simulation CPU Usage: 78 ms

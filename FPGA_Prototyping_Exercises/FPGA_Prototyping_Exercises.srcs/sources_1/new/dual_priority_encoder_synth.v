@@ -37,7 +37,7 @@ module dual_priority_encoder_synth(
     dual_priority_encoder_12b encoder(.req(sw[11:0]), .first(first), .second(second));
     
     seven_seg_mux segment_display(.clk(CLK100MHZ), .reset(btnC), .hex3(4'hF), .hex2(4'hF), 
-                                  .hex1(first), .hex0(second), .dp(4'b0000), .an_en(4'b0011), 
+                                  .hex1(first), .hex0(second), .dp(4'b1111), .an_en(4'b0011), 
                                   .seg_out({dp, seg}), .an_out(an));
    
 endmodule

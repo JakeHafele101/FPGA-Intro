@@ -3,9 +3,13 @@
 Oct 14 2022
 05:20:55
 C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/chapter_3/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/BCD_incrementor_12b_test.v,1670096634,verilog,,,,BCD_incrementor_12b_test,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v,1669999231,verilog,,C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v,,seven_seg,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/BCD_incrementor_12b_test.v,1670108586,verilog,,,,BCD_incrementor_12b_test,,,,,,,,
 C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/dual_priority_encoder_test.v,1670047221,verilog,,,,dual_priority_encoder_test,,,,,,,,
-C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/BCD_incrementor_12b.v,1670094497,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/bcd_incrementor.v,,BCD_incrementor_12b,,,,,,,,
-C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/bcd_incrementor.v,1670097877,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/BCD_incrementor_12b_test.v,,bcd_incrementor,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/floating_greater_test.v,1670120672,verilog,,,,floating_greater_test,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/BCD_incrementor_12b.v,1670102585,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/bcd_incrementor.v,,BCD_incrementor_12b,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/bcd_incrementor.v,1670106822,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v,,bcd_incrementor,,,,,,,,
 C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/dual_priority_encoder_12b.v,1670047003,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/priority_encoder_12b.v,,dual_priority_encoder_12b,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater.v,1670120563,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/floating_greater_test.v,,floating_greater,,,,,,,,
 C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/priority_encoder_12b.v,1670046490,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/dual_priority_encoder_test.v,,priority_encoder_12b,,,,,,,,
+C:/Projects/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v,1670107863,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/BCD_incrementor_12b_test.v,,seven_seg_mux,,,,,,,,

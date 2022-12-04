@@ -1,2 +1,2 @@
 Time resolution is 1 ps
-$stop called at time : 1 us : File "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/BCD_incrementor_12b_test.v" Line 38
+$stop called at time : 40 ns : File "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/floating_greater_test.v" Line 59

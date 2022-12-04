@@ -27,8 +27,8 @@ module barrel_shifter_lr_8b_synth(
     
     assign LED[7:0] = sw[7:0];
     
-//    barrel_shifter_lr_8b shifter_lr(.a(sw[7:0]), .lr(sw[8]), .amt(sw[11:9]), .y(LED[15:8]));
-    barrel_shifter_r_8b shifter_lr(.a(sw[7:0]), .lr(sw[8]), .amt(sw[11:9]), .y(LED[15:8]));
+    barrel_shifter_lr_8b shifter_lr(.a(sw[7:0]), .lr(sw[8]), .amt(sw[11:9]), .y(LED[15:8]));
+//    barrel_shifter_r_8b shifter_lr(.a(sw[7:0]), .lr(sw[8]), .amt(sw[11:9]), .y(LED[15:8]));
 
     
 endmodule
