@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670121329">
+  <File Type="ROUTE-PWR" Name="floating_greater_synth_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="floating_greater_synth.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="floating_greater_synth_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="floating_greater_synth_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="floating_greater_synth.msk"/>
+  <File Type="ROUTE-CLK" Name="floating_greater_synth_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="floating_greater_synth.vdi"/>
+  <File Type="BG-BIT" Name="floating_greater_synth.bit"/>
+  <File Type="BG-DRC" Name="floating_greater_synth.drc"/>
+  <File Type="BG-BGN" Name="floating_greater_synth.bgn"/>
+  <File Type="BG-BIN" Name="floating_greater_synth.bin"/>
+  <File Type="BITSTR-RBT" Name="floating_greater_synth.rbt"/>
+  <File Type="BITSTR-NKY" Name="floating_greater_synth.nky"/>
+  <File Type="BITSTR-BMM" Name="floating_greater_synth_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="floating_greater_synth.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="floating_greater_synth_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="floating_greater_synth.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="floating_greater_synth_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="floating_greater_synth.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="floating_greater_synth_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="floating_greater_synth.hwdef"/>
+  <File Type="PLACE-IO" Name="floating_greater_synth_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="floating_greater_synth_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="floating_greater_synth_utilization_placed.pb"/>
+  <File Type="ROUTE-RQS" Name="floating_greater_synth_routed.rqs"/>
+  <File Type="PLACE-CTRL" Name="floating_greater_synth_control_sets_placed.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="floating_greater_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-DRC" Name="floating_greater_synth_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="floating_greater_synth_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="floating_greater_synth_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="floating_greater_synth_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="floating_greater_synth_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="floating_greater_synth_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="floating_greater_synth_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="floating_greater_synth_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="floating_greater_synth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="floating_greater_synth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="floating_greater_synth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="floating_greater_synth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="floating_greater_synth_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="floating_greater_synth_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="floating_greater_synth_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="floating_greater_synth_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="floating_greater_synth_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="floating_greater_synth_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="floating_greater_synth_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="floating_greater_synth_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="floating_greater_synth_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="floating_greater_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="floating_greater_synth_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="floating_greater_synth.pdi"/>
+  <File Type="RCFI_FILE" Name="floating_greater_synth.rcfi"/>
+  <File Type="CFI_FILE" Name="floating_greater_synth.cfi"/>
+  <File Type="RNPI_FILE" Name="floating_greater_synth.rnpi"/>
+  <File Type="NPI_FILE" Name="floating_greater_synth.npi"/>
+  <File Type="RBD_FILE" Name="floating_greater_synth.rbd"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="floating_greater_synth_postroute_physopted.rqs"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/floating_greater.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater.v"/>
+        <Attr Name="ImportTime" Val="1670120563"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/floating_greater_synth.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater_synth.v"/>
+        <Attr Name="ImportTime" Val="1670121327"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_incrementor_12b.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/BCD_incrementor_12b.v"/>
+        <Attr Name="ImportTime" Val="1670102585"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bcd_incrementor.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/bcd_incrementor.v"/>
+        <Attr Name="ImportTime" Val="1670106822"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v"/>
+        <Attr Name="ImportTime" Val="1669999231"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v"/>
+        <Attr Name="ImportTime" Val="1670107863"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_incrementor_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/BCD_incrementor_synth.v"/>
+        <Attr Name="ImportTime" Val="1670110885"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dual_priority_encoder_12b.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/dual_priority_encoder_12b.v"/>
+        <Attr Name="ImportTime" Val="1670047003"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/priority_encoder_12b.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/priority_encoder_12b.v"/>
+        <Attr Name="ImportTime" Val="1670046490"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dual_priority_encoder_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/dual_priority_encoder_synth.v"/>
+        <Attr Name="ImportTime" Val="1670106668"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/barrel_shifter_r_8b.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/barrel_shifter_r_8b.v"/>
+        <Attr Name="ImportTime" Val="1670030623"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/barrel_shifter_lr_8b_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/barrel_shifter_lr_8b_synth.v"/>
+        <Attr Name="ImportTime" Val="1670111535"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/barrel_shifter_lr_8b.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/barrel_shifter_lr_8b.v"/>
+        <Attr Name="ImportTime" Val="1670022035"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg_synth.v"/>
+        <Attr Name="ImportTime" Val="1670013816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="floating_greater_synth"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1668925309"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp"/>
+        <Attr Name="ImportTime" Val="1670121329"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>
