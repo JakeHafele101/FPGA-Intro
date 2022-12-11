@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670566927" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/stopwatch_synth.dcp">
-  <File Type="PA-TCL" Name="rotating_square_synth.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="rotating_square_synth_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="rotating_square_synth_reports.tcl"/>
-  <File Type="RDS-RDS" Name="rotating_square_synth.vds"/>
-  <File Type="RDS-UTIL" Name="rotating_square_synth_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="rotating_square_synth_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="rotating_square_synth.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="rotating_square_synth_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="rotating_square_synth_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670797311" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/stopwatch_synth.dcp">
+  <File Type="PA-TCL" Name="heartbeat_synth.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="heartbeat_synth_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="heartbeat_synth_reports.tcl"/>
+  <File Type="RDS-RDS" Name="heartbeat_synth.vds"/>
+  <File Type="RDS-UTIL" Name="heartbeat_synth_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="heartbeat_synth_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="heartbeat_synth.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="heartbeat_synth_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="heartbeat_synth_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/heartbeat.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_seg_heartbeat_mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/heartbeat_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/rotating_square.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,6 +42,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/rotating_square_synth.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -93,30 +116,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/d_ff_reset.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/d_ff_en.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/d_ff.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/reg_file.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -133,17 +132,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/seven_seg_square_mux.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="rotating_square_synth"/>
+      <Option Name="TopModule" Val="heartbeat_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

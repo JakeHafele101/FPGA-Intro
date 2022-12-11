@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log rotating_square_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rotating_square_synth.tcl
+EAStep vivado -log heartbeat_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source heartbeat_synth.tcl

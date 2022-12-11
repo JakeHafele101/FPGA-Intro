@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log rotating_square_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source rotating_square_synth.tcl -notrace
+EAStep vivado -log heartbeat_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source heartbeat_synth.tcl -notrace
 
 

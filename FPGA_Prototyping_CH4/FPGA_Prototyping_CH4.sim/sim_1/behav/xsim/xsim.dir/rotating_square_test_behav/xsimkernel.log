@@ -1,7 +1,7 @@
-Running: xsim.dir/rotating_square_test_behav/xsimk.exe -simmode gui -wdb rotating_square_test_behav.wdb -simrunnum 0 -socket 62779
+Running: xsim.dir/rotating_square_test_behav/xsimk.exe -simmode gui -wdb rotating_square_test_behav.wdb -simrunnum 0 -socket 61478
 Design successfully loaded
-Design Loading Memory Usage: 7616 KB (Peak: 7616 KB)
-Design Loading CPU Usage: 31 ms
+Design Loading Memory Usage: 7704 KB (Peak: 7704 KB)
+Design Loading CPU Usage: 62 ms
 Simulation completed
-Simulation Memory Usage: 8220 KB (Peak: 8220 KB)
-Simulation CPU Usage: 31 ms
+Simulation Memory Usage: 8300 KB (Peak: 8300 KB)
+Simulation CPU Usage: 62 ms

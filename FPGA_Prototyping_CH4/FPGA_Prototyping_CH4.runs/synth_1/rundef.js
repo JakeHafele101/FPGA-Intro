@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log rotating_square_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rotating_square_synth.tcl" );
+         "-log heartbeat_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source heartbeat_synth.tcl" );
 
 
 
