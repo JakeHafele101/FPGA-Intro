@@ -1,0 +1,16 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/pwm_test.v,1670392102,verilog,,,,pwm_test,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/rotating_square_test.v,1670566586,verilog,,,,rotating_square_test,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/square_wave_test.v,1670294626,verilog,,,,square_wave_test,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/stopwatch_test.v,1670298960,verilog,,,,stopwatch_test,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v,1670198210,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v,,seven_seg,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v,1670393311,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/pwm_test.v,,seven_seg_mux,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/pwm_4b.v,1670389907,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v,,pwm_4b,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/rotating_square.v,1670566390,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/rotating_square_test.v,,rotating_square,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/seven_seg_square_mux.v,1670479633,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/rotating_square_test.v,,seven_seg_square_mux,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/square_wave.v,1670293844,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/rotating_square_test.v,,square_wave,,,,,,,,
+C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/stopwatch.v,1670300328,verilog,,C:/Projects/FPGA-Intro/FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sim_1/new/stopwatch_test.v,,stopwatch,,,,,,,,
