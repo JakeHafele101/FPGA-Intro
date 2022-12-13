@@ -68,7 +68,6 @@ module pwm_test(
         w = 4'd12; //75% duty cycle
         repeat(100) @(negedge clk);
         $stop;
-    
     end
     
 endmodule

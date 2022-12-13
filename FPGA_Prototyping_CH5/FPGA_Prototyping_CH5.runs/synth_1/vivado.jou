@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec 12 22:56:39 2022
+# Process ID: 16328
+# Current directory: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1
+# Command line: vivado.exe -log dual_edge_detector_synth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dual_edge_detector_synth.tcl
+# Log file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1/dual_edge_detector_synth.vds
+# Journal file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1\vivado.jou
+# Running On: DESKTOP-SA1D2UB, OS: Windows, CPU Frequency: 3991 MHz, CPU Physical cores: 4, Host memory: 17058 MB
+#-----------------------------------------------------------
+source dual_edge_detector_synth.tcl -notrace

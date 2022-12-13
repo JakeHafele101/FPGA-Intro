@@ -29,7 +29,7 @@ module dual_edge_detector_moore(
     //assigns state names to bit values for case statement
     localparam [1:0] zero = 2'b00, 
                      rise = 2'b01, 
-                     one = 2'b11, 
+                     one  = 2'b10, 
                      fall = 2'b11;
                      
     reg [1:0] state_reg, state_next;
@@ -60,7 +60,5 @@ module dual_edge_detector_moore(
                     end
             endcase
         end
-    
-
-    
+        
 endmodule
