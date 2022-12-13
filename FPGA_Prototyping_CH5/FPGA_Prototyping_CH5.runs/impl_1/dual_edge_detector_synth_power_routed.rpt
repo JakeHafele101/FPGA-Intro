@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Mon Dec 12 22:58:32 2022
+| Date             : Mon Dec 12 23:25:54 2022
 | Host             : DESKTOP-SA1D2UB running 64-bit major release  (build 9200)
 | Command          : report_power -file dual_edge_detector_synth_power_routed.rpt -pb dual_edge_detector_synth_power_summary_routed.pb -rpx dual_edge_detector_synth_power_routed.rpx
 | Design           : dual_edge_detector_synth
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.075        |
+| Total On-Chip Power (W)  | 0.073        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.004        |
+| Dynamic (W)              | 0.002        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -58,10 +58,10 @@ Table of Contents
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
 |   Register     |    <0.001 |       34 |     41600 |            0.08 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |       53 |       --- |             --- |
-| I/O            |     0.003 |       19 |       106 |           17.92 |
+| Signals        |    <0.001 |       54 |       --- |             --- |
+| I/O            |    <0.001 |       19 |       106 |           17.92 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.075 |          |           |                 |
+| Total          |     0.073 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.010 |       0.001 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,7 +140,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| dual_edge_detector_synth |     0.004 |
+| dual_edge_detector_synth |     0.002 |
 +--------------------------+-----------+
 
 

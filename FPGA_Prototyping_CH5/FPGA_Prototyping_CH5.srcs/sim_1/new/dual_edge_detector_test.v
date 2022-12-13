@@ -32,6 +32,8 @@ module dual_edge_detector_test(
     
     dual_edge_detector_moore moore_edge(.clk(clk), .reset(reset), .level(level), .tick(tick));
     
+//    dual_edge_detector_mealy mealy_edge(.clk(clk), .reset(reset), .level(level), .tick(tick));
+    
     always begin
         clk = 1'b1;
         #(T/2);

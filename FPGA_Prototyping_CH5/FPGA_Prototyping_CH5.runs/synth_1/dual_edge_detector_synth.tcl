@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -88,7 +86,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/new/clock_divider.v
-  C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/dual_edge_detector_moore.v
+  C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/dual_edge_detector_mealy.v
   C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/dual_edge_detector_synth.v
 }
 OPTRACE "Adding files" END { }

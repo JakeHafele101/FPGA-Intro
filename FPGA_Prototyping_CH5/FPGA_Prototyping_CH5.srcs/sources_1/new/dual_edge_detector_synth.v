@@ -32,6 +32,8 @@ module dual_edge_detector_synth(
     
     assign LED[1] = clk_div;
     
-    dual_edge_detector_moore moore(.clk(clk_div), .reset(btnC), .level(btnR), .tick(LED[0]));
+//    dual_edge_detector_moore moore(.clk(clk_div), .reset(btnC), .level(btnR), .tick(LED[0]));
+    dual_edge_detector_mealy mealy(.clk(clk_div), .reset(btnC), .level(btnR), .tick(LED[0]));
+
     
 endmodule

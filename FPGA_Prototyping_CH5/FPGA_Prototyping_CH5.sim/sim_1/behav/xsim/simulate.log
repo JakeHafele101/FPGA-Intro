@@ -1,2 +1,2 @@
 Time resolution is 1 ps
-$stop called at time : 87 ns : File "C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sim_1/new/dual_edge_detector_test.v" Line 65
+$stop called at time : 87 ns : File "C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sim_1/new/dual_edge_detector_test.v" Line 67

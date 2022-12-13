@@ -27,10 +27,8 @@ module dual_edge_detector_mealy(
     );
     
     //assigns state names to bit values for case statement
-    localparam [1:0] zero = 2'b00, 
-                     rise = 2'b01, 
-                     one = 2'b10, 
-                     fall = 2'b11;
+    localparam zero = 1'b0, 
+                one = 1'b1;
                      
     reg [1:0] state_reg, state_next;
                  
@@ -45,19 +43,20 @@ module dual_edge_detector_mealy(
     always @*
         begin
             tick = 1'b0;  //default off since rising/falling edge will happen less often
+            state_next = state_reg;
             case(state_reg)
-                zero: state_next = level ? rise : state_reg;
-                rise:
-                    begin
-                        tick = 1'b1;
-                        state_next = level ? one : fall;
-                    end
-                one: state_next = level ? state_reg : fall;
-                fall: 
-                    begin
-                        tick = 1'b1;
-                        state_next = level ? rise : zero;
-                    end
+                zero: 
+                    if(level)
+                        begin
+                            tick = 1'b1;
+                            state_next = one;
+                        end
+                one: 
+                    if(~level)
+                        begin
+                            tick = 1'b1;
+                            state_next = zero;
+                        end
             endcase
         end
         
