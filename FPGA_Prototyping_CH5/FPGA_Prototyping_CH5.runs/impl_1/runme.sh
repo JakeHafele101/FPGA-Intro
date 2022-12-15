@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log dual_edge_detector_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source dual_edge_detector_synth.tcl -notrace
+EAStep vivado -log parking_lot_counter_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source parking_lot_counter_synth.tcl -notrace
 
 

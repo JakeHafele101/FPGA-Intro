@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FPGA_Prototyping_CH5.srcs/sources_1/new/parking_lot_counter.v" \
+"../../../../FPGA_Prototyping_CH5.srcs/sim_1/new/parking_lot_counter_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,484 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Dec 14 21:52:32 2022
+# Process ID: 25264
+# Current directory: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1
+# Command line: vivado.exe -log parking_lot_counter_synth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source parking_lot_counter_synth.tcl
+# Log file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1/parking_lot_counter_synth.vds
+# Journal file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1\vivado.jou
+# Running On: DESKTOP-SA1D2UB, OS: Windows, CPU Frequency: 3991 MHz, CPU Physical cores: 4, Host memory: 17058 MB
+#-----------------------------------------------------------
+source parking_lot_counter_synth.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 393.762 ; gain = 74.203
+Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/utils_1/imports/synth_1/dual_edge_detector_synth.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/utils_1/imports/synth_1/dual_edge_detector_synth.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top parking_lot_counter_synth -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24064
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1203.438 ; gain = 406.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parking_lot_counter_synth' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/parking_lot_counter_synth.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parking_lot_counter' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/parking_lot_counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'parking_lot_counter' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/parking_lot_counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'up_down_counter_4b' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/up_down_counter_4b.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'up_down_counter_4b' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/up_down_counter_4b.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_mux' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_4b' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/new/pwm_4b.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_4b' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/new/pwm_4b.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mux' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'parking_lot_counter_synth' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/new/parking_lot_counter_synth.v:23]
+WARNING: [Synth 8-7137] Register count_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/new/pwm_4b.v:41]
+WARNING: [Synth 8-7137] Register pwm_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/sources_1/imports/new/pwm_4b.v:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.305 ; gain = 497.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.305 ; gain = 497.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.305 ; gain = 497.094
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1294.305 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/parking_lot_counter_synth_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/parking_lot_counter_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1384.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1384.715 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.srcs/utils_1/imports/synth_1/dual_edge_detector_synth.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'parking_lot_counter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    open |                          0000001 |                              000
+                  exit_b |                          0000010 |                              100
+                 exit_ab |                          0000100 |                              101
+                  exit_a |                          0001000 |                              110
+                 enter_a |                          0010000 |                              001
+                enter_ab |                          0100000 |                              010
+                 enter_b |                          1000000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'one-hot' in module 'parking_lot_counter'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 9     
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 15    
+	   7 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design parking_lot_counter_synth has port dp driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     3|
+|4     |LUT2   |     3|
+|5     |LUT3   |     4|
+|6     |LUT4   |     6|
+|7     |LUT5   |     4|
+|8     |LUT6   |    11|
+|9     |FDCE   |    33|
+|10    |FDPE   |     1|
+|11    |IBUF   |     4|
+|12    |OBUF   |    12|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1384.715 ; gain = 497.094
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1384.715 ; gain = 587.504
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1384.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1384.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 4743dd83
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 72 Warnings, 69 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1384.715 ; gain = 966.066
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/FPGA_Prototyping_CH5/FPGA_Prototyping_CH5.runs/synth_1/parking_lot_counter_synth.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parking_lot_counter_synth_utilization_synth.rpt -pb parking_lot_counter_synth_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 14 21:53:31 2022...
