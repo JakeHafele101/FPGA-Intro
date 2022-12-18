@@ -1,69 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671238564">
-  <File Type="ROUTE-PWR" Name="BCD_to_binary_synth_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="BCD_to_binary_synth.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="BCD_to_binary_synth_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="BCD_to_binary_synth_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="BCD_to_binary_synth.msk"/>
-  <File Type="ROUTE-CLK" Name="BCD_to_binary_synth_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="BCD_to_binary_synth.vdi"/>
-  <File Type="BG-BIT" Name="BCD_to_binary_synth.bit"/>
-  <File Type="BG-DRC" Name="BCD_to_binary_synth.drc"/>
-  <File Type="BG-BGN" Name="BCD_to_binary_synth.bgn"/>
-  <File Type="BG-BIN" Name="BCD_to_binary_synth.bin"/>
-  <File Type="BITSTR-RBT" Name="BCD_to_binary_synth.rbt"/>
-  <File Type="BITSTR-NKY" Name="BCD_to_binary_synth.nky"/>
-  <File Type="BITSTR-BMM" Name="BCD_to_binary_synth_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="BCD_to_binary_synth.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="BCD_to_binary_synth_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-SYSDEF" Name="BCD_to_binary_synth.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671402966">
+  <File Type="ROUTE-PWR" Name="fibb_synth_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="fibb_synth.tcl"/>
+  <File Type="BITSTR-MMI" Name="fibb_synth.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="fibb_synth_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="fibb_synth_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="fibb_synth_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="fibb_synth_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="fibb_synth_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="fibb_synth_opt.dcp"/>
+  <File Type="OPT-DRC" Name="fibb_synth_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="fibb_synth.hwdef"/>
+  <File Type="PWROPT-DCP" Name="fibb_synth_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="fibb_synth_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="fibb_synth_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="fibb_synth_placed.dcp"/>
+  <File Type="PLACE-IO" Name="fibb_synth_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="fibb_synth_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="fibb_synth_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="fibb_synth_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="fibb_synth_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="fibb_synth_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="fibb_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="fibb_synth.bin"/>
+  <File Type="PLACE-TIMING" Name="fibb_synth_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="fibb_synth_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="fibb_synth.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="fibb_synth_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="fibb_synth_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="fibb_synth_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="fibb_synth.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="fibb_synth_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="fibb_synth_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="fibb_synth_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="fibb_synth_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="fibb_synth_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="fibb_synth_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="fibb_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="fibb_synth_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fibb_synth_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fibb_synth_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="fibb_synth_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="fibb_synth_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="fibb_synth_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="fibb_synth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="fibb_synth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="fibb_synth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="fibb_synth_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="fibb_synth_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="fibb_synth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="fibb_synth_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="fibb_synth_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fibb_synth_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fibb_synth_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fibb_synth_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fibb_synth_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fibb_synth_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="fibb_synth_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="fibb_synth.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="fibb_synth_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="fibb_synth_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="fibb_synth.nky"/>
+  <File Type="BITSTR-BMM" Name="fibb_synth_bd.bmm"/>
+  <File Type="PDI-FILE" Name="fibb_synth.pdi"/>
+  <File Type="RCFI_FILE" Name="fibb_synth.rcfi"/>
+  <File Type="CFI_FILE" Name="fibb_synth.cfi"/>
+  <File Type="RNPI_FILE" Name="fibb_synth.rnpi"/>
+  <File Type="NPI_FILE" Name="fibb_synth.npi"/>
+  <File Type="RBD_FILE" Name="fibb_synth.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="BCD_to_binary_synth.ltx"/>
+  <File Type="BITSTR-LTX" Name="fibb_synth.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="fibb_synth.sysdef"/>
+  <File Type="BG-BGN" Name="fibb_synth.bgn"/>
+  <File Type="BG-DRC" Name="fibb_synth.drc"/>
+  <File Type="RDI-RDI" Name="fibb_synth.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="BCD_to_binary_synth_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="BCD_to_binary_synth.hwdef"/>
-  <File Type="PLACE-IO" Name="BCD_to_binary_synth_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="BCD_to_binary_synth_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="BCD_to_binary_synth_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="BCD_to_binary_synth_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="BCD_to_binary_synth_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="BCD_to_binary_synth_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="BCD_to_binary_synth_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="BCD_to_binary_synth_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="BCD_to_binary_synth_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="BCD_to_binary_synth_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="BCD_to_binary_synth_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="BCD_to_binary_synth_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="BCD_to_binary_synth_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="BCD_to_binary_synth_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="BCD_to_binary_synth_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="BCD_to_binary_synth_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="BCD_to_binary_synth_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="BCD_to_binary_synth_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="BCD_to_binary_synth_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="BCD_to_binary_synth_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="BCD_to_binary_synth_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="BCD_to_binary_synth_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="BCD_to_binary_synth_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="BCD_to_binary_synth_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="BCD_to_binary_synth_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="BCD_to_binary_synth_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="BCD_to_binary_synth_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="BCD_to_binary_synth_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="BCD_to_binary_synth_methodology_drc_routed.rpx"/>
-  <File Type="PDI-FILE" Name="BCD_to_binary_synth.pdi"/>
-  <File Type="RCFI_FILE" Name="BCD_to_binary_synth.rcfi"/>
-  <File Type="CFI_FILE" Name="BCD_to_binary_synth.cfi"/>
-  <File Type="RNPI_FILE" Name="BCD_to_binary_synth.rnpi"/>
-  <File Type="NPI_FILE" Name="BCD_to_binary_synth.npi"/>
-  <File Type="RBD_FILE" Name="BCD_to_binary_synth.rbd"/>
-  <File Type="ROUTE-RQS" Name="BCD_to_binary_synth_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="BCD_to_binary_synth_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="fibb_synth_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="fibb_synth_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/BCD_to_binary.v">
+    <File Path="$PSRCDIR/sources_1/new/fibb_combined.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -97,8 +115,40 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/fibb_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_to_binary.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/binary_to_BCD.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fibonacci.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/BCD_to_binary_synth.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -152,7 +202,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="BCD_to_binary_synth"/>
+      <Option Name="TopModule" Val="fibb_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -196,6 +246,5 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

@@ -23,9 +23,9 @@
 module binary_to_BCD(
     input clk, reset,
     input start,
-    input [6:0] bin,
+    input [13:0] bin,
     output reg ready, done_tick,
-    output [3:0] bcd1, bcd0
+    output [3:0] bcd3, bcd2, bcd1, bcd0
     );
     
     //state declarations
@@ -35,11 +35,11 @@ module binary_to_BCD(
     
     //signal declaration
     reg [1:0] state_reg, state_next;
-    reg [6:0] bin_reg, bin_next;
-    reg [2:0] n_reg, n_next;
-    reg [3:0] bcd1_reg, bcd0_reg;
-    reg [3:0] bcd1_next, bcd0_next;
-    wire [3:0] bcd1_temp, bcd0_temp;
+    reg [13:0] bin_reg, bin_next;
+    reg [3:0] n_reg, n_next;
+    reg [3:0] bcd3_reg, bcd2_reg, bcd1_reg, bcd0_reg;
+    reg [3:0] bcd3_next, bcd2_next, bcd1_next, bcd0_next;
+    wire [3:0] bcd3_temp, bcd2_temp, bcd1_temp, bcd0_temp;
     
     //FSMD state and data registers
     always @(posedge clk, posedge reset)
@@ -48,6 +48,8 @@ module binary_to_BCD(
                 state_reg <= idle;
                 bin_reg <= 0;
                 n_reg <= 0;
+                bcd3_reg <= 0;
+                bcd2_reg <= 0;
                 bcd1_reg <= 0;
                 bcd0_reg <= 0;
             end
@@ -56,6 +58,8 @@ module binary_to_BCD(
                 state_reg <= state_next;
                 bin_reg <= bin_next;
                 n_reg <= n_next;
+                bcd3_reg <= bcd3_next;
+                bcd2_reg <= bcd2_next;
                 bcd1_reg <= bcd1_next;
                 bcd0_reg <= bcd0_next;
             end
@@ -68,6 +72,8 @@ module binary_to_BCD(
         ready = 1'b0;
         done_tick = 1'b0;
         bin_next = bin_reg;
+        bcd3_next = bcd3_reg;
+        bcd2_next = bcd2_reg;
         bcd1_next = bcd1_reg;
         bcd0_next = bcd0_reg;
         n_next = n_reg;
@@ -80,8 +86,10 @@ module binary_to_BCD(
                         begin
                             state_next = op;
                             bcd0_next = 0; 
-                            bcd1_next = 0; 
-                            n_next = 3'b111;  //index to decrement in op state
+                            bcd1_next = 0;
+                            bcd2_next = 0; 
+                            bcd3_next = 0; 
+                            n_next = 4'b1110;  //index to decrement in op state
                             bin_next = bin;     //binary reg to shift into
                         end
                 end
@@ -89,8 +97,10 @@ module binary_to_BCD(
                 begin
                 bin_next = bin_reg << 1;
                 
-                bcd0_next = {bcd0_temp[2:0], bin_reg[6]};
+                bcd0_next = {bcd0_temp[2:0], bin_reg[13]};
                 bcd1_next = {bcd1_temp[2:0], bcd0_temp[3]};
+                bcd2_next = {bcd2_temp[2:0], bcd1_temp[3]};
+                bcd3_next = {bcd3_temp[2:0], bcd2_temp[3]};
                 
                 n_next = n_next - 1;
                 if(n_next == 0)
@@ -109,9 +119,13 @@ module binary_to_BCD(
     //data path function units
     assign bcd0_temp = (bcd0_reg > 4) ? bcd0_reg + 3 : bcd0_reg;
     assign bcd1_temp = (bcd1_reg > 4) ? bcd1_reg + 3 : bcd1_reg;
+    assign bcd2_temp = (bcd2_reg > 4) ? bcd2_reg + 3 : bcd2_reg;
+    assign bcd3_temp = (bcd3_reg > 4) ? bcd3_reg + 3 : bcd3_reg;
     
     //output
     assign bcd0 = bcd0_reg;
     assign bcd1 = bcd1_reg;
+    assign bcd2 = bcd2_reg;
+    assign bcd3 = bcd3_reg;
     
 endmodule

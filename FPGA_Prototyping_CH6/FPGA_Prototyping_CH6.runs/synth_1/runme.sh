@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log BCD_to_binary_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCD_to_binary_synth.tcl
+EAStep vivado -log fibb_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fibb_synth.tcl

@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log BCD_to_binary_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source BCD_to_binary_synth.tcl -notrace
+EAStep vivado -log fibb_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source fibb_synth.tcl -notrace
 
 
