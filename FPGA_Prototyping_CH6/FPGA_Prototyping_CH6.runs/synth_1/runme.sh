@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log reaction_timer_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reaction_timer_synth.tcl
+EAStep vivado -log babbage_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source babbage_synth.tcl

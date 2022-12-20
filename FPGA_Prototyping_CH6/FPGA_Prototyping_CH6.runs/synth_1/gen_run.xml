@@ -1,40 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671523754" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dual_edge_detector_synth.dcp">
-  <File Type="PA-TCL" Name="reaction_timer_synth.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="reaction_timer_synth_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="reaction_timer_synth_reports.tcl"/>
-  <File Type="RDS-RDS" Name="reaction_timer_synth.vds"/>
-  <File Type="RDS-UTIL" Name="reaction_timer_synth_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="reaction_timer_synth_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="reaction_timer_synth.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="reaction_timer_synth_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="reaction_timer_synth_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671573961" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dual_edge_detector_synth.dcp">
+  <File Type="PA-TCL" Name="babbage_synth.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="babbage_synth_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="babbage_synth_reports.tcl"/>
+  <File Type="RDS-RDS" Name="babbage_synth.vds"/>
+  <File Type="RDS-UTIL" Name="babbage_synth_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="babbage_synth_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="babbage_synth.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="babbage_synth_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="babbage_synth_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/reaction_timer.v">
+    <File Path="$PSRCDIR/sources_1/new/babbage.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/seven_seg_mux_reaction.v">
+    <File Path="$PSRCDIR/sources_1/new/binary_to_BCD.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/reaction_timer_synth.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/fibb_combined.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -42,7 +27,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/pwm_4b.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/pwm_4b.v"/>
         <Attr Name="ImportTime" Val="1670791627"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -52,7 +36,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v"/>
         <Attr Name="ImportTime" Val="1669999231"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -62,9 +45,47 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v"/>
         <Attr Name="ImportTime" Val="1670791627"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/babbage_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/reaction_timer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_seg_mux_reaction.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/reaction_timer_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fibb_combined.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -79,14 +100,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/BCD_to_binary.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/binary_to_BCD.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -146,19 +159,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/clock_divider.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/clock_divider.v"/>
-        <Attr Name="ImportTime" Val="1670874278"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="reaction_timer_synth"/>
+      <Option Name="TopModule" Val="babbage_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
