@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FPGA_Prototyping_CH4.srcs/sources_1/new/stopwatch.v" \
+"../../../../FPGA_Prototyping_CH4.srcs/sim_1/new/stopwatch_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

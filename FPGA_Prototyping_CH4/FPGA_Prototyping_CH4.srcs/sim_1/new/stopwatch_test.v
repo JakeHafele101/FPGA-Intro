@@ -29,7 +29,7 @@ module stopwatch_test(
     reg clk, go, clr;
     wire [3:0] d2, d1, d0;
     
-    stopwatch #(.DVSR(1)) watch(.clk(clk), .go(go), .clr(clr), .d2(d2), .d1(d1), .d0(d0));
+    stopwatch #(.DVSR(2)) watch(.clk(clk), .go(go), .clr(clr), .d2(d2), .d1(d1), .d0(d0));
     
     always begin
         clk = 1'b1;

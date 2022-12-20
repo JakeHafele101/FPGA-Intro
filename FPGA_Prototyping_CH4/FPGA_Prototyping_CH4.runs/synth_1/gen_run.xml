@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1670874340" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/stopwatch_synth.dcp">
   <File Type="PA-TCL" Name="stack_synth.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="stack_synth_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="stack_synth_reports.tcl"/>
   <File Type="RDS-RDS" Name="stack_synth.vds"/>
   <File Type="RDS-UTIL" Name="stack_synth_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="stack_synth_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="stack_synth.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="stack_synth_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="stack_synth_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/clock_divider.v">
