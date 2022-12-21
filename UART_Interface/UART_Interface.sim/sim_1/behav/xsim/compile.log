@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module baud_rate_generator
+WARNING: [VRFC 10-3380] identifier 'N' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator.v:25]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+WARNING: [VRFC 10-3380] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx.v:28]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sim_1/new/uart_rx_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx_test
+WARNING: [VRFC 10-8373] loop statement with empty body is not permitted in this mode of Verilog [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sim_1/new/uart_rx_test.v:95]
