@@ -105,7 +105,7 @@ module uart_tx(
                                     s_s_next = 0; //reset tick counter to 0
                                     s_b_next = s_b_reg >> 1; //shift transmit bits right 1 since LSB received first
                                     if (s_n_reg == DBIT - 1) //if read last data bit
-                                        s_state_reg = stop;
+                                        s_state_next = stop;
                                     else
                                         s_n_next = s_n_reg + 1;
                                 end

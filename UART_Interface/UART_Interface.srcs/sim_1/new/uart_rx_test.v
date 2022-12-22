@@ -26,17 +26,21 @@ module uart_rx_test(
     
     parameter T = 2;
     
-    parameter DBIT = 8,      //bits of data in word
-              SB_TICK = 16,  //ticks for stop bit. 16 = 1 bit, 24 for 1.5 bits, 32 for 2 bits
-              DVSR = 1,      //counter for baud rate of 1 (T/BAUD)
-              DVSR_BIT = 4;  //number of bits for DVSR counter for baud rate tick generator
+    parameter DBIT     = 8,  //bits of data in word
+              SB_TICK  = 16, //ticks for stop bit. 16 = 1 bit, 24 for 1.5 bits, 32 for 2 bits
+              DVSR     = 1,  //counter for baud rate of 2 (T/BAUD)
+              DVSR_BIT = 4,  //number of bits for DVSR counter for baud rate tick generator
+              FIFO_W   = 2;  //number of address bits for words in FIFO buffer
               
     
     reg clk, reset;
     reg rx;
+    reg rd_uart;
     
     wire tick, rx_done_tick;
     wire [7:0] rx_data_out;
+    wire rx_empty, rx_full;
+    wire [7:0] rd_data;
     
     
     baud_rate_generator #(.M(DVSR), .N(DVSR_BIT))baud_gen(.i_clk(clk), .i_reset(reset), .o_count(), .o_baud_tick(tick));
@@ -44,8 +48,8 @@ module uart_rx_test(
     uart_rx #(.DBIT(DBIT), .SB_TICK(SB_TICK)) rx_unit(.i_clk(clk), .i_reset(reset), .i_rx(rx), .i_s_tick(tick), 
                                                       .o_rx_done_tick(rx_done_tick), .o_data(rx_data_out));
     
-//    FIFO #(.B(DBIT), .W(FIFO_W)) fifo_rx(.i_clk(i_clk), .i_reset(i_reset), .i_wr(s_rx_done_tick), .i_rd(i_rd_uart), .i_wr_data(s_rx_data_out), 
-//                                         .o_empty(o_rx_empty), .o_full(), .o_rd_data(o_rd_data));
+    FIFO #(.B(DBIT), .W(FIFO_W)) fifo_rx(.i_clk(clk), .i_reset(reset), .i_wr(rx_done_tick), .i_rd(rd_uart), .i_wr_data(rx_data_out), 
+                                         .o_empty(rx_empty), .o_full(rx_full), .o_rd_data(rd_data));
 
     
     always begin
@@ -63,23 +67,25 @@ module uart_rx_test(
     
     initial begin
         rx = 1'b1;
-        repeat(16) @(negedge tick) //rx_empty
+        rd_uart = 1'b0;
+        @(negedge clk); //rx_empty
         
-        receive(8'd5); //0000 0110
-//        read_FIFO(); //5
+        receive(8'd5); //5
+        repeat(16) @(negedge tick);
+        read_FIFO(); //5
         
         //receieve five words. should only take 4 in FIFO buffer
-        receive(8'd10); 
+        receive(8'd0); 
         receive(8'd20);
-        receive(8'd30);
-        receive(8'd40);
-        receive(8'd50);
+        receive(8'd170); //10101010
+        receive(8'd255); //full after 40
+        receive(8'd50); //does not add, full
         
-//        read_FIFO(); //10
-//        read_FIFO(); //20
-//        read_FIFO(); //30
-//        read_FIFO(); //40, empty now
-//        read_FIFO(); //empty
+        read_FIFO(); //10
+        read_FIFO(); //20
+        read_FIFO(); //30
+        read_FIFO(); //40, empty after read
+        read_FIFO(); //empty
         
     end
     
@@ -88,11 +94,11 @@ module uart_rx_test(
         integer i;
         begin
             rx = 1'b1; //idle
-            repeat(16) @(negedge tick)
+            repeat(16) @(negedge tick);
             rx = 1'b0; //start bit
-            repeat(16) @(negedge tick)
+            repeat(16) @(negedge tick);
             
-            for(i = 0; i < DBIT; i = i + 1); //load data bits
+            for(i = 0; i < DBIT; i = i + 1) //load data bits
                 begin
                     rx = data_in[i];
                     repeat(16) @(negedge tick);
@@ -103,13 +109,14 @@ module uart_rx_test(
         end
     endtask
     
-//    task read_FIFO();
-//        begin
-//            rd_uart = 1'b1;
-//            @(negedge clk);
-//            rd_uart = 1'b0;
-//            @(negedge clk);
-//        end
-//    endtask
+    task read_FIFO();
+        begin
+            repeat(1) @(negedge clk);
+            rd_uart = 1'b1;
+            repeat(1) @(negedge clk);
+            rd_uart = 1'b0;
+            repeat(20) @(negedge clk);
+        end
+    endtask
     
 endmodule

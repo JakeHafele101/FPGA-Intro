@@ -24,13 +24,15 @@ module uart_test(
 
     );
     
-    parameter T = 20;
+    parameter T = 2;
     
     parameter DBIT = 8,      //bits of data in word
               SB_TICK = 16,  //ticks for stop bit. 16 = 1 bit, 24 for 1.5 bits, 32 for 2 bits
-              DVSR = 2,     //counter for baud rate of 10 (T/BAUD)
+              DVSR = 1,     //counter for baud rate of 10 (T/BAUD)
               DVSR_BIT = 4,  //number of bits for DVSR counter for baud rate tick generator
               FIFO_W = 2;    //number of address bits in FIFO buffer (4 words)
+              
+    parameter TICK = T;
     
     reg clk, reset;
     reg rd_uart, rx;
@@ -66,21 +68,30 @@ module uart_test(
         wr_data = 8'd0;
         @(negedge clk); //rx_empty
         
-        receive(8'd5);
+        receive(8'd5); //5
         read_FIFO(); //5
         
         //receieve five words. should only take 4 in FIFO buffer
-        receive(8'd10);
-        receive(8'd20);
-        receive(8'd30);
-        receive(8'd40);
-        receive(8'd50);
+        receive(8'd0);   //0000 0000
+        receive(8'd20);  //
+        receive(8'd170); //1010 1010
+        receive(8'd255); //
+        receive(8'd50);  //does not add, full
         
+        //read buffered received words from FIFO RX
         read_FIFO(); //10
         read_FIFO(); //20
         read_FIFO(); //30
-        read_FIFO(); //40, empty now
+        read_FIFO(); //40, empty after read
         read_FIFO(); //empty
+        
+        //send 5 words through FIFO TX to buffer for transmit uart, only 4 send
+        transmit_FIFO('d10); //0000 1010
+        transmit_FIFO('d20); //0001 0100
+        transmit_FIFO('d30); //0001 1110 
+        transmit_FIFO('d40); //0010 1000
+        transmit_FIFO('d50); //full by now, does not enter into buffer since 4 words already in
+        repeat(TICK * 16) @(negedge clk);
         
     end
     
@@ -89,25 +100,41 @@ module uart_test(
         integer i;
         begin
             rx = 1'b1; //idle
-            @(negedge clk)
+            repeat(TICK * 16) @(negedge clk);
             rx = 1'b0; //start bit
-            @(negedge clk)
-            for(i = 0; i < DBIT; i = i + 1); //load data bits
+            repeat(TICK * 16) @(negedge clk);
+            
+            for(i = 0; i < DBIT; i = i + 1) //load data bits
                 begin
                     rx = data_in[i];
-                    @(negedge clk);
+                    repeat(TICK * 16) @(negedge clk);
                 end
+                
             rx = 1'b1; //stop bit
-            @(negedge clk);
+            repeat(TICK * 16) @(negedge clk);
         end
     endtask
     
     task read_FIFO();
         begin
+            repeat(1) @(negedge clk);
             rd_uart = 1'b1;
-            @(negedge clk);
+            repeat(1) @(negedge clk);
             rd_uart = 1'b0;
-            @(negedge clk);
+            repeat(20) @(negedge clk);
+        end
+    endtask
+    
+    //loads receive data word one bit at a time
+    task transmit_FIFO(input [DBIT-1:0] data_in);
+        begin
+            repeat(1) @(negedge clk);
+            wr_data = data_in;
+            repeat(1) @(negedge clk);
+            wr_uart = 1'b1;
+            repeat(1) @(negedge clk);
+            wr_uart = 1'b0;
+            repeat(1) @(negedge clk);
         end
     endtask
     

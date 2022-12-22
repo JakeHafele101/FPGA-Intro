@@ -31,13 +31,13 @@ module FIFO(
     parameter B = 8,  //number of data bits in each word (8 by default)
               W = 4;  //number of address bits (15 words total by default)
     
-    reg [B-1:0] s_array_reg [W-1:0];
+    reg [B-1:0] s_array_reg [2**W-1:0];
     reg [W-1:0] s_wr_ptr_reg, s_wr_ptr_next;
     reg [W-1:0] s_rd_ptr_reg, s_rd_ptr_next;
     reg         s_full_reg, s_full_next, s_empty_reg, s_empty_next;
     
     wire [W-1:0] s_wr_ptr_succ, s_rd_ptr_succ;
-    wire        s_wr_en;
+    wire         s_wr_en;
     
     //register write operation
     always @(posedge i_clk)
@@ -50,7 +50,7 @@ module FIFO(
                 s_wr_ptr_reg <= 0;
                 s_rd_ptr_reg <= 0;
                 s_full_reg  <= 1'b0;
-                s_empty_reg <= 1'b0;
+                s_empty_reg <= 1'b1;
             end
         else
             begin
@@ -101,7 +101,7 @@ module FIFO(
     
     //output assignments
     assign o_empty = s_empty_reg;
-    assign o_full  = s_empty_reg;
+    assign o_full  = s_full_reg;
     assign o_rd_data = s_array_reg[s_rd_ptr_reg];
     
 endmodule
