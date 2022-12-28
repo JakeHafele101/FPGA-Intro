@@ -50,8 +50,7 @@ module uart_synth(
               .o_rd_data(rec_data));
               
     seven_seg_mux segment(.clk(CLK100MHZ), .reset(btnC), .duty_cycle(4'b1000), .hex3(rec_data_inc[7:4]), .hex2(rec_data_inc[3:0]), 
-                          .hex1(rec_data[7:4]), .hex0(rec_data[3:0]),
- .dp(4'b0000), .an_en(4'b1111), .seg_out({dp, seg}), .an_out(an));
+                          .hex1(rec_data[7:4]), .hex0(rec_data[3:0]), .dp(4'b0000), .an_en(4'b1111), .seg_out({dp, seg}), .an_out(an));
     
     assign rec_data_inc = rec_data + 1;
     
