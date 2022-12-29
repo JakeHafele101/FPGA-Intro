@@ -26,9 +26,10 @@ module uart_rx_full_test(
     
     parameter T = 2; //clk period
     
-    parameter DVSR     = 1,  //counter for baud rate of 2 (T/BAUD)
-              DVSR_BIT = 4,  //number of bits for DVSR counter for baud rate tick generator
-              FIFO_W   = 2;  //number of address bits for words in FIFO buffer              
+    parameter DVSR      = 1,  //counter for baud rate of 2 (T/BAUD)
+              DVSR_BIT  = 4,  //number of bits for DVSR counter for baud rate tick generator
+              FIFO_DBIT = 8,  //number of data bits in FIFO buffer
+              FIFO_W    = 2;  //number of address bits for words in FIFO buffer              
     
     //test inputs
     reg clk, reset;
@@ -37,10 +38,10 @@ module uart_rx_full_test(
     reg [1:0] data_num, stop_num, par;
     
     //test interconnects 
-    
-    //test outputs
     wire tick, rx_done_tick;
     wire [7:0] rx_data_out;
+    
+    //test outputs
     wire rx_empty, rx_full;
     wire [7:0] rd_data;
     wire par_err, frm_err, over_err;
@@ -50,9 +51,10 @@ module uart_rx_full_test(
     uart_rx_full rx_unit(.i_clk(clk), .i_reset(reset), .i_rx(rx), .i_s_tick(tick), .i_data_num(data_num), .i_stop_num(stop_num), 
                          .i_par(par), .o_err({frm_err, par_err}), .o_rx_done_tick(rx_done_tick), .o_data(rx_data_out));
     
-    FIFO_full #(.B(DBIT), .W(FIFO_W)) fifo_rx(.i_clk(clk), .i_reset(reset), .i_wr(rx_done_tick), .i_rd(rd_uart), .i_wr_data(rx_data_out), 
-                                         .o_empty(rx_empty), .o_full(rx_full), .o_rd_data(rd_data));
-
+    FIFO_full #(.B(FIFO_DBIT), .W(FIFO_W)) fifo_rx(.i_clk(clk), .i_reset(reset), .i_wr(rx_done_tick), .i_rd(rd_uart), .i_wr_data(rx_data_out), 
+                                                   .o_empty(rx_empty), .o_full(rx_full), .o_rd_data(rd_data));
+    
+    assign over_err = rx_done_tick && rx_full; //data overrun error active if FIFO full and going to write again (when rx done recieving after stop bit)
     
     always begin
         clk = 1'b1;
@@ -67,14 +69,55 @@ module uart_rx_full_test(
         reset = 1'b0;
     end
     
+    //things to test:
+    // different data bits transmitted, different stop bits, parity settings, errors
+    
     initial begin
         rx = 1'b1;
-        data_num = 2'b00;
-        stop_num = 2'b00;
-        par = 2'b00;
+        data_num = 2'b10; //8 data bits received
+        stop_num = 2'b00; //1 stop bit received
+        par = 2'b00;      //no parity bit received
         rd_uart = 1'b0;
         @(negedge clk);
-
+        
+        //<----- Data bit num Testing ----->
+        data_num = 2'b10; //8 data bit received, all bits read
+        repeat(2) @(negedge clk);
+        receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick('d16));
+        read_FIFO();
+        
+//        data_num = 2'b01; //7 data bits recieved, MSB not read
+//        repeat(2) @(negedge clk);
+//        receive(.data_in(8'b10111101), .data_num('d7), .parity(2'b00), .stop_tick('d16));
+//        read_FIFO();
+        
+//        data_num = 2'b00; //6 data bits receieved, 2 MSB's not read
+//        repeat(2) @(negedge clk);
+//        receive(.data_in(8'b11011110), .data_num('d6), .parity(2'b00), .stop_tick('d16));
+//        read_FIFO();
+        
+//        data_num = 2'b11; //8 data bits receieved by default since should not be used
+//        repeat(2) @(negedge clk);
+//        receive(.data_in(8'b01111111), .data_num('d6), .parity(2'b00), .stop_tick('d16));
+//        read_FIFO();
+        
+        //<----- Stop bit num Testing ----->
+        
+        
+        //<----- Parity Testing ----->
+        
+        
+        //<----- Parity error Testing ----->
+        
+        
+        //<----- Frame Error Testing ----->
+        
+        
+        //<----- Data Overrun Error Testing ----->
+        
+        
+        //<----- Mix of everything ----->
+        
         $stop;
     end
     
