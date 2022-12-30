@@ -108,7 +108,7 @@ module uart_rx_full(
                                 if (i_rx == 1) //if 1 received, alternate parity count between even and odd
                                     s_parity_next = ~s_parity_reg;
                                     
-                                if (s_n_reg == s_dbit_num) //if read last data bit
+                                if (s_n_reg == s_dbit_num - 1) //if read last data bit
                                     begin
                                         s_state_next = (i_par == 2'b01 || i_par == 2'b10) ? parity : stop; //if parity bit checked, go to parity state
                                         if(i_data_num == 2'b00) //6 data bits, shift twice right to LSB
@@ -138,7 +138,7 @@ module uart_rx_full(
                             s_s_next = s_s_reg + 1;
                 stop:
                     if(i_s_tick)
-                        if(s_s_reg == (s_stop_num)) //monitors stop bit after 16, 24, or 32 ticks to read in middle
+                        if(s_s_reg == (s_stop_num - 1)) //monitors stop bit after 16, 24, or 32 ticks to read in middle
                             begin
                                 if(~i_rx) //if stop bit not 1, frame error detected (not at end of transmit)
                                     s_err_next = s_err_reg || 2'b10;

@@ -81,28 +81,10 @@ module uart_rx_full_test(
         @(negedge clk);
         
         //<----- Data bit num Testing ----->
-        data_num = 2'b10; //8 data bit received, all bits read
-        repeat(2) @(negedge clk);
-        receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick('d16));
-        read_FIFO();
-        
-//        data_num = 2'b01; //7 data bits recieved, MSB not read
-//        repeat(2) @(negedge clk);
-//        receive(.data_in(8'b10111101), .data_num('d7), .parity(2'b00), .stop_tick('d16));
-//        read_FIFO();
-        
-//        data_num = 2'b00; //6 data bits receieved, 2 MSB's not read
-//        repeat(2) @(negedge clk);
-//        receive(.data_in(8'b11011110), .data_num('d6), .parity(2'b00), .stop_tick('d16));
-//        read_FIFO();
-        
-//        data_num = 2'b11; //8 data bits receieved by default since should not be used
-//        repeat(2) @(negedge clk);
-//        receive(.data_in(8'b01111111), .data_num('d6), .parity(2'b00), .stop_tick('d16));
-//        read_FIFO();
+//        data_num_test();
         
         //<----- Stop bit num Testing ----->
-        
+        stop_num_test();
         
         //<----- Parity Testing ----->
         
@@ -159,6 +141,59 @@ module uart_rx_full_test(
             repeat(1) @(negedge clk);
             rd_uart = 1'b0;
             repeat(2) @(negedge clk);
+        end
+    endtask
+    
+    task data_num_test();
+        begin
+            data_num = 2'b11; //8 data bits receieved by default since should not be used
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick('d16)); //124
+            read_FIFO();
+            
+            data_num = 2'b10; //8 data bit received, all bits read
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick('d16)); //124
+            read_FIFO();
+            
+            data_num = 2'b01; //7 data bits recieved, MSB not read
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b00111101), .data_num('d7), .parity(2'b00), .stop_tick('d16)); //61 
+            read_FIFO();
+            
+            data_num = 2'b00; //6 data bits receieved, 2 MSB's not read
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b00011110), .data_num('d6), .parity(2'b00), .stop_tick('d16)); //30 
+            read_FIFO();
+            
+            data_num = 2'b10; //8 data bits recieved
+        
+        end
+    endtask
+    
+    task stop_num_test();
+        begin
+            stop_num = 2'b11; //2 stop bits recieved by default since 2'b11 not specified (32 ticks and 128ns)
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d32));
+            read_FIFO();
+            
+            stop_num = 2'b10; //2 stop bits recieved (32 ticks and 128ns) 96 measured
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d32)); 
+            read_FIFO();
+            
+            stop_num = 2'b01; //1.5 stop bit recieved (24 ticks and 96 ns) 64 measured
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d24));
+            read_FIFO();
+            
+            stop_num = 2'b00; //1 stop bit recieved (16 ticks and 64 ns) 32 measured
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d16));
+            read_FIFO();
+            
+            stop_num = 2'b00;
         end
     endtask
     
