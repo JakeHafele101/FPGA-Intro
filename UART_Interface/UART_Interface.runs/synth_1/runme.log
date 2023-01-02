@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log uart_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_synth.tcl
+    with args -log uart_full_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_full_synth.tcl
 
 
 
@@ -9,12 +9,12 @@
   **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
-source uart_synth.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 394.039 ; gain = 70.094
+source uart_full_synth.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 394.141 ; gain = 70.945
 Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/utils_1/imports/synth_1/uart_synth.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/utils_1/imports/synth_1/uart_synth.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top uart_synth -part xc7a35tcpg236-1
+Command: synth_design -top uart_full_synth -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
@@ -23,17 +23,14 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 52016
+INFO: [Synth 8-7075] Helper process launched with PID 6000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO.v:26]
-WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO.v:28]
-WARNING: [Synth 8-6901] identifier 'N' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator.v:25]
-WARNING: [Synth 8-6901] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx.v:28]
-WARNING: [Synth 8-6901] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx.v:27]
+WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:26]
+WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:28]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1204.797 ; gain = 409.109
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1204.301 ; gain = 407.805
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'uart_synth' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_full_synth' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_full_synth.v:23]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/debounce.v:23]
 INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/clock_divider.v:23]
 	Parameter DVSR bound to: 2000000 - type: integer 
@@ -42,179 +39,69 @@ INFO: [Synth 8-6157] synthesizing module 'rising_edge_detector_mealy' [C:/Projec
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/rising_edge_detector_mealy.v:47]
 INFO: [Synth 8-6155] done synthesizing module 'rising_edge_detector_mealy' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/rising_edge_detector_mealy.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'debounce' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/debounce.v:23]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:45]
-WARNING: [Synth 8-7071] port 'clk' of module 'rising_edge_detector_mealy' is unconnected for instance 'nolabel_line45' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:45]
-WARNING: [Synth 8-7071] port 'reset' of module 'rising_edge_detector_mealy' is unconnected for instance 'nolabel_line45' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:45]
-WARNING: [Synth 8-7071] port 'level' of module 'rising_edge_detector_mealy' is unconnected for instance 'nolabel_line45' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:45]
-WARNING: [Synth 8-7071] port 'tick' of module 'rising_edge_detector_mealy' is unconnected for instance 'nolabel_line45' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:45]
-WARNING: [Synth 8-7023] instance 'nolabel_line45' of module 'rising_edge_detector_mealy' has 4 connections declared, but only 0 given [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:45]
-INFO: [Synth 8-6157] synthesizing module 'uart' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart.v:23]
-	Parameter DBIT bound to: 8 - type: integer 
-	Parameter SB_TICK bound to: 16 - type: integer 
-	Parameter DVSR bound to: 326 - type: integer 
-	Parameter DVSR_BIT bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_full.v:23]
 	Parameter FIFO_W bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'baud_rate_generator' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator.v:23]
-	Parameter M bound to: 326 - type: integer 
-	Parameter N bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'baud_rate_generator' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx.v:23]
-	Parameter DBIT bound to: 8 - type: integer 
-	Parameter SB_TICK bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx.v:23]
-INFO: [Synth 8-6157] synthesizing module 'FIFO' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO.v:23]
-	Parameter B bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'baud_rate_generator_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator_full.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'baud_rate_generator_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx_full.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FIFO_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:23]
 	Parameter W bound to: 2 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO.v:71]
-INFO: [Synth 8-6155] done synthesizing module 'FIFO' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO.v:23]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx.v:23]
-	Parameter DBIT bound to: 8 - type: integer 
-	Parameter SB_TICK bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_full.v:23]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg_mux' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
 INFO: [Synth 8-6157] synthesizing module 'pwm_4b' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'pwm_4b' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:23]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mux' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'uart_synth' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_synth.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_full_synth' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_full_synth.v:23]
 WARNING: [Synth 8-7137] Register count_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:41]
 WARNING: [Synth 8-7137] Register pwm_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:42]
-WARNING: [Synth 8-7129] Port LED[15] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[14] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[13] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[12] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[11] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[10] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[9] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[8] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[6] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[5] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[4] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[3] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[2] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnR in module uart_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[15] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module uart_full_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1297.684 ; gain = 501.996
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1299.062 ; gain = 502.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1297.684 ; gain = 501.996
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1299.062 ; gain = 502.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1297.684 ; gain = 501.996
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1299.062 ; gain = 502.566
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1297.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1299.062 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
@@ -223,38 +110,38 @@ WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/UART_I
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_synth_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/uart_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_full_synth_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uart_full_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1361.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1361.082 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1365.809 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'rising_edge_detector_mealy'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'debounce'
-INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'uart_rx'
-INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'uart_rx_full'
+INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'uart_tx_full'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -275,57 +162,63 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encod
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                   start |                               01 |                               01
-                    data |                               10 |                               10
-                    stop |                               11 |                               11
+                    idle |                              000 |                              000
+                   start |                              001 |                              001
+                    data |                              010 |                              010
+                  parity |                              011 |                              011
+                    stop |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'uart_rx_full'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                   start |                               01 |                               01
-                    data |                               10 |                               10
-                    stop |                               11 |                               11
+                    idle |                              000 |                              000
+                   start |                              001 |                              001
+                    data |                              010 |                              010
+                  parity |                              011 |                              011
+                    stop |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'uart_tx'
+INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'uart_tx_full'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   12 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
 	   2 Input    8 Bit       Adders := 1     
 	   2 Input    5 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 2     
 	   2 Input    2 Bit       Adders := 4     
 +---Registers : 
-	               12 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
-+---RAMs : 
-	               32 Bit	(4 X 8 bit)          RAMs := 2     
+	                1 Bit    Registers := 8     
 +---Muxes : 
+	   2 Input   13 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
 	   2 Input    5 Bit        Muxes := 3     
-	   4 Input    5 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 5     
 	   4 Input    4 Bit        Muxes := 1     
-	   4 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 10    
-	   4 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 17    
-	   3 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 24    
+	   5 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 11    
+	   5 Input    1 Bit        Muxes := 18    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -342,38 +235,32 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design uart_synth has port dp driven by constant 1
-WARNING: [Synth 8-7129] Port LED[15] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[14] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[13] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[12] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[11] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[10] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[9] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[8] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[6] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[5] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[4] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[3] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[2] in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port btnR in module uart_synth is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (nolabel_line45/FSM_sequential_state_reg_reg[1]) is unused and will be removed from module uart_synth.
-WARNING: [Synth 8-3332] Sequential element (nolabel_line45/FSM_sequential_state_reg_reg[0]) is unused and will be removed from module uart_synth.
+WARNING: [Synth 8-3917] design uart_full_synth has port dp driven by constant 1
+WARNING: [Synth 8-7129] Port LED[10] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[15] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module uart_full_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module uart_full_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+------------------------------+-----------+----------------------+-------------+
-|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
-+------------+------------------------------+-----------+----------------------+-------------+
-|uart_synth  | uart/fifo_rx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
-|uart_synth  | uart/fifo_tx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
-+------------+------------------------------+-----------+----------------------+-------------+
++----------------+------------------------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
++----------------+------------------------------+-----------+----------------------+-------------+
+|uart_full_synth | uart/fifo_rx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
+|uart_full_synth | uart/fifo_tx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
++----------------+------------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -383,25 +270,25 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+------------+------------------------------+-----------+----------------------+-------------+
-|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
-+------------+------------------------------+-----------+----------------------+-------------+
-|uart_synth  | uart/fifo_rx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
-|uart_synth  | uart/fifo_tx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
-+------------+------------------------------+-----------+----------------------+-------------+
++----------------+------------------------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
++----------------+------------------------------+-----------+----------------------+-------------+
+|uart_full_synth | uart/fifo_rx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
+|uart_full_synth | uart/fifo_tx/s_array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
++----------------+------------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -410,7 +297,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -428,37 +315,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -475,46 +362,46 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |    16|
-|3     |LUT1     |     3|
-|4     |LUT2     |    19|
-|5     |LUT3     |    22|
-|6     |LUT4     |    26|
-|7     |LUT5     |    28|
-|8     |LUT6     |    83|
-|9     |MUXF7    |     2|
+|2     |CARRY4   |    23|
+|3     |LUT1     |     4|
+|4     |LUT2     |    25|
+|5     |LUT3     |    61|
+|6     |LUT4     |    43|
+|7     |LUT5     |    51|
+|8     |LUT6     |    50|
+|9     |MUXF7    |     3|
 |10    |RAM32M   |     2|
 |11    |RAM32X1D |     4|
-|12    |FDCE     |   117|
+|12    |FDCE     |   125|
 |13    |FDPE     |     3|
-|14    |IBUF     |     4|
-|15    |OBUF     |    15|
-|16    |OBUFT    |    14|
+|14    |IBUF     |    12|
+|15    |OBUF     |    26|
+|16    |OBUFT    |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1361.082 ; gain = 501.996
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1361.082 ; gain = 565.395
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1365.809 ; gain = 502.566
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1365.809 ; gain = 569.312
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1361.082 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1365.809 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1361.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: 72598e1a
+Synth Design complete, checksum: a6c6ab4b
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 83 Warnings, 36 Critical Warnings and 0 Errors encountered.
+58 Infos, 34 Warnings, 6 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1361.082 ; gain = 942.211
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1365.809 ; gain = 946.809
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.runs/synth_1/uart_synth.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file uart_synth_utilization_synth.rpt -pb uart_synth_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 22 15:37:21 2022...
+INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.runs/synth_1/uart_full_synth.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file uart_full_synth_utilization_synth.rpt -pb uart_full_synth_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  1 21:09:09 2023...

@@ -1,76 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671744993">
-  <File Type="ROUTE-PWR" Name="uart_synth_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="uart_synth.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="uart_synth_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="uart_synth_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="uart_synth.msk"/>
-  <File Type="ROUTE-CLK" Name="uart_synth_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="uart_synth.vdi"/>
-  <File Type="BG-BIT" Name="uart_synth.bit"/>
-  <File Type="BG-DRC" Name="uart_synth.drc"/>
-  <File Type="BG-BGN" Name="uart_synth.bgn"/>
-  <File Type="BG-BIN" Name="uart_synth.bin"/>
-  <File Type="BITSTR-RBT" Name="uart_synth.rbt"/>
-  <File Type="BITSTR-NKY" Name="uart_synth.nky"/>
-  <File Type="BITSTR-BMM" Name="uart_synth_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="uart_synth.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="uart_synth_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-SYSDEF" Name="uart_synth.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1672628898">
+  <File Type="ROUTE-PWR" Name="uart_full_synth_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="uart_full_synth.tcl"/>
+  <File Type="BITSTR-MMI" Name="uart_full_synth.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="uart_full_synth_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="uart_full_synth_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="uart_full_synth_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="uart_full_synth_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="uart_full_synth_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="uart_full_synth_opt.dcp"/>
+  <File Type="OPT-DRC" Name="uart_full_synth_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="uart_full_synth.hwdef"/>
+  <File Type="PWROPT-DCP" Name="uart_full_synth_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="uart_full_synth_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="uart_full_synth_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="uart_full_synth_placed.dcp"/>
+  <File Type="PLACE-IO" Name="uart_full_synth_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="uart_full_synth_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="uart_full_synth_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="uart_full_synth_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="uart_full_synth_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="uart_full_synth_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="uart_full_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="uart_full_synth.bin"/>
+  <File Type="PLACE-TIMING" Name="uart_full_synth_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="uart_full_synth_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="uart_full_synth.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="uart_full_synth_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="uart_full_synth_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="uart_full_synth_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="uart_full_synth.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="uart_full_synth_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="uart_full_synth_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="uart_full_synth_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="uart_full_synth_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="uart_full_synth_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="uart_full_synth_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="uart_full_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="uart_full_synth_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="uart_full_synth_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="uart_full_synth_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="uart_full_synth_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="uart_full_synth_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="uart_full_synth_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="uart_full_synth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="uart_full_synth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="uart_full_synth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="uart_full_synth_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="uart_full_synth_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="uart_full_synth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="uart_full_synth_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="uart_full_synth_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="uart_full_synth_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="uart_full_synth_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="uart_full_synth_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="uart_full_synth_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="uart_full_synth_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="uart_full_synth_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="uart_full_synth.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="uart_full_synth_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="uart_full_synth_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="uart_full_synth.nky"/>
+  <File Type="BITSTR-BMM" Name="uart_full_synth_bd.bmm"/>
+  <File Type="PDI-FILE" Name="uart_full_synth.pdi"/>
+  <File Type="RCFI_FILE" Name="uart_full_synth.rcfi"/>
+  <File Type="CFI_FILE" Name="uart_full_synth.cfi"/>
+  <File Type="RNPI_FILE" Name="uart_full_synth.rnpi"/>
+  <File Type="NPI_FILE" Name="uart_full_synth.npi"/>
+  <File Type="RBD_FILE" Name="uart_full_synth.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="uart_synth.ltx"/>
+  <File Type="BITSTR-LTX" Name="uart_full_synth.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="uart_full_synth.sysdef"/>
+  <File Type="BG-BGN" Name="uart_full_synth.bgn"/>
+  <File Type="BG-DRC" Name="uart_full_synth.drc"/>
+  <File Type="RDI-RDI" Name="uart_full_synth.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="uart_synth_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="uart_synth.hwdef"/>
-  <File Type="PLACE-IO" Name="uart_synth_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="uart_synth_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="uart_synth_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="uart_synth_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="uart_synth_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="uart_synth_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="uart_synth_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="uart_synth_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="uart_synth_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="uart_synth_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="uart_synth_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="uart_synth_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="uart_synth_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="uart_synth_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="uart_synth_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="uart_synth_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="uart_synth_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="uart_synth_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="uart_synth_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="uart_synth_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="uart_synth_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="uart_synth_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="uart_synth_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="uart_synth_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="uart_synth_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="uart_synth_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="uart_synth_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="uart_synth_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="uart_synth_methodology_drc_routed.rpx"/>
-  <File Type="PDI-FILE" Name="uart_synth.pdi"/>
-  <File Type="RCFI_FILE" Name="uart_synth.rcfi"/>
-  <File Type="CFI_FILE" Name="uart_synth.cfi"/>
-  <File Type="RNPI_FILE" Name="uart_synth.rnpi"/>
-  <File Type="NPI_FILE" Name="uart_synth.npi"/>
-  <File Type="RBD_FILE" Name="uart_synth.rbd"/>
-  <File Type="ROUTE-RQS" Name="uart_synth_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="uart_synth_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="uart_full_synth_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="uart_full_synth_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/FIFO.v">
+    <File Path="$PSRCDIR/sources_1/new/FIFO_full.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/baud_rate_generator.v">
+    <File Path="$PSRCDIR/sources_1/new/baud_rate_generator_full.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -131,8 +149,53 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_full.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_rx_full.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_tx_full.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_full_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FIFO.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/baud_rate_generator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/uart.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -140,6 +203,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/uart_rx.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -147,6 +211,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -154,6 +219,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/uart_synth.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -161,7 +227,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="uart_synth"/>
+      <Option Name="TopModule" Val="uart_full_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -203,6 +269,5 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

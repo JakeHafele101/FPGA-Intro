@@ -45,11 +45,11 @@ module uart_rx_full_test(
     wire rx_empty, rx_full;
     wire [7:0] rd_data;
     wire par_err, frm_err, over_err;
-    
+        
     baud_rate_generator #(.M(DVSR), .N(DVSR_BIT))baud_gen(.i_clk(clk), .i_reset(reset), .o_count(), .o_baud_tick(tick));
         
-    uart_rx_full rx_unit(.i_clk(clk), .i_reset(reset), .i_rx(rx), .i_s_tick(tick), .i_data_num(data_num), .i_stop_num(stop_num), 
-                         .i_par(par), .o_err({frm_err, par_err}), .o_rx_done_tick(rx_done_tick), .o_data(rx_data_out));
+    uart_rx_full rx_unit(.i_clk(clk), .i_reset(reset), .i_rx(rx), .i_baud_tick(tick), .i_data_num(data_num), .i_stop_num(stop_num), 
+                         .i_par(par), .o_par_err(par_err), .o_frm_err(frm_err), .o_rx_done_tick(rx_done_tick), .o_data(rx_data_out));
     
     FIFO_full #(.B(FIFO_DBIT), .W(FIFO_W)) fifo_rx(.i_clk(clk), .i_reset(reset), .i_wr(rx_done_tick), .i_rd(rd_uart), .i_wr_data(rx_data_out), 
                                                    .o_empty(rx_empty), .o_full(rx_full), .o_rd_data(rd_data));
@@ -80,25 +80,12 @@ module uart_rx_full_test(
         rd_uart = 1'b0;
         @(negedge clk);
         
-        //<----- Data bit num Testing ----->
 //        data_num_test();
-        
-        //<----- Stop bit num Testing ----->
-        stop_num_test();
-        
-        //<----- Parity Testing ----->
-        
-        
-        //<----- Parity error Testing ----->
-        
-        
-        //<----- Frame Error Testing ----->
-        
-        
-        //<----- Data Overrun Error Testing ----->
-        
-        
-        //<----- Mix of everything ----->
+//        stop_num_test();
+//        parity_test();
+//        frame_error_test();
+//        overrun_error_test();
+        adhoc_test();
         
         $stop;
     end
@@ -148,22 +135,22 @@ module uart_rx_full_test(
         begin
             data_num = 2'b11; //8 data bits receieved by default since should not be used
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick('d16)); //124
+            receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); //124
             read_FIFO();
             
             data_num = 2'b10; //8 data bit received, all bits read
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick('d16)); //124
+            receive(.data_in(8'b01111100), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); //124
             read_FIFO();
             
             data_num = 2'b01; //7 data bits recieved, MSB not read
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b00111101), .data_num('d7), .parity(2'b00), .stop_tick('d16)); //61 
+            receive(.data_in(8'b00111101), .data_num('d7), .parity(2'b00), .stop_tick(6'd16)); //61 
             read_FIFO();
             
             data_num = 2'b00; //6 data bits receieved, 2 MSB's not read
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b00011110), .data_num('d6), .parity(2'b00), .stop_tick('d16)); //30 
+            receive(.data_in(8'b00011110), .data_num('d6), .parity(2'b00), .stop_tick(6'd16)); //30 
             read_FIFO();
             
             data_num = 2'b10; //8 data bits recieved
@@ -175,25 +162,139 @@ module uart_rx_full_test(
         begin
             stop_num = 2'b11; //2 stop bits recieved by default since 2'b11 not specified (32 ticks and 128ns)
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d32));
+            receive(.data_in(8'b00000000), .data_num('d8), .parity(2'b00), .stop_tick(6'd32));
             read_FIFO();
             
             stop_num = 2'b10; //2 stop bits recieved (32 ticks and 128ns) 96 measured
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d32)); 
+            receive(.data_in(8'b00000001), .data_num('d8), .parity(2'b00), .stop_tick(6'd32)); 
             read_FIFO();
             
             stop_num = 2'b01; //1.5 stop bit recieved (24 ticks and 96 ns) 64 measured
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d24));
+            receive(.data_in(8'b00000010), .data_num('d8), .parity(2'b00), .stop_tick(6'd24));
             read_FIFO();
             
             stop_num = 2'b00; //1 stop bit recieved (16 ticks and 64 ns) 32 measured
             repeat(2) @(negedge clk);
-            receive(.data_in(8'b01111111), .data_num('d8), .parity(2'b00), .stop_tick('d16));
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
             read_FIFO();
             
             stop_num = 2'b00;
+        end
+    endtask
+    
+    task parity_test();
+        begin
+            //no parity bit set
+            par = 2'b11; 
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            read_FIFO();
+            
+            par = 2'b00; 
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            read_FIFO();
+            
+            //even parity setting
+            par = 2'b01; //even parity bit (0 when even amount of 1 data bits, 1 otherwise)
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b10), .stop_tick(6'd16)); //parity bit should be 0 since even data bits, no error
+            read_FIFO();
+            
+            receive(.data_in(8'b00000001), .data_num('d8), .parity(2'b11), .stop_tick(6'd16)); //parity bit should be 1 since odd data bits, no error
+            read_FIFO();
+            
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b11), .stop_tick(6'd16)); //parity bit should be 0 since even data bits, parity error set since sent as 1
+            read_FIFO();
+            
+            receive(.data_in(8'b00000001), .data_num('d8), .parity(2'b10), .stop_tick(6'd16)); //parity bit should be 1 since odd data bits, parity error set since sent as 0
+            read_FIFO();
+            
+            //odd parity setting
+            par = 2'b10; //odd parity bit (0 when odd amount of 1 data bits, 1 otherwise)
+            repeat(2) @(negedge clk);
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b11), .stop_tick(6'd16)); //parity bit should be 1 since even data bits, no error
+            read_FIFO();
+            
+            receive(.data_in(8'b00000001), .data_num('d8), .parity(2'b10), .stop_tick(6'd16)); //parity bit should be 0 since odd data bits, no error
+            read_FIFO();
+            
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b10), .stop_tick(6'd16)); //parity bit should be 1 since even data bits, parity error set since sent as 0
+            read_FIFO();
+            
+            receive(.data_in(8'b00000001), .data_num('d8), .parity(2'b11), .stop_tick(6'd16)); //parity bit should be 0 since odd data bits, parity error set since sent as 1
+            read_FIFO();
+            
+            par = 2'b00; 
+        
+        end
+    endtask
+    
+    task frame_error_test();
+        begin
+            
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); //no frame error, reads stop bit as 1
+            read_FIFO();
+            
+            receive(.data_in(8'b00000011), .data_num('d8), .parity(2'b10), .stop_tick(6'd16)); //use parity bit to sim stop bit as 0, frame error triggered
+            read_FIFO();
+            
+        end
+    endtask
+    
+    task overrun_error_test();
+        begin
+            receive(.data_in(8'd0), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            receive(.data_in(8'd1), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            receive(.data_in(8'd2), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            receive(.data_in(8'd3), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            receive(.data_in(8'd4), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); //overrun error when writing when FIFO full
+            
+            read_FIFO();
+            receive(.data_in(8'd5), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+            receive(.data_in(8'd6), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); //overrun error
+            
+            read_FIFO();
+            read_FIFO();
+            read_FIFO();
+            read_FIFO();
+            receive(.data_in(8'd7), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); 
+            receive(.data_in(8'd8), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); 
+            receive(.data_in(8'd9), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); 
+            receive(.data_in(8'd10), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); 
+            receive(.data_in(8'd11), .data_num('d8), .parity(2'b00), .stop_tick(6'd16)); //overrun error
+        end
+    endtask
+    
+    task adhoc_test();
+        begin
+        // 8 data bits, no parity, 16 tick stop
+        data_num = 2'b10; //8 data bits received
+        stop_num = 2'b00; //1 stop bit received
+        par = 2'b00;      //no parity bit received
+        repeat(2) @(negedge clk);
+        receive(.data_in(8'b00000000), .data_num('d8), .parity(2'b00), .stop_tick(6'd16));
+        read_FIFO();
+        
+        //7 data bits, even parity, 24 tick stop
+        data_num = 2'b01; //7 data bits received
+        stop_num = 2'b01; //1.5 stop bit received
+        par = 2'b01;      //even parity
+        repeat(2) @(negedge clk);
+        receive(.data_in(8'b00000001), .data_num('d7), .parity(2'b11), .stop_tick(6'd24));
+        read_FIFO();
+        
+        //6 data bits, odd parity, 32 tick stop
+        data_num = 2'b00; //6 data bits received
+        stop_num = 2'b10; //2 stop bit received
+        par = 2'b10;      //odd parity
+        repeat(2) @(negedge clk);
+        receive(.data_in(8'b00000010), .data_num('d6), .parity(2'b10), .stop_tick(6'd32));
+        read_FIFO();
+        
+        
         end
     endtask
     

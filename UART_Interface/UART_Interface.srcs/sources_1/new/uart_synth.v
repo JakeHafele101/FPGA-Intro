@@ -22,7 +22,7 @@
 
 module uart_synth(
     input CLK100MHZ,
-    input btnL, btnC, btnR,
+    input btnL, btnC,
     input RsRx,
     output RsTx,
     output [15:0] LED, 
@@ -41,9 +41,7 @@ module uart_synth(
     wire [DBIT-1:0] rec_data, rec_data_inc;
               
     debounce dbL(.clk(CLK100MHZ), .reset(btnC), .switch(btnL), .db(), .tick(btnDB));
-        
-    rising_edge_detector_mealy();
-    
+            
     uart #(.DBIT(DBIT), .SB_TICK(SB_TICK), .DVSR(DVSR), .DVSR_BIT(DVSR_BIT), .FIFO_W(FIFO_W))
          uart(.i_clk(CLK100MHZ), .i_reset(btnC), .i_rd_uart(btnDB), .i_wr_uart(btnDB), .i_rx(RsRx), 
               .i_wr_data(rec_data_inc), .o_tx_full(LED[1]), .o_rx_empty(LED[0]), .o_tx(RsTx), 

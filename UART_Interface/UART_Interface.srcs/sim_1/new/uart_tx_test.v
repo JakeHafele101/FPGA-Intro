@@ -71,10 +71,20 @@ module uart_tx_test(
         @(negedge clk); //rx_empty
         
         transmit_FIFO('d10); //0000 1010
+        @(negedge tx_done_tick);
+        
         transmit_FIFO('d20); //0001 0100
+        @(negedge tx_done_tick);
+
         transmit_FIFO('d30); //0001 1110 
+        @(negedge tx_done_tick);
+        
         transmit_FIFO('d40); //0010 1000
+        @(negedge tx_done_tick);
+        
         transmit_FIFO('d50); //full by now, does not enter into buffer since 4 words already in
+        @(negedge tx_done_tick);
+        
         @(posedge tx_empty);
         $stop;
     end

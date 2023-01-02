@@ -38,14 +38,11 @@ module uart_full(
     wire s_tick, s_rx_done_tick, s_tx_done_tick;
     wire s_rx_full, s_tx_empty;
     wire [7:0] s_tx_fifo_out, s_rx_data_out;
-    
-    wire [1:0] s_err_rx;
-    wire s_err_overrun;
-              
+                  
     baud_rate_generator_full baud_gen(.i_clk(i_clk), .i_reset(i_reset), .i_bd_rate(i_bd_rate), .o_count(), .o_baud_tick(s_tick));
     
-    uart_rx_full rx_unit(.i_clk(i_clk), .i_reset(i_reset), .i_rx(i_rx), .i_s_tick(s_tick), .i_data_num(i_data_num), .i_stop_num(i_stop_num), 
-                         .i_par(i_par), .o_err(s_err_rx), .o_rx_done_tick(s_rx_done_tick), .o_data(s_rx_data_out));
+    uart_rx_full rx_unit(.i_clk(i_clk), .i_reset(i_reset), .i_rx(i_rx), .i_baud_tick(s_tick), .i_data_num(i_data_num), .i_stop_num(i_stop_num), 
+                         .i_par(i_par), .o_par_err(o_err[0]), .o_frm_err(o_err[1]), .o_rx_done_tick(s_rx_done_tick), .o_data(s_rx_data_out));
     
     FIFO_full #(.W(FIFO_W)) fifo_rx(.i_clk(i_clk), .i_reset(i_reset), .i_wr(s_rx_done_tick), .i_rd(i_rd_uart), .i_wr_data(s_rx_data_out), 
                                     .o_empty(o_rx_empty), .o_full(s_rx_full), .o_rd_data(o_rd_data));
@@ -53,10 +50,9 @@ module uart_full(
     FIFO_full #(.W(FIFO_W)) fifo_tx(.i_clk(i_clk), .i_reset(i_reset), .i_wr(i_wr_uart), .i_rd(s_tx_done_tick), .i_wr_data(i_wr_data), 
                                     .o_empty(s_tx_empty), .o_full(o_tx_full), .o_rd_data(s_tx_fifo_out));
                                          
-    uart_tx_full tx_unit(.i_clk(i_clk), .i_reset(i_reset), .i_tx_start(~s_tx_empty), .i_s_tick(s_tick), .i_data(s_tx_fifo_out), 
-                         .o_tx_done_tick(s_tx_done_tick), .o_tx(o_tx));
+    uart_tx_full tx_unit(.i_clk(i_clk), .i_reset(i_reset), .i_tx_start(~s_tx_empty), .i_baud_tick(s_tick), .i_data_num(i_data_num), 
+                         .i_stop_num(i_stop_num), .i_par(i_par), .i_data(s_tx_fifo_out), .o_tx_done_tick(s_tx_done_tick), .o_tx(o_tx));
     //output data
-    assign s_err_overrun = s_rx_done_tick && s_rx_full; //if rx FIFO full and writing next received data, overrun error active
-    assign o_err = {s_err_overrun, s_err_rx};
+    assign o_err[2] = s_rx_done_tick && s_rx_full; //data overrun errorl. if rx FIFO full and writing next received data, overrun error active
     
 endmodule

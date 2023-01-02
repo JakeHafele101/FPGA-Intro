@@ -23,11 +23,12 @@
 module uart_rx_full(
     input i_clk, i_reset, 
     input i_rx,                  //receive bit
-    input i_s_tick,              //enable start tick from baud rate generator. samples 16 times per bit
+    input i_baud_tick,           //enable start tick from baud rate generator. samples 16 times per bit
     input [1:0] i_data_num,      //number of data bits: 00 is 6 bits, 01 is 7 bits, 10 is 8 bits
     input [1:0] i_stop_num,      //number of stop bits: 00 is 1 bit, 01 is 1.5 bits, 10 is 2 bits
     input [1:0] i_par,           //specifies parity scheme: 00 is no parity, 01 is even parity, 10 is odd parity
-    output [1:0] o_err,          //error active if bit 1. Bit 0 is parity error, bit 1 is frame error
+    output reg  o_par_err,       //parity error active if 1
+    output reg  o_frm_err,       //frame error active if 1
     output reg  o_rx_done_tick,  //tick when whole word received
     output [7:0] o_data          //output received word
     );
@@ -39,11 +40,10 @@ module uart_rx_full(
                      stop   = 3'b100;
                      
     reg [2:0]      s_state_reg,  s_state_next;  //state register
-    reg [4:0]      s_s_reg,      s_s_next;      //reg for 16 tick samples per bit
+    reg [4:0]      s_s_reg,      s_s_next;      //counter for baud rate ticks (samples every 16 baud ticks, or potentially more for stop bit)
     reg [2:0]      s_n_reg,      s_n_next;      //n keeps track of sampling data bit
     reg [7:0]      s_b_reg,      s_b_next;      //reg to store received data bits, max set by DBIT parameter
     reg            s_parity_reg, s_parity_next; //if 0, even number of ones. if 1, odd number of one bits received
-    reg [1:0]      s_err_reg,    s_err_next; 
     
     wire [3:0] s_dbit_num; //either 6, 7, or 8 data bits
     wire [5:0] s_stop_num; //either 16. 24. or 32 for 1, 1.5, or 2 stop bits
@@ -56,7 +56,6 @@ module uart_rx_full(
                 s_n_reg      <= 0;
                 s_b_reg      <= 0;
                 s_parity_reg <= 0;
-                s_err_reg    <= 0;
             end
         else
             begin
@@ -64,8 +63,7 @@ module uart_rx_full(
                 s_s_reg       <= s_s_next;
                 s_n_reg       <= s_n_next;
                 s_b_reg       <= s_b_next;
-                s_parity_next <= s_parity_reg;
-                s_err_next    <= s_err_reg;
+                s_parity_reg <= s_parity_next;
             end
     
     always @*
@@ -76,8 +74,9 @@ module uart_rx_full(
             s_n_next      = s_n_reg;
             s_b_next      = s_b_reg;
             s_parity_next = s_parity_reg;
-            s_err_next    = s_err_reg;
             
+            o_par_err = 1'b0;
+            o_frm_err = 1'b0;
             o_rx_done_tick = 1'b0;
             
             case (s_state_reg)
@@ -86,10 +85,10 @@ module uart_rx_full(
                         begin
                             s_state_next = start;
                             s_s_next = 0;
-                            s_err_next = 2'b00;   //clears errors on new receieve
+                            s_parity_next = 1'b0;
                         end
                 start:
-                    if(i_s_tick) //samples 16 times per bit
+                    if(i_baud_tick) //samples 16 times per bit
                         if(s_s_reg == 7) //checks against middle sample (7/16) of start bit
                             begin
                                 s_state_next = data;
@@ -99,13 +98,13 @@ module uart_rx_full(
                         else
                             s_s_next = s_s_reg + 1;
                 data:
-                    if(i_s_tick)
+                    if(i_baud_tick)
                         if (s_s_reg == 15) //samples after 15 more ticks since goes from middle of start bit to middle of data bit
                             begin
                                 s_s_next = 0; //reset tick counter to 0
                                 s_b_next = {i_rx, s_b_reg[7:1]}; //shift received bits right since LSB received first
                                 
-                                if (i_rx == 1) //if 1 received, alternate parity count between even and odd
+                                if (i_rx == 1'b1) //if 1 received, alternate parity count between even and odd number of 1's
                                     s_parity_next = ~s_parity_reg;
                                     
                                 if (s_n_reg == s_dbit_num - 1) //if read last data bit
@@ -122,26 +121,26 @@ module uart_rx_full(
                         else
                             s_s_next = s_s_reg + 1;
                 parity:
-                    if(i_s_tick)
+                    if(i_baud_tick)
                         if (s_s_reg == 15) //samples after 15 more ticks since goes from middle of start bit to middle of data bit
                             begin
                                 s_s_next = 0; //reset tick counter to 0
                                 
-                                if((i_par == 2'b01) && (i_rx == s_parity_reg)) //checks for even parity. parity returns 0 if counted 1's is even
-                                    s_err_next = s_err_reg || 2'b01; //set parity error to ACTIVE (1)
-                                else if((i_par == 2'b10) && (i_rx == ~s_parity_reg)) //checks for odd parity. parity returns 0 if counted 1's is odd
-                                    s_err_next = s_err_reg || 2'b01;
+                                if((i_par == 2'b01) && (i_rx == ~s_parity_reg)) //if even parity and counted vs recieved parity differ, error set
+                                    o_par_err = 1'b1; //set parity error to ACTIVE (1)
+                                else if((i_par == 2'b10) && (i_rx == s_parity_reg)) //if odd parity and counted vs recieved parity differ, error set
+                                    o_par_err = 1'b1;
                                     
                                 s_state_next = stop;
                             end
                         else
                             s_s_next = s_s_reg + 1;
                 stop:
-                    if(i_s_tick)
+                    if(i_baud_tick)
                         if(s_s_reg == (s_stop_num - 1)) //monitors stop bit after 16, 24, or 32 ticks to read in middle
                             begin
                                 if(~i_rx) //if stop bit not 1, frame error detected (not at end of transmit)
-                                    s_err_next = s_err_reg || 2'b10;
+                                    o_frm_err = 1'b1;
                                 
                                 s_state_next = idle;
                                 o_rx_done_tick = 1'b1;
@@ -162,6 +161,6 @@ module uart_rx_full(
                                                 32;  //2 stop bit
     
     //output data
-    assign o_err = s_err_reg;
     assign o_data = s_b_reg;
+        
 endmodule

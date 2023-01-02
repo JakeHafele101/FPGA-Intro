@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log uart_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_synth.tcl
+EAStep vivado -log uart_full_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_full_synth.tcl
