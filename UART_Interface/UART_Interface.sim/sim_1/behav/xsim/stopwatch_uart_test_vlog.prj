@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../UART_Interface.srcs/sources_1/new/FIFO_full.v" \
+"../../../../UART_Interface.srcs/sources_1/new/enhanced_stopwatch.v" \
+"../../../../UART_Interface.srcs/sources_1/new/enhanced_stopwatch_receive_interface.v" \
+"../../../../UART_Interface.srcs/sources_1/new/enhanced_stopwatch_transmit_interface.v" \
+"../../../../UART_Interface.srcs/sim_1/new/stopwatch_uart_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

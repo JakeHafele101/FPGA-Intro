@@ -1,0 +1,7 @@
+Running: xsim.dir/stopwatch_transmit_test_behav/xsimk.exe -simmode gui -wdb stopwatch_transmit_test_behav.wdb -simrunnum 0 -socket 57955
+Design successfully loaded
+Design Loading Memory Usage: 7696 KB (Peak: 7696 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 8304 KB (Peak: 8304 KB)
+Simulation CPU Usage: 31 ms

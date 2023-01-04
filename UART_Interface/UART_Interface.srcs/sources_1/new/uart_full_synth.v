@@ -43,12 +43,9 @@ module uart_full_synth(
     debounce dbL(.clk(CLK100MHZ), .reset(btnC), .switch(btnL), .db(), .tick(btnDB));
         
     
-    uart_full #(.FIFO_W(FIFO_W))
- uart(.i_clk(CLK100MHZ), .i_reset(btnC), .i_bd_rate(sw[1:0]), .i_data_num(sw[3:2]),.i_stop_num(sw[5:4]), .i_par(sw[7:6]),
-                                      .i_rd_uart(btnDB), .i_wr_uart(btnDB), .i_rx(RsRx), 
-.i_wr_data(rec_data_inc), .o_err(LED[15:13]), 
-                                      .o_tx_full(LED[12]), .o_rx_empty(LED[11]), .o_tx(RsTx), 
-.o_rd_data(rec_data));
+    uart_full #(.FIFO_W(FIFO_W)) uart(.i_clk(CLK100MHZ), .i_reset(btnC), .i_bd_rate(sw[1:0]), .i_data_num(sw[3:2]),.i_stop_num(sw[5:4]), .i_par(sw[7:6]),
+                                      .i_rd_uart(btnDB), .i_wr_uart(btnDB), .i_rx(RsRx), .i_wr_data(rec_data_inc), .o_err(LED[15:13]), 
+                                      .o_tx_full(LED[12]), .o_rx_empty(LED[11]), .o_tx(RsTx), .o_rd_data(rec_data));
               
     seven_seg_mux segment(.clk(CLK100MHZ), .reset(btnC), .duty_cycle(4'b1000), .hex3(rec_data_inc[7:4]), .hex2(rec_data_inc[3:0]), 
                           .hex1(rec_data[7:4]), .hex0(rec_data[3:0]), .dp(4'b0000), .an_en(4'b1111), .seg_out({dp, seg}), .an_out(an));

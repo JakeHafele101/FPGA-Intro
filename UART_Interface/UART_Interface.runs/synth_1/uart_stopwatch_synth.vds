@@ -1,0 +1,412 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Jan  3 18:27:08 2023
+# Process ID: 10932
+# Current directory: C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.runs/synth_1
+# Command line: vivado.exe -log uart_stopwatch_synth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_stopwatch_synth.tcl
+# Log file: C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.runs/synth_1/uart_stopwatch_synth.vds
+# Journal file: C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.runs/synth_1\vivado.jou
+# Running On: DESKTOP-SA1D2UB, OS: Windows, CPU Frequency: 3991 MHz, CPU Physical cores: 4, Host memory: 17058 MB
+#-----------------------------------------------------------
+source uart_stopwatch_synth.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 395.109 ; gain = 61.762
+Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/utils_1/imports/synth_1/uart_synth.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/utils_1/imports/synth_1/uart_synth.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top uart_stopwatch_synth -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21932
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:26]
+WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1205.535 ; gain = 408.336
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'uart_stopwatch_synth' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_stopwatch_synth.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_full.v:23]
+	Parameter FIFO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'baud_rate_generator_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator_full.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'baud_rate_generator_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx_full.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FIFO_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:23]
+	Parameter W bound to: 8 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_full' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_full' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_full.v:23]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch_receive_interface' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch_receive_interface.v:23]
+WARNING: [Synth 8-6090] variable 's_up_next' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch_receive_interface.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_stopwatch_receive_interface' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch_receive_interface.v:23]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_stopwatch' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch.v:23]
+INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch_transmit_interface' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch_transmit_interface.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch_transmit_interface.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'enhanced_stopwatch_transmit_interface' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/enhanced_stopwatch_transmit_interface.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_mux' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pwm_4b' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_4b' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mux' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_stopwatch_synth' (0#1) [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/new/uart_stopwatch_synth.v:23]
+WARNING: [Synth 8-7137] Register count_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:41]
+WARNING: [Synth 8-7137] Register pwm_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/sources_1/imports/new/pwm_4b.v:42]
+WARNING: [Synth 8-7129] Port LED[12] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[15] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module uart_stopwatch_synth is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1301.516 ; gain = 504.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1301.516 ; gain = 504.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1301.516 ; gain = 504.316
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1301.516 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_stopwatch_synth_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uart_stopwatch_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.957 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1365.957 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'uart_rx_full'
+INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'uart_tx_full'
+INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'enhanced_stopwatch_transmit_interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                   start |                              001 |                              001
+                    data |                              010 |                              010
+                  parity |                              011 |                              011
+                    stop |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'uart_rx_full'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                   start |                              001 |                              001
+                    data |                              010 |                              010
+                  parity |                              011 |                              011
+                    stop |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'uart_tx_full'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                 newline |                              001 |                              001
+                      d3 |                              010 |                              010
+                period_1 |                              011 |                              011
+                      d2 |                              100 |                              100
+                      d1 |                              101 |                              101
+                period_2 |                              110 |                              110
+                      d0 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'sequential' in module 'enhanced_stopwatch_transmit_interface'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 3     
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 8     
+	   3 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 5     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 23    
+	   5 Input    1 Bit        Muxes := 20    
+	   4 Input    1 Bit        Muxes := 10    
+	   8 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port LED[12] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[15] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module uart_stopwatch_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module uart_stopwatch_synth is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------+------------------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object                   | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+------------------------------+-----------+----------------------+--------------+
+|uart_stopwatch_synth | uart/fifo_tx/s_array_reg_reg | Implied   | 256 x 6              | RAM64M x 12  | 
+|uart_stopwatch_synth | uart/fifo_rx/s_array_reg_reg | Implied   | 256 x 8              | RAM64M x 12  | 
++---------------------+------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++---------------------+------------------------------+-----------+----------------------+--------------+
+|Module Name          | RTL Object                   | Inference | Size (Depth x Width) | Primitives   | 
++---------------------+------------------------------+-----------+----------------------+--------------+
+|uart_stopwatch_synth | uart/fifo_tx/s_array_reg_reg | Implied   | 256 x 6              | RAM64M x 12  | 
+|uart_stopwatch_synth | uart/fifo_rx/s_array_reg_reg | Implied   | 256 x 8              | RAM64M x 12  | 
++---------------------+------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    23|
+|3     |LUT1   |     9|
+|4     |LUT2   |    34|
+|5     |LUT3   |    43|
+|6     |LUT4   |    66|
+|7     |LUT5   |    63|
+|8     |LUT6   |   115|
+|9     |MUXF7  |     4|
+|10    |RAM64M |    20|
+|11    |FDCE   |   135|
+|12    |FDPE   |     5|
+|13    |FDRE   |    48|
+|14    |IBUF   |    11|
+|15    |OBUF   |    24|
+|16    |OBUFT  |     5|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1365.957 ; gain = 568.758
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 1365.957 ; gain = 504.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1365.957 ; gain = 568.758
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1365.957 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1369.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 20 instances
+
+Synth Design complete, checksum: f7ea1dc
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 40 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1369.164 ; gain = 949.180
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/UART_Interface/UART_Interface.runs/synth_1/uart_stopwatch_synth.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file uart_stopwatch_synth_utilization_synth.rpt -pb uart_stopwatch_synth_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  3 18:28:11 2023...
