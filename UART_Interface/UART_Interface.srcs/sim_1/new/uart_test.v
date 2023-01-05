@@ -28,7 +28,7 @@ module uart_test(
     
     parameter DBIT = 8,      //bits of data in word
               SB_TICK = 16,  //ticks for stop bit. 16 = 1 bit, 24 for 1.5 bits, 32 for 2 bits
-              DVSR = 1,     //counter for baud rate of 10 (T/BAUD)
+              DVSR = 1,     //counter for baud rate of 2 (T/BAUD)
               DVSR_BIT = 4,  //number of bits for DVSR counter for baud rate tick generator
               FIFO_W = 2;    //number of address bits in FIFO buffer (4 words)
               
