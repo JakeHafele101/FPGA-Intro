@@ -1,2 +1,2 @@
 Time resolution is 1 ps
-$stop called at time : 7800 ns : File "C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sim_1/new/kb_code_test.v" Line 98
+$stop called at time : 9607 ns : File "C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sim_1/new/kb_code_test.v" Line 102

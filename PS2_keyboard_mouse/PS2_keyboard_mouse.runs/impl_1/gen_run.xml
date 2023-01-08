@@ -17,6 +17,7 @@
   <File Type="BITSTR-MMI" Name="kb_monitor_synth.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="kb_monitor_synth_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="kb_monitor_synth.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="kb_monitor_synth_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="kb_monitor_synth.ltx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
@@ -25,8 +26,11 @@
   <File Type="PLACE-IO" Name="kb_monitor_synth_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="kb_monitor_synth_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="kb_monitor_synth_utilization_placed.pb"/>
+  <File Type="ROUTE-RQS" Name="kb_monitor_synth_routed.rqs"/>
   <File Type="PLACE-CTRL" Name="kb_monitor_synth_control_sets_placed.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="kb_monitor_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-DRC" Name="kb_monitor_synth_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="kb_monitor_synth_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="kb_monitor_synth_power_routed.rpx"/>
@@ -48,7 +52,6 @@
   <File Type="PHYSOPT-DCP" Name="kb_monitor_synth_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="kb_monitor_synth_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="kb_monitor_synth_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="kb_monitor_synth_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="kb_monitor_synth_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="kb_monitor_synth_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="kb_monitor_synth.pdi"/>
@@ -57,10 +60,7 @@
   <File Type="RNPI_FILE" Name="kb_monitor_synth.rnpi"/>
   <File Type="NPI_FILE" Name="kb_monitor_synth.npi"/>
   <File Type="RBD_FILE" Name="kb_monitor_synth.rbd"/>
-  <File Type="ROUTE-RQS" Name="kb_monitor_synth_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="kb_monitor_synth_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/FIFO.v">

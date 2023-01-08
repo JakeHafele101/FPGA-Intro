@@ -94,6 +94,7 @@ module kb_code_test(
         
         receive(8'h32);  // B
         receive(8'h32);  // B, never transmitted with no brk code following
+
         
         $stop;
     end
