@@ -77,9 +77,9 @@ module key_to_ascii(
             8'h49: o_ascii_code = 8'h2e; // .
             8'h4a: o_ascii_code = 8'h2f; // /
             
-            8'h49: o_ascii_code = 8'h20; // (space)
-            8'h49: o_ascii_code = 8'h0d; // (enter, cr)
-            8'h49: o_ascii_code = 8'h08; // (backspace)
+            8'h29: o_ascii_code = 8'h20; // (space)
+            8'h5a: o_ascii_code = 8'h0d; // (enter, cr)
+            8'h66: o_ascii_code = 8'h08; // (backspace)
             default: o_ascii_code = 8'h2a; // *
         endcase
     

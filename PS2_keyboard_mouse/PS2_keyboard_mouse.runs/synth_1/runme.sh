@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log kb_monitor_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source kb_monitor_synth.tcl
+EAStep vivado -log key_code_shift_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source key_code_shift_synth.tcl

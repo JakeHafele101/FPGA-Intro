@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1672882420" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/kb_monitor_synth.dcp">
-  <File Type="PA-TCL" Name="kb_monitor_synth.tcl"/>
-  <File Type="REPORTS-TCL" Name="kb_monitor_synth_reports.tcl"/>
-  <File Type="RDS-RDS" Name="kb_monitor_synth.vds"/>
-  <File Type="RDS-UTIL" Name="kb_monitor_synth_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="kb_monitor_synth_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="kb_monitor_synth.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673410994" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/kb_monitor_synth.dcp">
+  <File Type="PA-TCL" Name="key_code_shift_synth.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="key_code_shift_synth_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="key_code_shift_synth_reports.tcl"/>
+  <File Type="RDS-RDS" Name="key_code_shift_synth.vds"/>
+  <File Type="RDS-UTIL" Name="key_code_shift_synth_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="key_code_shift_synth_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="key_code_shift_synth.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="key_code_shift_synth_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="key_code_shift_synth_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/FIFO.v">
@@ -26,7 +29,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/kb_monitor.v">
+    <File Path="$PSRCDIR/sources_1/new/kb_code_shift.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/key_to_ascii_shift.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -67,58 +77,64 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/key_code_shift_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/kb_code_hold.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/key_to_ascii.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/kb_code_hold_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/kb_monitor.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/kb_monitor_synth.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/FIFO_full.v">
+    <File Path="$PSRCDIR/sources_1/new/kb_code.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UART_Interface/UART_Interface.srcs/sources_1/new/FIFO_full.v"/>
-        <Attr Name="ImportTime" Val="1672440636"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/baud_rate_generator_full.v">
+    <File Path="$PSRCDIR/sources_1/new/kb_code_synth.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UART_Interface/UART_Interface.srcs/sources_1/new/baud_rate_generator_full.v"/>
-        <Attr Name="ImportTime" Val="1672440636"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/uart_full.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UART_Interface/UART_Interface.srcs/sources_1/new/uart_full.v"/>
-        <Attr Name="ImportTime" Val="1672612560"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/uart_rx_full.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UART_Interface/UART_Interface.srcs/sources_1/new/uart_rx_full.v"/>
-        <Attr Name="ImportTime" Val="1672612055"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/uart_tx_full.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UART_Interface/UART_Interface.srcs/sources_1/new/uart_tx_full.v"/>
-        <Attr Name="ImportTime" Val="1672624486"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -186,7 +202,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="kb_monitor_synth"/>
+      <Option Name="TopModule" Val="key_code_shift_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
