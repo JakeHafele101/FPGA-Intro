@@ -91,7 +91,7 @@ read_verilog -library xil_defaultlib {
   C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/baud_rate_generator.v
   C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/kb_code_shift.v
   C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/key_to_ascii_shift.v
-  C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/ps2_rx.v
+  C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/ps2_rx_watchdog.v
   C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/uart.v
   C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/uart_rx.v
   C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/uart_tx.v

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue Jan 10 22:25:16 2023
+| Date             : Thu Jan 12 02:21:50 2023
 | Host             : DESKTOP-SA1D2UB running 64-bit major release  (build 9200)
 | Command          : report_power -file key_code_shift_synth_power_routed.rpt -pb key_code_shift_synth_power_summary_routed.pb -rpx key_code_shift_synth_power_routed.rpx
 | Design           : key_code_shift_synth
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.073        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
+| Dynamic (W)              | 0.002        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,15 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |      234 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      100 |     20800 |            0.48 |
-|   Register               |    <0.001 |       68 |     41600 |            0.16 |
+| Clocks                   |    <0.001 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |      296 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      120 |     20800 |            0.58 |
+|   CARRY4                 |    <0.001 |        5 |      8150 |            0.06 |
+|   Register               |    <0.001 |       89 |     41600 |            0.21 |
 |   LUT as Distributed RAM |    <0.001 |       14 |      9600 |            0.15 |
 |   F7/F8 Muxes            |    <0.001 |        5 |     32600 |            0.02 |
-|   Others                 |     0.000 |        8 |       --- |             --- |
-| Signals                  |    <0.001 |      151 |       --- |             --- |
-| I/O                      |    <0.001 |        5 |       106 |            4.72 |
+|   Others                 |     0.000 |       11 |       --- |             --- |
+| Signals                  |    <0.001 |      210 |       --- |             --- |
+| I/O                      |    <0.001 |       21 |       106 |           19.81 |
 | Static Power             |     0.072 |          |           |                 |
 | Total                    |     0.073 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -141,7 +142,7 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| key_code_shift_synth |     0.001 |
+| key_code_shift_synth |     0.002 |
 +----------------------+-----------+
 
 

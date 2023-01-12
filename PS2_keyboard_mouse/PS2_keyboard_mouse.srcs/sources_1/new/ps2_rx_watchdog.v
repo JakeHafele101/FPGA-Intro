@@ -48,7 +48,7 @@ input i_clk, i_reset,
     reg [3:0] s_n_reg, s_n_next;  //counter for n'th bit read
     reg [10:0] s_b_reg, s_b_next; //reg to collect data bits, shifts in as recieved similar to uart ((1 start bit, 8 data bits, 1 parity bit, 1 stop bit)
     
-    reg [11:0] s_watchdog_count_reg, s_watchdog_count_next;
+    reg [20:0] s_watchdog_count_reg, s_watchdog_count_next;
         
     //filter and falling edge tick generation for ps2c
     always @(posedge i_clk, posedge i_reset)
@@ -120,7 +120,7 @@ input i_clk, i_reset,
                             else
                                 s_n_next = s_n_reg - 1;
                         end
-                    else if(s_watchdog_count_reg == TIMEOUT_DVSR) //if reached 20 us wait, assert o_time_out error
+                    else if(s_watchdog_count_reg >= TIMEOUT_DVSR) //if reached 20 us wait, assert o_time_out error
                         begin
                             o_time_out = 1'b1;
                             s_state_next = idle;

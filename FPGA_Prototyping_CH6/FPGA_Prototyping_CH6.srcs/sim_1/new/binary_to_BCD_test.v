@@ -75,4 +75,5 @@ module binary_to_BCD_test(
         repeat(20) @(negedge clk);
         $stop;
     end
+
 endmodule

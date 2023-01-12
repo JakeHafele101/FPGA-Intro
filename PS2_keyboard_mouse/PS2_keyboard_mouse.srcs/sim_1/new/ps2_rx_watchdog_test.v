@@ -40,6 +40,8 @@ module ps2_rx_watchdog_test(
     reg clk, reset;
     reg ps2d, ps2c;
     
+    reg ps2c_hold;
+    
     wire [8:0] key_code;
     wire [7:0] ascii_code;
     wire kb_buf_empty;
@@ -68,8 +70,12 @@ module ps2_rx_watchdog_test(
     always begin
         ps2c = 1'b1;
         #(T_PS2/2);
-        ps2c = 1'b0;
-        #(T_PS2/2);
+        
+        if(~ps2c_hold)
+            begin
+                ps2c = 1'b0;
+                #(T_PS2/2);
+            end
     end
     
     initial begin
@@ -81,6 +87,7 @@ module ps2_rx_watchdog_test(
     initial begin
         ps2d = 1'b1;
         tx_ascii = 1'b0;
+        ps2c_hold = 1'b0;
         repeat(5) @(negedge clk); //rx_empty
         
         receive(BRK);    // BRK code, will read following 
@@ -145,7 +152,9 @@ module ps2_rx_watchdog_test(
             @(posedge ps2c); //wait to start until positive edge of ps2c, so data bits tx bits synced up to falling edge
             ps2d = 1'b0; //start bit
             @(posedge ps2c);
-            repeat(220) @(posedge clk);
+            ps2c_hold = 1'b1; //hold active so no falling edge occurs
+            repeat((TIMEOUT_DVSR * T) + 20) @(posedge clk); //wait until time exceeds watchdog timer
+            ps2c_hold = 1'b0;
         end
     endtask
     

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Jan 10 22:24:08 2023
+| Date         : Thu Jan 12 02:20:38 2023
 | Host         : DESKTOP-SA1D2UB running 64-bit major release  (build 9200)
 | Command      : report_utilization -file key_code_shift_synth_utilization_synth.rpt -pb key_code_shift_synth_utilization_synth.pb
 | Design       : key_code_shift_synth
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |  118 |     0 |          0 |     20800 |  0.57 |
-|   LUT as Logic             |  102 |     0 |          0 |     20800 |  0.49 |
+| Slice LUTs*                |  137 |     0 |          0 |     20800 |  0.66 |
+|   LUT as Logic             |  121 |     0 |          0 |     20800 |  0.58 |
 |   LUT as Memory            |   16 |     0 |          0 |      9600 |  0.17 |
 |     LUT as Distributed RAM |   16 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| Slice Registers            |   68 |     0 |          0 |     41600 |  0.16 |
-|   Register as Flip Flop    |   68 |     0 |          0 |     41600 |  0.16 |
+| Slice Registers            |   89 |     0 |          0 |     41600 |  0.21 |
+|   Register as Flip Flop    |   89 |     0 |          0 |     41600 |  0.21 |
 |   Register as Latch        |    0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                   |    5 |     0 |          0 |     16300 |  0.03 |
 | F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |
@@ -59,7 +59,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 4     |          Yes |           - |          Set |
-| 64    |          Yes |           - |        Reset |
+| 85    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -94,7 +94,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |          0 |       106 |  4.72 |
+| Bonded IOB                  |   21 |     0 |          0 |       106 | 19.81 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -153,18 +153,20 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   64 |        Flop & Latch |
+| FDCE     |   85 |        Flop & Latch |
 | LUT6     |   57 |                 LUT |
-| LUT3     |   25 |                 LUT |
+| LUT2     |   31 |                 LUT |
+| LUT3     |   27 |                 LUT |
+| LUT4     |   25 |                 LUT |
 | RAMD32   |   22 |  Distributed Memory |
-| LUT4     |   21 |                 LUT |
-| LUT5     |   14 |                 LUT |
-| LUT2     |    8 |                 LUT |
+| LUT5     |   18 |                 LUT |
+| OBUFT    |   15 |                  IO |
 | RAMS32   |    6 |  Distributed Memory |
 | MUXF7    |    5 |               MuxFx |
+| CARRY4   |    5 |          CarryLogic |
 | IBUF     |    4 |                  IO |
 | FDPE     |    4 |        Flop & Latch |
-| OBUF     |    1 |                  IO |
+| OBUF     |    2 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

@@ -29,7 +29,7 @@ module kb_code_shift(
     );
     
     parameter FIFO_W = 2, //2^W word size for FIFO buffer
-              TIMEOUT_DVSR = 2000; 
+              TIMEOUT_DVSR = 2000;
     
     //state definition
     localparam wait_brk = 1'b0, 
@@ -50,7 +50,7 @@ module kb_code_shift(
         
     //ps2 receiver
     ps2_rx_watchdog #(.TIMEOUT_DVSR(TIMEOUT_DVSR))ps2_rx(.i_clk(i_clk), .i_reset(i_reset), .i_ps2d(i_ps2d), .i_ps2c(i_ps2c), .i_rx_en(1'b1), .o_rx_done_tick(s_scan_done_tick), .o_time_out(o_time_out), .o_data(s_scan_out));
-    
+        
     //FIFO buffer
     FIFO #(.B(9), .W(FIFO_W)) fifo_rx(.i_clk(i_clk), .i_reset(i_reset), .i_wr(s_got_code_tick), .i_rd(i_rd_key_code), .i_wr_data({s_shift_reg, s_scan_out}), 
                                          .o_empty(o_kb_buf_empty), .o_full(), .o_rd_data(o_key_code));
