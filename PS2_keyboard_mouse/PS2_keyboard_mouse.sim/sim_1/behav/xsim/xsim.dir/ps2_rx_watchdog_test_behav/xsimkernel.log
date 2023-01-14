@@ -1,7 +1,0 @@
-Running: xsim.dir/ps2_rx_watchdog_test_behav/xsimk.exe -simmode gui -wdb ps2_rx_watchdog_test_behav.wdb -simrunnum 0 -socket 55905
-Design successfully loaded
-Design Loading Memory Usage: 7732 KB (Peak: 7732 KB)
-Design Loading CPU Usage: 77 ms
-Simulation completed
-Simulation Memory Usage: 8500 KB (Peak: 8500 KB)
-Simulation CPU Usage: 93 ms
