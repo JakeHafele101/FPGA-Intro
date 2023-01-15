@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log babbage_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source babbage_synth.tcl" );
+         "-log BCD_to_binary_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BCD_to_binary_synth.tcl" );
 
 
 

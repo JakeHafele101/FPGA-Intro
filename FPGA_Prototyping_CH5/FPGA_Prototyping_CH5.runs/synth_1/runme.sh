@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log dual_edge_detector_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dual_edge_detector_synth.tcl
+EAStep vivado -log debounce_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source debounce_synth.tcl

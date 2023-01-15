@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log dual_edge_detector_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dual_edge_detector_synth.tcl" );
+         "-log debounce_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source debounce_synth.tcl" );
 
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1672792023" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/uart_synth.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673809765" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/uart_synth.dcp">
   <File Type="PA-TCL" Name="uart_stopwatch_synth.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="uart_stopwatch_synth_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="uart_stopwatch_synth_reports.tcl"/>

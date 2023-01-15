@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671573961" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dual_edge_detector_synth.dcp">
-  <File Type="PA-TCL" Name="babbage_synth.tcl"/>
-  <File Type="REPORTS-TCL" Name="babbage_synth_reports.tcl"/>
-  <File Type="RDS-RDS" Name="babbage_synth.vds"/>
-  <File Type="RDS-UTIL" Name="babbage_synth_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="babbage_synth_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="babbage_synth.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673807975" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dual_edge_detector_synth.dcp">
+  <File Type="PA-TCL" Name="BCD_to_binary_synth.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="BCD_to_binary_synth_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="BCD_to_binary_synth_reports.tcl"/>
+  <File Type="RDS-RDS" Name="BCD_to_binary_synth.vds"/>
+  <File Type="RDS-UTIL" Name="BCD_to_binary_synth_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BCD_to_binary_synth_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="BCD_to_binary_synth.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="BCD_to_binary_synth_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="BCD_to_binary_synth_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/babbage.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/binary_to_BCD.v">
+    <File Path="$PSRCDIR/sources_1/new/BCD_to_binary.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -49,8 +45,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/babbage_synth.v">
+    <File Path="$PSRCDIR/sources_1/new/BCD_to_binary_synth.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fibb_combined.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fibb_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -80,7 +92,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/fibb_combined.v">
+    <File Path="$PSRCDIR/sources_1/new/babbage.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -88,7 +100,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/fibb_synth.v">
+    <File Path="$PSRCDIR/sources_1/new/binary_to_BCD.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -96,7 +108,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/BCD_to_binary.v">
+    <File Path="$PSRCDIR/sources_1/new/babbage_synth.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -105,14 +117,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/fibonacci.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/BCD_to_binary_synth.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -158,7 +162,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="babbage_synth"/>
+      <Option Name="TopModule" Val="BCD_to_binary_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

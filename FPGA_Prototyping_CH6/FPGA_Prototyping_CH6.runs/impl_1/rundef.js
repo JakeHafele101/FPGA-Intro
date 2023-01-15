@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log babbage_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source babbage_synth.tcl -notrace" );
+         "-log BCD_to_binary_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source BCD_to_binary_synth.tcl -notrace" );
 
 
 

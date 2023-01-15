@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log dual_edge_detector_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source dual_edge_detector_synth.tcl -notrace
+EAStep vivado -log debounce_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source debounce_synth.tcl -notrace
 
 

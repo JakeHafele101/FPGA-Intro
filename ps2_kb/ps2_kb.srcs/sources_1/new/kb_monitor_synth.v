@@ -28,7 +28,7 @@ module kb_monitor_synth(
     output RsTx
     );
     
-    //1200 baud rate, 8 data bits, 1 stop bit, no parity
+    //19200 baud rate, 8 data bits, 1 stop bit, no parity
     kb_monitor kb(.i_clk(CLK100MHZ), .i_reset(btnC), .i_ps2d(PS2Data), .i_ps2c(PS2Clk), .o_tx(RsTx));
     
 endmodule

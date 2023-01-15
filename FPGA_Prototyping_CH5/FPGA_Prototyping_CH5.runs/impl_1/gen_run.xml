@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673753339">
-  <File Type="ROUTE-PWR" Name="dual_edge_detector_synth_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="dual_edge_detector_synth.tcl"/>
-  <File Type="BITSTR-MMI" Name="dual_edge_detector_synth.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="dual_edge_detector_synth_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="dual_edge_detector_synth_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="dual_edge_detector_synth_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="dual_edge_detector_synth_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="dual_edge_detector_synth_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="dual_edge_detector_synth_opt.dcp"/>
-  <File Type="OPT-DRC" Name="dual_edge_detector_synth_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="dual_edge_detector_synth.hwdef"/>
-  <File Type="PWROPT-DCP" Name="dual_edge_detector_synth_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="dual_edge_detector_synth_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="dual_edge_detector_synth_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="dual_edge_detector_synth_placed.dcp"/>
-  <File Type="PLACE-IO" Name="dual_edge_detector_synth_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="dual_edge_detector_synth_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="dual_edge_detector_synth_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="dual_edge_detector_synth_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="dual_edge_detector_synth_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="dual_edge_detector_synth_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="dual_edge_detector_synth_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="dual_edge_detector_synth.bin"/>
-  <File Type="PLACE-TIMING" Name="dual_edge_detector_synth_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="dual_edge_detector_synth_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="dual_edge_detector_synth.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="dual_edge_detector_synth_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="dual_edge_detector_synth_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="dual_edge_detector_synth_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="dual_edge_detector_synth.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="dual_edge_detector_synth_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="dual_edge_detector_synth_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="dual_edge_detector_synth_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="dual_edge_detector_synth_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="dual_edge_detector_synth_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="dual_edge_detector_synth_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="dual_edge_detector_synth_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="dual_edge_detector_synth_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dual_edge_detector_synth_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dual_edge_detector_synth_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="dual_edge_detector_synth_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="dual_edge_detector_synth_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="dual_edge_detector_synth_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="dual_edge_detector_synth_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="dual_edge_detector_synth_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="dual_edge_detector_synth_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="dual_edge_detector_synth_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="dual_edge_detector_synth_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="dual_edge_detector_synth_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="dual_edge_detector_synth_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="dual_edge_detector_synth_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dual_edge_detector_synth_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dual_edge_detector_synth_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="dual_edge_detector_synth_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="dual_edge_detector_synth_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="dual_edge_detector_synth_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="dual_edge_detector_synth_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="dual_edge_detector_synth.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="dual_edge_detector_synth_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="dual_edge_detector_synth_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="dual_edge_detector_synth.nky"/>
-  <File Type="BITSTR-BMM" Name="dual_edge_detector_synth_bd.bmm"/>
-  <File Type="PDI-FILE" Name="dual_edge_detector_synth.pdi"/>
-  <File Type="RCFI_FILE" Name="dual_edge_detector_synth.rcfi"/>
-  <File Type="CFI_FILE" Name="dual_edge_detector_synth.cfi"/>
-  <File Type="RNPI_FILE" Name="dual_edge_detector_synth.rnpi"/>
-  <File Type="NPI_FILE" Name="dual_edge_detector_synth.npi"/>
-  <File Type="RBD_FILE" Name="dual_edge_detector_synth.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673764377">
+  <File Type="ROUTE-PWR" Name="debounce_synth_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="debounce_synth.tcl"/>
+  <File Type="BITSTR-MMI" Name="debounce_synth.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="debounce_synth_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="debounce_synth_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="debounce_synth_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="debounce_synth_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="debounce_synth_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="debounce_synth_opt.dcp"/>
+  <File Type="OPT-DRC" Name="debounce_synth_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="debounce_synth.hwdef"/>
+  <File Type="PWROPT-DCP" Name="debounce_synth_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="debounce_synth_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="debounce_synth_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="debounce_synth_placed.dcp"/>
+  <File Type="PLACE-IO" Name="debounce_synth_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="debounce_synth_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="debounce_synth_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="debounce_synth_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="debounce_synth_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="debounce_synth_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="debounce_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="debounce_synth.bin"/>
+  <File Type="PLACE-TIMING" Name="debounce_synth_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="debounce_synth_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="debounce_synth.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="debounce_synth_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="debounce_synth_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="debounce_synth_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="debounce_synth.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="debounce_synth_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="debounce_synth_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="debounce_synth_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="debounce_synth_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="debounce_synth_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="debounce_synth_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="debounce_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="debounce_synth_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="debounce_synth_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="debounce_synth_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="debounce_synth_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="debounce_synth_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="debounce_synth_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="debounce_synth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="debounce_synth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="debounce_synth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="debounce_synth_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="debounce_synth_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="debounce_synth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="debounce_synth_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="debounce_synth_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="debounce_synth_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="debounce_synth_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="debounce_synth_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="debounce_synth_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="debounce_synth_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="debounce_synth_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="debounce_synth.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="debounce_synth_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="debounce_synth_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="debounce_synth.nky"/>
+  <File Type="BITSTR-BMM" Name="debounce_synth_bd.bmm"/>
+  <File Type="PDI-FILE" Name="debounce_synth.pdi"/>
+  <File Type="RCFI_FILE" Name="debounce_synth.rcfi"/>
+  <File Type="CFI_FILE" Name="debounce_synth.cfi"/>
+  <File Type="RNPI_FILE" Name="debounce_synth.rnpi"/>
+  <File Type="NPI_FILE" Name="debounce_synth.npi"/>
+  <File Type="RBD_FILE" Name="debounce_synth.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="dual_edge_detector_synth.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="dual_edge_detector_synth.sysdef"/>
-  <File Type="BG-BGN" Name="dual_edge_detector_synth.bgn"/>
-  <File Type="BG-DRC" Name="dual_edge_detector_synth.drc"/>
-  <File Type="RDI-RDI" Name="dual_edge_detector_synth.vdi"/>
+  <File Type="BITSTR-LTX" Name="debounce_synth.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="debounce_synth.sysdef"/>
+  <File Type="BG-BGN" Name="debounce_synth.bgn"/>
+  <File Type="BG-DRC" Name="debounce_synth.drc"/>
+  <File Type="RDI-RDI" Name="debounce_synth.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="dual_edge_detector_synth_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="dual_edge_detector_synth_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="debounce_synth_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="debounce_synth_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
@@ -90,23 +90,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_mealy.v">
+    <File Path="$PSRCDIR/sources_1/new/counter_8b.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_synth.v">
+    <File Path="$PSRCDIR/sources_1/new/debounce.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/parking_lot_counter.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -114,7 +106,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/pwm_4b.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/pwm_4b.v"/>
         <Attr Name="ImportTime" Val="1670791627"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -122,9 +113,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/rising_edge_detector_mealy.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v"/>
         <Attr Name="ImportTime" Val="1669999231"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -134,9 +131,39 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v"/>
         <Attr Name="ImportTime" Val="1670791627"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/debounce_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_mealy.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/parking_lot_counter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -158,38 +185,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/counter_8b.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/debounce.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/rising_edge_detector_mealy.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/debounce_synth.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_moore.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -200,7 +195,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="dual_edge_detector_synth"/>
+      <Option Name="TopModule" Val="debounce_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

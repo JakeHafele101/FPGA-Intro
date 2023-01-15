@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Dec 20 16:07:04 2022
-# Process ID: 25044
+# Start of session at: Sun Jan 15 12:40:52 2023
+# Process ID: 27152
 # Current directory: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH6/FPGA_Prototyping_CH6.runs/impl_1
-# Command line: vivado.exe -log babbage_synth.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source babbage_synth.tcl -notrace
-# Log file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH6/FPGA_Prototyping_CH6.runs/impl_1/babbage_synth.vdi
+# Command line: vivado.exe -log BCD_to_binary_synth.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source BCD_to_binary_synth.tcl -notrace
+# Log file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH6/FPGA_Prototyping_CH6.runs/impl_1/BCD_to_binary_synth.vdi
 # Journal file: C:/Projects/FPGA-Intro/FPGA_Prototyping_CH6/FPGA_Prototyping_CH6.runs/impl_1\vivado.jou
 # Running On: DESKTOP-SA1D2UB, OS: Windows, CPU Frequency: 3991 MHz, CPU Physical cores: 4, Host memory: 17058 MB
 #-----------------------------------------------------------
-source babbage_synth.tcl -notrace
+source BCD_to_binary_synth.tcl -notrace

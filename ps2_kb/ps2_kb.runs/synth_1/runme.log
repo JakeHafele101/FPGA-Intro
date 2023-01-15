@@ -10,545 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source enhanced_stopwatch_ps2_synth.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 392.941 ; gain = 68.977
-Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/utils_1/imports/synth_1/kb_monitor_synth.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/utils_1/imports/synth_1/kb_monitor_synth.dcp for incremental synthesis
-INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top enhanced_stopwatch_ps2_synth -part xc7a35tcpg236-1
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23216
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/FIFO.v:26]
-WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/FIFO.v:28]
-WARNING: [Synth 8-6901] identifier 'N' is used before its declaration [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/baud_rate_generator.v:25]
-WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/kb_code_shift.v:70]
-WARNING: [Synth 8-6901] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/uart_rx.v:28]
-WARNING: [Synth 8-6901] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/uart_tx.v:27]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1205.477 ; gain = 407.770
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch_ps2_synth' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/enhanced_stopwatch_ps2_synth.v:23]
-INFO: [Synth 8-6157] synthesizing module 'kb_code_shift' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/kb_code_shift.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ps2_rx_watchdog' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/ps2_rx_watchdog.v:23]
-	Parameter TIMEOUT_DVSR bound to: 10000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ps2_rx_watchdog' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/ps2_rx_watchdog.v:23]
-INFO: [Synth 8-6157] synthesizing module 'FIFO' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/FIFO.v:23]
-	Parameter B bound to: 9 - type: integer 
-	Parameter W bound to: 2 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/FIFO.v:71]
-INFO: [Synth 8-6155] done synthesizing module 'FIFO' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/FIFO.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'kb_code_shift' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/kb_code_shift.v:23]
-INFO: [Synth 8-6157] synthesizing module 'key_to_ascii_shift' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/key_to_ascii_shift.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'key_to_ascii_shift' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/key_to_ascii_shift.v:23]
-INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch_receive_interface' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/enhanced_stopwatch_receive_interface.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'enhanced_stopwatch_receive_interface' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/enhanced_stopwatch_receive_interface.v:23]
-INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/enhanced_stopwatch.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'enhanced_stopwatch' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/new/enhanced_stopwatch.v:23]
-INFO: [Synth 8-6157] synthesizing module 'seven_seg_mux' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pwm_4b' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/pwm_4b.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'pwm_4b' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/pwm_4b.v:23]
-INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mux' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'enhanced_stopwatch_ps2_synth' (0#1) [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/enhanced_stopwatch_ps2_synth.v:23]
-WARNING: [Synth 8-7137] Register count_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/pwm_4b.v:41]
-WARNING: [Synth 8-7137] Register pwm_reg_reg in module pwm_4b has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/pwm_4b.v:42]
-WARNING: [Synth 8-3848] Net LED in module/entity enhanced_stopwatch_ps2_synth does not have driver. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/sources_1/new/enhanced_stopwatch_ps2_synth.v:30]
-WARNING: [Synth 8-7129] Port LED[15] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[14] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[13] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[12] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[11] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[10] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[9] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[8] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[6] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[5] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[4] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[3] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[2] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[1] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[0] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[7] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[6] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[5] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[4] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1299.773 ; gain = 502.066
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1299.773 ; gain = 502.066
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1299.773 ; gain = 502.066
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1299.773 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:115]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:115]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:116]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:116]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:267]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:267]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:268]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:268]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:269]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:269]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:270]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:270]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[0]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:285]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:285]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[0]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:286]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:286]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[1]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:287]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:287]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[1]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:288]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:288]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[2]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:289]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:289]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[2]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:290]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:290]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[3]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:291]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:291]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiDB[3]'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:292]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:292]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiCSn'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:293]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:293]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'QspiCSn'. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:294]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc:294]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/enhanced_stopwatch_ps2_synth_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/enhanced_stopwatch_ps2_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1406.582 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1406.582 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xc7a35tcpg236-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'ps2_rx_watchdog'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                              001 |                               00
-                      rx |                              010 |                               01
-                    load |                              100 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'one-hot' in module 'ps2_rx_watchdog'
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   21 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 6     
-	   2 Input    2 Bit       Adders := 2     
-+---Registers : 
-	               21 Bit    Registers := 1     
-	               11 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 6     
-	                1 Bit    Registers := 9     
-+---RAMs : 
-	               36 Bit	(4 X 9 bit)          RAMs := 1     
-+---Muxes : 
-	   2 Input   21 Bit        Muxes := 1     
-	   3 Input   21 Bit        Muxes := 1     
-	   3 Input   11 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 3     
-	   3 Input    4 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 4     
-	   4 Input    4 Bit        Muxes := 1     
-	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 4     
-	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 4     
-	   3 Input    1 Bit        Muxes := 7     
-	   2 Input    1 Bit        Muxes := 22    
-	   4 Input    1 Bit        Muxes := 6     
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 90 (col length:60)
-BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port LED[15] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[14] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[13] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[12] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[11] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[10] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[9] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[8] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[6] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[5] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[4] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[3] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[2] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[1] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[0] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[7] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[6] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[5] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[4] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+-----------------------------+---------------------------------+---------------+----------------+
-|Module Name                  | RTL Object                      | Depth x Width | Implemented As | 
-+-----------------------------+---------------------------------+---------------+----------------+
-|key_to_ascii_shift           | o_ascii_code                    | 128x7         | LUT            | 
-|key_to_ascii_shift           | o_ascii_code                    | 128x7         | LUT            | 
-|enhanced_stopwatch_ps2_synth | key_to_ascii_shift/o_ascii_code | 128x7         | LUT            | 
-|enhanced_stopwatch_ps2_synth | key_to_ascii_shift/o_ascii_code | 128x7         | LUT            | 
-+-----------------------------+---------------------------------+---------------+----------------+
-
-
-Distributed RAM: Preliminary Mapping Report (see note below)
-+-----------------------------+---------------------------------------+-----------+----------------------+-------------+
-|Module Name                  | RTL Object                            | Inference | Size (Depth x Width) | Primitives  | 
-+-----------------------------+---------------------------------------+-----------+----------------------+-------------+
-|enhanced_stopwatch_ps2_synth | kb_code_shift/fifo_rx/s_array_reg_reg | Implied   | 4 x 9                | RAM32M x 2  | 
-+-----------------------------+---------------------------------------+-----------+----------------------+-------------+
-
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Final Mapping Report
-+-----------------------------+---------------------------------------+-----------+----------------------+-------------+
-|Module Name                  | RTL Object                            | Inference | Size (Depth x Width) | Primitives  | 
-+-----------------------------+---------------------------------------+-----------+----------------------+-------------+
-|enhanced_stopwatch_ps2_synth | kb_code_shift/fifo_rx/s_array_reg_reg | Implied   | 4 x 9                | RAM32M x 2  | 
-+-----------------------------+---------------------------------------+-----------+----------------------+-------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    18|
-|3     |LUT1   |     4|
-|4     |LUT2   |    31|
-|5     |LUT3   |    25|
-|6     |LUT4   |    44|
-|7     |LUT5   |    24|
-|8     |LUT6   |    80|
-|9     |MUXF7  |    15|
-|10    |RAM32M |     2|
-|11    |FDCE   |    77|
-|12    |FDPE   |     4|
-|13    |FDRE   |    48|
-|14    |IBUF   |     4|
-|15    |OBUF   |    16|
-|16    |OBUFT  |    20|
-+------+-------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.582 ; gain = 608.875
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1406.582 ; gain = 502.066
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1406.582 ; gain = 608.875
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1406.582 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1406.582 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
-
-Synth Design complete, checksum: 27df4d33
-INFO: [Common 17-83] Releasing license: Synthesis
-46 Infos, 104 Warnings, 54 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1406.582 ; gain = 988.770
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/PS2_keyboard_mouse/PS2_keyboard_mouse.runs/synth_1/enhanced_stopwatch_ps2_synth.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file enhanced_stopwatch_ps2_synth_utilization_synth.rpt -pb enhanced_stopwatch_ps2_synth_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 14 15:13:20 2023...
-
-*** Running vivado
-    with args -log enhanced_stopwatch_ps2_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source enhanced_stopwatch_ps2_synth.tcl
-
-
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-source enhanced_stopwatch_ps2_synth.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 394.199 ; gain = 70.531
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.320 ; gain = 72.020
 Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/utils_1/imports/synth_1/kb_monitor_synth.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/utils_1/imports/synth_1/kb_monitor_synth.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -557,11 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18376
+INFO: [Synth 8-7075] Helper process launched with PID 12668
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/FIFO.v:26]
 WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/FIFO.v:28]
@@ -570,7 +30,7 @@ WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; us
 WARNING: [Synth 8-6901] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/uart_rx.v:28]
 WARNING: [Synth 8-6901] identifier 'DBIT' is used before its declaration [C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/uart_tx.v:27]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1204.531 ; gain = 407.891
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1204.262 ; gain = 407.641
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'enhanced_stopwatch_ps2_synth' [C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/enhanced_stopwatch_ps2_synth.v:23]
 INFO: [Synth 8-6157] synthesizing module 'kb_code_shift' [C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/kb_code_shift.v:23]
@@ -620,18 +80,18 @@ WARNING: [Synth 8-7129] Port JA[6] in module enhanced_stopwatch_ps2_synth is eit
 WARNING: [Synth 8-7129] Port JA[5] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[4] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.211 ; gain = 502.570
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1297.809 ; gain = 501.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.211 ; gain = 502.570
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1297.809 ; gain = 501.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.211 ; gain = 502.570
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1297.809 ; gain = 501.188
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1299.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1297.809 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -804,29 +264,37 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/enhanced_stopwatch_ps2_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1409.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1407.715 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1409.762 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1407.715 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.715 ; gain = 611.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/utils_1/imports/synth_1/kb_monitor_synth.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.715 ; gain = 611.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 'ps2_rx_watchdog'
 ---------------------------------------------------------------------------------------------------
@@ -838,8 +306,18 @@ INFO: [Synth 8-802] inferred FSM for state register 's_state_reg_reg' in module 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 's_state_reg_reg' using encoding 'one-hot' in module 'ps2_rx_watchdog'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -909,7 +387,7 @@ WARNING: [Synth 8-7129] Port JA[6] in module enhanced_stopwatch_ps2_synth is eit
 WARNING: [Synth 8-7129] Port JA[5] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[4] in module enhanced_stopwatch_ps2_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -941,13 +419,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -967,7 +445,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -985,37 +463,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1049,28 +527,28 @@ Report Cell Usage:
 |16    |OBUFT  |    20|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1409.762 ; gain = 502.570
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1409.762 ; gain = 613.121
+Synthesis finished with 0 errors, 1 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.715 ; gain = 501.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1407.715 ; gain = 611.094
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1409.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1407.715 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1409.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1407.715 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
 
 Synth Design complete, checksum: 27df4d33
 INFO: [Common 17-83] Releasing license: Synthesis
-46 Infos, 104 Warnings, 54 Critical Warnings and 0 Errors encountered.
+43 Infos, 104 Warnings, 55 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 1409.762 ; gain = 990.695
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1407.715 ; gain = 987.512
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.runs/synth_1/enhanced_stopwatch_ps2_synth.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file enhanced_stopwatch_ps2_synth_utilization_synth.rpt -pb enhanced_stopwatch_ps2_synth_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 14 19:45:17 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 15 14:44:43 2023...

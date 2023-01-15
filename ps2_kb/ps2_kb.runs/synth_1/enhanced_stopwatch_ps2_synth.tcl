@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
@@ -88,8 +89,6 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/FIFO.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/baud_rate_generator.v
-  C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/imports/new/clock_divider.v
-  C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/imports/new/debounce.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/kb_code.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/kb_code_hold.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/kb_code_hold_synth.v
@@ -102,7 +101,6 @@ read_verilog -library xil_defaultlib {
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/ps2_rx.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/new/ps2_rx_watchdog.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/imports/new/pwm_4b.v
-  C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/imports/new/rising_edge_detector_mealy.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v
   C:/Projects/FPGA-Intro/ps2_kb/ps2_kb.srcs/sources_1/imports/new/uart.v

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1672792024">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673809765">
   <File Type="ROUTE-PWR" Name="uart_stopwatch_synth_power_routed.rpt"/>
   <File Type="PA-TCL" Name="uart_stopwatch_synth.tcl"/>
   <File Type="BITSTR-MMI" Name="uart_stopwatch_synth.mmi"/>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673753339" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dual_edge_detector_synth.dcp">
-  <File Type="PA-TCL" Name="dual_edge_detector_synth.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="dual_edge_detector_synth_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="dual_edge_detector_synth_reports.tcl"/>
-  <File Type="RDS-RDS" Name="dual_edge_detector_synth.vds"/>
-  <File Type="RDS-UTIL" Name="dual_edge_detector_synth_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="dual_edge_detector_synth_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="dual_edge_detector_synth.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="dual_edge_detector_synth_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="dual_edge_detector_synth_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1673764376" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/dual_edge_detector_synth.dcp">
+  <File Type="PA-TCL" Name="debounce_synth.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="debounce_synth_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="debounce_synth_reports.tcl"/>
+  <File Type="RDS-RDS" Name="debounce_synth.vds"/>
+  <File Type="RDS-UTIL" Name="debounce_synth_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="debounce_synth_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="debounce_synth.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="debounce_synth_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="debounce_synth_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/clock_divider.v">
@@ -20,23 +20,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_mealy.v">
+    <File Path="$PSRCDIR/sources_1/new/counter_8b.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_synth.v">
+    <File Path="$PSRCDIR/sources_1/new/debounce.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/parking_lot_counter.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -44,7 +36,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/pwm_4b.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/new/pwm_4b.v"/>
         <Attr Name="ImportTime" Val="1670791627"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -52,9 +43,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/rising_edge_detector_mealy.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v"/>
         <Attr Name="ImportTime" Val="1669999231"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -64,9 +61,39 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../FPGA_Prototyping_CH4/FPGA_Prototyping_CH4.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v"/>
         <Attr Name="ImportTime" Val="1670791627"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/debounce_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_mealy.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_synth.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/parking_lot_counter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -88,38 +115,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/counter_8b.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/debounce.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/rising_edge_detector_mealy.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/debounce_synth.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/dual_edge_detector_moore.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -130,7 +125,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="dual_edge_detector_synth"/>
+      <Option Name="TopModule" Val="debounce_synth"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

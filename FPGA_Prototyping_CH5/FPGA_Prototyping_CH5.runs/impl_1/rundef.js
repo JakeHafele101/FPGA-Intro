@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log dual_edge_detector_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source dual_edge_detector_synth.tcl -notrace" );
+         "-log debounce_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source debounce_synth.tcl -notrace" );
 
 
 
