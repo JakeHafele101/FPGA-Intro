@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.runs/synth_1'
+HD_PWD='C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log floating_greater_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source floating_greater_synth.tcl
+EAStep vivado -log seven_seg_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source seven_seg_synth.tcl

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log parking_lot_counter_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parking_lot_counter_synth.tcl
+EAStep vivado -log dual_edge_detector_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dual_edge_detector_synth.tcl

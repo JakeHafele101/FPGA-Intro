@@ -34,7 +34,7 @@ module rotating_banner_synth(
     
     assign LED[1:0] = sw[1:0];
     
-    rotating_banner banner(.clk(CLK100MHZ), .reset(btnC), .en(sw[0]), .dir(sw[1]), .m(31'h01234567), .hex(hex));
+    rotating_banner banner(.clk(CLK100MHZ), .reset(btnC), .en(sw[0]), .dir(sw[1]), .m(32'h01234567), .hex(hex));
     
     seven_seg_mux segment_mux(.clk(CLK100MHZ), .reset(btnC), .duty_cycle(4'b1000), .hex3(hex[15:12]), .hex2(hex[11:8]), .hex1(hex[7:4]), .hex0(hex[3:0]), .dp(4'b1111), .an_en(4'b1111), .an_out(an), .seg_out({dp, seg}));
 

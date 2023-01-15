@@ -1,30 +1,30 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/FIFO.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/baud_rate_generator.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/clock_divider.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/kb_code.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/kb_code_hold.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/kb_code_shift.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/kb_monitor.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/key_to_ascii.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/key_to_ascii_shift.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/ps2_rx.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/new/ps2_rx_watchdog.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/pwm_4b.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/imports/new/rising_edge_detector_mealy.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/uart.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/uart_rx.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/uart_tx.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/enhanced_stopwatch_receive_interface.v" \
-"../../../../PS2_keyboard_mouse.srcs/sources_1/imports/new/enhanced_stopwatch.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/ps2_rx_watchdog_test.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/kb_code_shift_test.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/kb_code_hold_test.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/kb_code_test.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/kb_monitor_test.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/ps2_rx_test.v" \
-"../../../../PS2_keyboard_mouse.srcs/sim_1/new/enhanced_stopwatch_ps2_test.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/FIFO.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/baud_rate_generator.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/imports/new/clock_divider.v" \
+"../../../../ps2_kb.srcs/sources_1/new/kb_code.v" \
+"../../../../ps2_kb.srcs/sources_1/new/kb_code_hold.v" \
+"../../../../ps2_kb.srcs/sources_1/new/kb_code_shift.v" \
+"../../../../ps2_kb.srcs/sources_1/new/kb_monitor.v" \
+"../../../../ps2_kb.srcs/sources_1/new/key_to_ascii.v" \
+"../../../../ps2_kb.srcs/sources_1/new/key_to_ascii_shift.v" \
+"../../../../ps2_kb.srcs/sources_1/new/ps2_rx.v" \
+"../../../../ps2_kb.srcs/sources_1/new/ps2_rx_watchdog.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/imports/new/pwm_4b.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/imports/new/rising_edge_detector_mealy.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/uart.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/uart_rx.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/uart_tx.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/enhanced_stopwatch_receive_interface.v" \
+"../../../../ps2_kb.srcs/sources_1/imports/new/enhanced_stopwatch.v" \
+"../../../../ps2_kb.srcs/sim_1/new/ps2_rx_watchdog_test.v" \
+"../../../../ps2_kb.srcs/sim_1/new/kb_code_shift_test.v" \
+"../../../../ps2_kb.srcs/sim_1/new/kb_code_hold_test.v" \
+"../../../../ps2_kb.srcs/sim_1/new/kb_code_test.v" \
+"../../../../ps2_kb.srcs/sim_1/new/kb_monitor_test.v" \
+"../../../../ps2_kb.srcs/sim_1/new/ps2_rx_test.v" \
+"../../../../ps2_kb.srcs/sim_1/new/enhanced_stopwatch_ps2_test.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

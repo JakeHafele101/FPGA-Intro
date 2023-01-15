@@ -2,79 +2,61 @@
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671573961">
   <File Type="ROUTE-PWR" Name="babbage_synth_power_routed.rpt"/>
   <File Type="PA-TCL" Name="babbage_synth.tcl"/>
-  <File Type="BITSTR-MMI" Name="babbage_synth.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="babbage_synth_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="babbage_synth_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="babbage_synth_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="babbage_synth_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="babbage_synth_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="babbage_synth_opt.dcp"/>
+  <File Type="BITSTR-MSK" Name="babbage_synth.msk"/>
+  <File Type="ROUTE-CLK" Name="babbage_synth_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="babbage_synth.vdi"/>
+  <File Type="BG-BIT" Name="babbage_synth.bit"/>
+  <File Type="BG-DRC" Name="babbage_synth.drc"/>
+  <File Type="BG-BGN" Name="babbage_synth.bgn"/>
+  <File Type="BG-BIN" Name="babbage_synth.bin"/>
+  <File Type="BITSTR-RBT" Name="babbage_synth.rbt"/>
+  <File Type="BITSTR-NKY" Name="babbage_synth.nky"/>
+  <File Type="BITSTR-BMM" Name="babbage_synth_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="babbage_synth.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="babbage_synth_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="babbage_synth.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="babbage_synth.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="babbage_synth_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="babbage_synth.hwdef"/>
-  <File Type="PWROPT-DCP" Name="babbage_synth_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="babbage_synth_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="babbage_synth_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="babbage_synth_placed.dcp"/>
   <File Type="PLACE-IO" Name="babbage_synth_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="babbage_synth_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="babbage_synth_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="babbage_synth_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="babbage_synth_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="babbage_synth_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="babbage_synth_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="babbage_synth.bin"/>
-  <File Type="PLACE-TIMING" Name="babbage_synth_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="babbage_synth_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="babbage_synth.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="babbage_synth_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="babbage_synth_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="babbage_synth_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="babbage_synth.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="babbage_synth_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="babbage_synth_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="babbage_synth_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="babbage_synth_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="babbage_synth_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="babbage_synth_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="babbage_synth_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="babbage_synth_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="babbage_synth_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="babbage_synth_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="babbage_synth_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="babbage_synth_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="babbage_synth_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="babbage_synth_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="babbage_synth_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="babbage_synth_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="babbage_synth_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="babbage_synth_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="babbage_synth_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="babbage_synth_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="babbage_synth_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="babbage_synth_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="babbage_synth_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="babbage_synth_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="babbage_synth_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="babbage_synth_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="babbage_synth_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="babbage_synth_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="babbage_synth_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="babbage_synth_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="babbage_synth_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="babbage_synth_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="babbage_synth_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="babbage_synth_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="babbage_synth_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="babbage_synth.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="babbage_synth_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="babbage_synth_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="babbage_synth.nky"/>
-  <File Type="BITSTR-BMM" Name="babbage_synth_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="babbage_synth_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="babbage_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="babbage_synth_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="babbage_synth.pdi"/>
   <File Type="RCFI_FILE" Name="babbage_synth.rcfi"/>
   <File Type="CFI_FILE" Name="babbage_synth.cfi"/>
   <File Type="RNPI_FILE" Name="babbage_synth.rnpi"/>
   <File Type="NPI_FILE" Name="babbage_synth.npi"/>
   <File Type="RBD_FILE" Name="babbage_synth.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="babbage_synth.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="babbage_synth.sysdef"/>
-  <File Type="BG-BGN" Name="babbage_synth.bgn"/>
-  <File Type="BG-DRC" Name="babbage_synth.drc"/>
-  <File Type="RDI-RDI" Name="babbage_synth.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="babbage_synth_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="babbage_synth_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -275,5 +257,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

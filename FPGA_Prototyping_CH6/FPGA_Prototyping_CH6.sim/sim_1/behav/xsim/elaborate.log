@@ -1,14 +1,8 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot babbage_test_behav xil_defaultlib.babbage_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot reaction_timer_test_behav xil_defaultlib.reaction_timer_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.babbage
-Compiling module xil_defaultlib.babbage_test
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot babbage_test_behav
+ERROR: [VRFC 10-3180] cannot find port 'o_rand' on this module [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH6/FPGA_Prototyping_CH6.srcs/sim_1/new/reaction_timer_test.v:45]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

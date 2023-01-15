@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log floating_greater_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source floating_greater_synth.tcl
+    with args -log seven_seg_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source seven_seg_synth.tcl
 
 
 
@@ -9,210 +9,226 @@
   **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
-source floating_greater_synth.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp for incremental synthesis
+source seven_seg_synth.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 394.148 ; gain = 60.629
+Command: read_checkpoint -auto_incremental -incremental C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top floating_greater_synth -part xc7a35tcpg236-1
+Command: synth_design -top seven_seg_synth -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10848
+INFO: [Synth 8-7075] Helper process launched with PID 25972
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'hex3', assumed default net type 'wire' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg_synth.v:32]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1206.566 ; gain = 408.969
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1202.648 ; gain = 405.492
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'floating_greater_synth' [C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater_synth.v:23]
-INFO: [Synth 8-6157] synthesizing module 'floating_greater' [C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'floating_greater' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'floating_greater_synth' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/sources_1/new/floating_greater_synth.v:23]
-WARNING: [Synth 8-7129] Port LED[15] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[14] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[13] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[12] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[11] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[10] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[9] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[8] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[6] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[5] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[4] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[3] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[2] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[1] in module floating_greater_synth is either unconnected or has no load
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_synth' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg_synth.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_mux' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mux' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/Synthesized_Starter_Code/Synthesized_Starter_Code.srcs/sources_1/new/seven_seg_mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_synth' (0#1) [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg_synth.v:23]
+WARNING: [Synth 8-3848] Net hex3 in module/entity seven_seg_synth does not have driver. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/sources_1/imports/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.sim/seven_seg_synth.v:32]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1295.824 ; gain = 498.227
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1292.547 ; gain = 495.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1295.824 ; gain = 498.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1292.547 ; gain = 495.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1295.824 ; gain = 498.227
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1292.547 ; gain = 495.391
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1295.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1292.547 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:7]
+Parsing XDC File [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:47]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:48]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:9]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:9]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:82]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:49]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:83]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:50]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:84]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:51]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:52]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:53]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:54]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:55]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:56]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:57]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:58]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:92]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:59]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:93]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:60]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:94]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:61]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:62]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:97]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:63]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:98]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:64]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:100]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:65]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:101]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:66]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:102]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:67]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:103]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:68]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:104]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:104]
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:69]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:105]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:105]
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:70]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:106]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:71]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:107]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:72]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:111]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:73]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:112]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:74]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:113]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:75]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:114]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:76]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:115]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:77]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:116]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:78]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:117]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:118]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:114]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:119]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:119]
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:115]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:120]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc:120]
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:116]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/Starter Code/Starter Code.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/floating_greater_synth_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/floating_greater_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnD'. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/constrs_1/imports/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/seven_seg_synth_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/seven_seg_synth_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1338.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.094 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1338.676 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1327.094 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Start Preparing Guide Design
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.srcs/utils_1/imports/synth_1/barrel_shifter_lr_8b.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.094 ; gain = 529.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.094 ; gain = 529.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.094 ; gain = 529.938
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input    1 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -229,41 +245,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port LED[15] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[14] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[13] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[12] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[11] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[10] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[9] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[8] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[6] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[5] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[4] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[3] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[2] in module floating_greater_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[1] in module floating_greater_synth is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -281,37 +282,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,37 +328,40 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |     3|
-|2     |LUT2   |     5|
-|3     |LUT4   |    12|
-|4     |LUT5   |     1|
-|5     |LUT6   |     2|
-|6     |IBUF   |    16|
-|7     |OBUF   |     1|
-|8     |OBUFT  |    15|
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     1|
+|4     |LUT3   |     4|
+|5     |LUT4   |     7|
+|6     |LUT5   |     7|
+|7     |LUT6   |     1|
+|8     |MUXF7  |     7|
+|9     |FDCE   |    18|
+|10    |IBUF   |    18|
+|11    |OBUF   |    12|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1338.676 ; gain = 498.227
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1338.676 ; gain = 541.078
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1327.094 ; gain = 495.391
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1327.094 ; gain = 529.938
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1338.676 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1331.125 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1341.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1335.793 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 5c226f1c
+Synth Design complete, checksum: c93d731c
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 68 Warnings, 37 Critical Warnings and 0 Errors encountered.
+27 Infos, 42 Warnings, 41 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1341.648 ; gain = 923.219
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1335.793 ; gain = 916.781
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.runs/synth_1/floating_greater_synth.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file floating_greater_synth_utilization_synth.rpt -pb floating_greater_synth_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  3 20:36:15 2022...
+INFO: [Common 17-1381] The checkpoint 'C:/Projects/FPGA-Intro/FPGA_Prototyping_CH3/FPGA_Prototyping_CH3.runs/synth_1/seven_seg_synth.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file seven_seg_synth_utilization_synth.rpt -pb seven_seg_synth_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 14 20:35:54 2023...

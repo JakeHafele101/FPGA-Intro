@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log floating_greater_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source floating_greater_synth.tcl" );
+         "-log seven_seg_synth.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source seven_seg_synth.tcl" );
 
 
 

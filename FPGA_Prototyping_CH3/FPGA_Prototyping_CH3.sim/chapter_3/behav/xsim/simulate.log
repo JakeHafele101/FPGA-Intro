@@ -1,4 +1,1 @@
 Time resolution is 1 ps
-
-Expected: 00000000, Actual: 1011100000000
-$stop called at time : 35 ns : File "C:/Projects/FPGA-Intro/FPGA_Prototyping_Exercises/FPGA_Prototyping_Exercises.srcs/chapter_3/new/int_to_float_test.v" Line 51
